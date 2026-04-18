@@ -63,8 +63,8 @@
 
 ## Copilot Prompting Workshop
 
-| Lab | Description |
-|:---|:---|
+| Lab                                                            | Description                                                                                                                                                                                              |
+| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [031 - Prompting Workshop](Labs/031-CopilotPromptingWorkshop/) | **Comprehensive 13-section workshop** covering setup, inline suggestions, chat, plan mode, agent mode, custom instructions, reusable prompts, custom agents, and advanced prompt engineering techniques. |
 
 ---

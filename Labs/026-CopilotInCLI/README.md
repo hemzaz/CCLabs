@@ -24,7 +24,7 @@
 
 ## Lab Steps
 
-### Step 1 - Install GitHub Copilot CLI Extension
+## Step 1 - Install GitHub Copilot CLI Extension
 
 ```bash
 # Install the Copilot CLI extension for gh
@@ -34,7 +34,7 @@ gh extension install github/gh-copilot
 gh copilot --version
 ```
 
-### Step 2 - Authenticate
+## Step 2 - Authenticate
 
 ```bash
 # If not already authenticated
@@ -44,7 +44,7 @@ gh auth login
 gh auth status
 ```
 
-### Step 3 - Suggest Commands (`gh copilot suggest`)
+## Step 3 - Suggest Commands (`gh copilot suggest`)
 
 Ask for shell commands in plain English:
 
@@ -68,7 +68,7 @@ When Copilot suggests a command, you can:
 - Press `e` to edit it first
 - Press `q` to quit
 
-### Step 4 - Explain Commands (`gh copilot explain`)
+## Step 4 - Explain Commands (`gh copilot explain`)
 
 Get plain-English explanations of commands:
 
@@ -86,7 +86,7 @@ gh copilot explain "curl -fsSL https://example.com | bash"
 gh copilot explain "sed -i 's/\b\(foo\|bar\)\b/baz/g' *.txt"
 ```
 
-### Step 5 - Set Up Shell Aliases
+## Step 5 - Set Up Shell Aliases
 
 Add these to your `~/.zshrc` or `~/.bashrc` for faster access:
 
@@ -105,7 +105,7 @@ alias 'explain'='gh copilot explain'
 
 Reload: `source ~/.zshrc`
 
-### Step 6 - Specify Command Type
+## Step 6 - Specify Command Type
 
 The `-t` flag restricts suggestions to a command type:
 
@@ -120,7 +120,7 @@ gh copilot suggest -t gh "create a draft PR from current branch"
 gh copilot suggest -t shell "monitor CPU usage of a specific process in real time"
 ```
 
-### Step 7 - Use in Scripts
+## Step 7 - Use in Scripts
 
 ```bash
 #!/usr/bin/env bash
@@ -129,7 +129,7 @@ read -p "What do you want to do? " request
 gh copilot suggest "$request"
 ```
 
-### Step 8 - Practical Scenarios
+## Step 8 - Practical Scenarios
 
 **Git emergency:**
 
@@ -181,7 +181,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ## Tasks
 
-### Task 01 - Install the Copilot CLI Extension
+## Task 01 - Install the Copilot CLI Extension
 
 **Scenario:** Set up `gh copilot` in your terminal.
 
@@ -196,7 +196,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ---
 
-### Task 02 - Suggest a Git Command
+## Task 02 - Suggest a Git Command
 
 **Scenario:** You want to undo your last commit but keep the changes staged.
 
@@ -212,7 +212,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ---
 
-### Task 03 - Explain a Complex Command
+## Task 03 - Explain a Complex Command
 
 **Scenario:** You found a `git rebase` command you don't understand.
 
@@ -226,7 +226,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ---
 
-### Task 04 - Suggest a Kubernetes Command
+## Task 04 - Suggest a Kubernetes Command
 
 **Scenario:** You want to find which pod is consuming the most CPU.
 
@@ -240,7 +240,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ---
 
-### Task 05 - Set Up Shell Aliases
+## Task 05 - Set Up Shell Aliases
 
 **Scenario:** Create short aliases so you can use `??` instead of `gh copilot suggest`.
 
@@ -260,7 +260,7 @@ Continue with [Lab 027 - Knowledge Bases](../027-KnowledgeBases/README.md)
 
 ---
 
-### Task 06 - Suggest a Network Debugging Command
+## Task 06 - Suggest a Network Debugging Command
 
 **Scenario:** Find which process is listening on port 5432.
 

@@ -24,7 +24,7 @@
 
 ## Lab Steps
 
-### Step 1 - Schema-Aware Query Generation
+## Step 1 - Schema-Aware Query Generation
 
 Create a schema file `schema.sql` and reference it:
 
@@ -64,7 +64,7 @@ Write a query to find the top 10 customers by total spend in the last 90 days,
 including their email, total amount spent, and number of orders.
 ```
 
-### Step 2 - Query Optimization
+## Step 2 - Query Optimization
 
 Paste a slow query:
 
@@ -85,7 +85,7 @@ Analyze it for performance issues and suggest optimizations,
 including which indexes to add.
 ```
 
-### Step 3 - ORM Query Generation (Prisma)
+## Step 3 - ORM Query Generation (Prisma)
 
 ```
 #file:prisma/schema.prisma
@@ -98,7 +98,7 @@ Write a Prisma query to:
 5. Paginate (page size 20)
 ```
 
-### Step 4 - ORM Query Generation (SQLAlchemy)
+## Step 4 - ORM Query Generation (SQLAlchemy)
 
 ```python
 # Given these SQLAlchemy models:
@@ -124,7 +124,7 @@ total revenue per month for the last 12 months,
 grouped by month and ordered chronologically.
 ```
 
-### Step 5 - Generate Migration Scripts
+## Step 5 - Generate Migration Scripts
 
 ```
 Add a `subscription_tier` enum column to the users table with values:
@@ -133,7 +133,7 @@ Default existing users to 'free'.
 Create a database migration for both PostgreSQL (raw SQL) and Prisma.
 ```
 
-### Step 6 - Connect to Live Database via MCP
+## Step 6 - Connect to Live Database via MCP
 
 Add to `.vscode/mcp.json`:
 
@@ -159,7 +159,7 @@ Show me the 5 largest tables in the database and their row counts.
 Are there any tables missing indexes on foreign key columns?
 ```
 
-### Step 7 - Explain Query Plans
+## Step 7 - Explain Query Plans
 
 ```sql
 EXPLAIN ANALYZE SELECT ...
@@ -187,7 +187,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ## Tasks
 
-### Task 01 - Schema-Aware Query Generation
+## Task 01 - Schema-Aware Query Generation
 
 **Scenario:** Generate a complex query using your schema file as context.
 
@@ -204,7 +204,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ---
 
-### Task 02 - Optimize a Slow Query
+## Task 02 - Optimize a Slow Query
 
 **Scenario:** A query runs slow on a large table. Ask Copilot to optimize it.
 
@@ -225,7 +225,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ---
 
-### Task 03 - Write a Prisma Query
+## Task 03 - Write a Prisma Query
 
 **Scenario:** Generate a Prisma query with filtering, sorting, and pagination.
 
@@ -243,7 +243,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ---
 
-### Task 04 - Generate a Database Migration
+## Task 04 - Generate a Database Migration
 
 **Scenario:** Add a new enum column to the users table.
 
@@ -258,7 +258,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ---
 
-### Task 05 - Configure the PostgreSQL MCP Server
+## Task 05 - Configure the PostgreSQL MCP Server
 
 **Scenario:** Connect Copilot to your live database for real-time schema-aware queries.
 
@@ -279,7 +279,7 @@ Continue with [Lab 021 - API Design](../021-APIDesign/README.md)
 
 ---
 
-### Task 06 - Explain a Query Execution Plan
+## Task 06 - Explain a Query Execution Plan
 
 **Scenario:** Paste the output of `EXPLAIN ANALYZE` and ask Copilot to interpret it.
 

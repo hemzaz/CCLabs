@@ -23,20 +23,20 @@
 
 ## Lab Steps
 
-### Step 1 - Open the Copilot Edits Panel
+## Step 1 - Open the Copilot Edits Panel
 
 1. Press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Shift+I` (macOS)
 2. The **Copilot Edits** panel opens (separate from Chat)
 3. You'll see a file list and a prompt input
 
-### Step 2 - Add Files to the Edit Session
+## Step 2 - Add Files to the Edit Session
 
 Click the **+** button (or drag files) to add files to the edit context:
 
 - Add all files related to a feature (model, service, controller, tests)
 - You can add up to **10 files** per edit session
 
-### Step 3 - Add a Feature Across Files
+## Step 3 - Add a Feature Across Files
 
 With `UserModel.ts`, `UserService.ts`, `UserController.ts`, and `user.test.ts` added:
 
@@ -49,14 +49,14 @@ Update the tests to cover the new field.
 
 Copilot will show **diffs across all 4 files simultaneously**.
 
-### Step 4 - Review and Accept Changes
+## Step 4 - Review and Accept Changes
 
 1. Each file shows a diff with green (additions) and red (removals)
 2. Use **Accept All** to apply all changes, or **Accept** per-file
 3. Use **Discard** to reject unwanted changes
 4. Use **Undo** (`Ctrl+Z` / `Cmd+Z`) to revert after accepting
 
-### Step 5 - Schema-Driven Changes
+## Step 5 - Schema-Driven Changes
 
 Add your database schema and migration files, then:
 
@@ -66,7 +66,7 @@ Update the schema definition, create a migration, update the Order model,
 update the OrderService to accept and validate discount codes, and update tests.
 ```
 
-### Step 6 - API Versioning
+## Step 6 - API Versioning
 
 Add your routes, controllers, and API tests:
 
@@ -75,7 +75,7 @@ Add a v2 version of the /users endpoint that returns paginated results
 instead of a flat array. Keep v1 working. Update the router and add v2 tests.
 ```
 
-### Step 7 - Enforce a New Standard Across Files
+## Step 7 - Enforce a New Standard Across Files
 
 ```
 All our service classes are missing input validation.
@@ -109,7 +109,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ## Tasks
 
-### Task 01 - Open the Copilot Edits Panel
+## Task 01 - Open the Copilot Edits Panel
 
 **Scenario:** Locate and open the Copilot Edits panel in VS Code.
 
@@ -124,7 +124,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ---
 
-### Task 02 - Rename a Symbol Across Files
+## Task 02 - Rename a Symbol Across Files
 
 **Scenario:** Rename `UserService` to `AccountService` in all files that reference it.
 
@@ -143,7 +143,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ---
 
-### Task 03 - Add a Field Consistently Across Files
+## Task 03 - Add a Field Consistently Across Files
 
 **Scenario:** Add a `createdBy: string` field to the Order model and update all related files.
 
@@ -158,7 +158,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ---
 
-### Task 04 - Move a Module
+## Task 04 - Move a Module
 
 **Scenario:** Move `src/utils/dateHelpers.ts` to `src/shared/date.utils.ts` and fix all imports.
 
@@ -173,7 +173,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ---
 
-### Task 05 - Accept and Reject Individual File Changes
+## Task 05 - Accept and Reject Individual File Changes
 
 **Scenario:** The agent made changes to 5 files. Accept 3 and reject 2.
 
@@ -188,7 +188,7 @@ Continue with [Lab 016 - Commit Messages](../016-CommitMessages/README.md)
 
 ---
 
-### Task 06 - Undo an Accepted Edit
+## Task 06 - Undo an Accepted Edit
 
 **Scenario:** You accepted all edits but realized one file has a bug. Undo just that file.
 

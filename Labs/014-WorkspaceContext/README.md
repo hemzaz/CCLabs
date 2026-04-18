@@ -23,7 +23,7 @@
 
 ## Lab Steps
 
-### Step 1 - Basic Workspace Questions
+## Step 1 - Basic Workspace Questions
 
 Open any project and use `@workspace` to explore it:
 
@@ -39,7 +39,7 @@ Open any project and use `@workspace` to explore it:
 @workspace How is authentication implemented in this codebase?
 ```
 
-### Step 2 - Finding Code Patterns
+## Step 2 - Finding Code Patterns
 
 ```
 @workspace Find all places where database connections are created.
@@ -54,7 +54,7 @@ Are we using connection pooling consistently?
 @workspace Find all TODO comments in the codebase and group them by priority or theme.
 ```
 
-### Step 3 - Context Variables
+## Step 3 - Context Variables
 
 | Variable                | What it includes                   |
 | :---------------------- | :--------------------------------- |
@@ -66,7 +66,7 @@ Are we using connection pooling consistently?
 | `#terminalLastCommand`  | Last terminal command + output     |
 | `@vscode`               | VS Code API and settings knowledge |
 
-### Step 4 - Targeted File Context
+## Step 4 - Targeted File Context
 
 Rather than using the full workspace, attach specific files:
 
@@ -80,7 +80,7 @@ Compare #file:src/services/UserService.ts with #file:src/services/OrderService.t
 Are they following the same patterns? What inconsistencies exist?
 ```
 
-### Step 5 - Cross-File Refactoring with Context
+## Step 5 - Cross-File Refactoring with Context
 
 ```
 @workspace I need to add soft-delete support to all models.
@@ -92,7 +92,7 @@ Which models exist, and what's the best approach given our current ORM setup?
 Find all callback-style async functions and create a migration plan.
 ```
 
-### Step 6 - Using Terminal Context
+## Step 6 - Using Terminal Context
 
 Run a failing test, then ask:
 
@@ -106,7 +106,7 @@ Or after a build error:
 #terminalSelection Explain this error and provide a fix.
 ```
 
-### Step 7 - Improving Context Quality
+## Step 7 - Improving Context Quality
 
 Tips for better `@workspace` answers:
 
@@ -146,7 +146,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ## Tasks
 
-### Task 01 - Ask an Architecture Question with `@workspace`
+## Task 01 - Ask an Architecture Question with `@workspace`
 
 **Scenario:** Find where authentication middleware is defined and which routes bypass it.
 
@@ -160,7 +160,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ---
 
-### Task 02 - Reference Multiple Files
+## Task 02 - Reference Multiple Files
 
 **Scenario:** Compare the OrderService and PaymentService to find inconsistent error handling.
 
@@ -178,7 +178,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ---
 
-### Task 03 - Use `#editor` for the Open File
+## Task 03 - Use `#editor` for the Open File
 
 **Scenario:** Refactor the function you currently have open without typing the file path.
 
@@ -196,7 +196,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ---
 
-### Task 04 - Use `#selection` for a Specific Block
+## Task 04 - Use `#selection` for a Specific Block
 
 **Scenario:** Get a code review of only 10 lines, not the entire file.
 
@@ -214,7 +214,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ---
 
-### Task 05 - Create a `.copilotignore` File
+## Task 05 - Create a `.copilotignore` File
 
 **Scenario:** Prevent Copilot from including generated files and secrets in workspace context.
 
@@ -246,7 +246,7 @@ Continue with [Lab 015 - Multi-File Editing](../015-MultiFileEditing/README.md)
 
 ---
 
-### Task 06 - Use `#terminalLastCommand` for Debugging
+## Task 06 - Use `#terminalLastCommand` for Debugging
 
 **Scenario:** After a failing test run, paste the error into Copilot using terminal context.
 

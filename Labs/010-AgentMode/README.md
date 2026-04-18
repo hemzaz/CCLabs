@@ -24,14 +24,14 @@
 
 ## Lab Steps
 
-### Step 1 - Enable Agent Mode
+## Step 1 - Enable Agent Mode
 
 1. Open the Copilot Chat panel
 2. Click the **dropdown arrow** next to the chat input
 3. Select **Agent** mode (or look for the `@github` agent option)
 4. You can also use the `#` prefix for specific agents
 
-### Step 2 - Multi-File Task
+## Step 2 - Multi-File Task
 
 Ask Copilot Agent to create a complete feature:
 
@@ -47,7 +47,7 @@ Create a complete REST API endpoint for user registration:
 
 Agent Mode will plan the task, create multiple files, and execute the steps sequentially.
 
-### Step 3 - Iterative Development
+## Step 3 - Iterative Development
 
 Ask Agent to build and iterate:
 
@@ -60,7 +60,7 @@ Create a Python CLI tool that:
 Run the tool to verify it works correctly.
 ```
 
-### Step 4 - Project Scaffolding
+## Step 4 - Project Scaffolding
 
 Use Agent Mode to scaffold a full project:
 
@@ -73,7 +73,7 @@ Use Agent Mode to scaffold a full project:
 - GitHub Actions CI workflow
 ```
 
-### Step 5 - Debug and Fix with Agent
+## Step 5 - Debug and Fix with Agent
 
 ```
 @workspace The tests in this project are failing. Analyze the errors,
@@ -119,7 +119,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ## Tasks
 
-### Task 01 - Explore Available Tools
+## Task 01 - Explore Available Tools
 
 **Scenario:** Switch to Agent mode and discover all available tools.
 
@@ -134,7 +134,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ---
 
-### Task 02 - Cross-File Change with Agent
+## Task 02 - Cross-File Change with Agent
 
 **Scenario:** Add a `phone_number` field to the User model and update all creation sites.
 
@@ -149,7 +149,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ---
 
-### Task 03 - Auto-Fix All Lint Errors
+## Task 03 - Auto-Fix All Lint Errors
 
 **Scenario:** The project has 15 ESLint errors. Let the agent fix them all.
 
@@ -163,7 +163,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ---
 
-### Task 04 - Scaffold a Feature End-to-End
+## Task 04 - Scaffold a Feature End-to-End
 
 **Scenario:** Create a complete `Tags` feature: model, migration, service, controller, tests.
 
@@ -181,7 +181,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ---
 
-### Task 05 - Database Migration with Approval Gate
+## Task 05 - Database Migration with Approval Gate
 
 **Scenario:** Add soft-delete (deletedAt column) to three tables but don't run the migration automatically.
 
@@ -196,7 +196,7 @@ Continue exploring and practicing to become proficient in AI-assisted developmen
 
 ---
 
-### Task 06 - Iterate Until Tests Pass
+## Task 06 - Iterate Until Tests Pass
 
 **Scenario:** Make a refactoring change and let the agent fix any broken tests automatically.
 

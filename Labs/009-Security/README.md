@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Fix SQL Injection
+## Step 1 - Fix SQL Injection
 
 Copilot can identify and fix SQL injection vulnerabilities:
 
@@ -39,7 +39,7 @@ Select the code and ask:
 This code has a SQL injection vulnerability. Fix it using parameterized queries.
 ```
 
-### Step 2 - Fix Cross-Site Scripting (XSS)
+## Step 2 - Fix Cross-Site Scripting (XSS)
 
 ```javascript
 // VULNERABLE: Don't do this!
@@ -54,7 +54,7 @@ Ask Copilot:
 This code is vulnerable to XSS. Fix it to safely render user-provided content.
 ```
 
-### Step 3 - Secure Password Handling
+## Step 3 - Secure Password Handling
 
 ```python
 # INSECURE: Don't store passwords like this!
@@ -68,7 +68,7 @@ Ask:
 Fix this code to properly hash passwords before storing them using bcrypt.
 ```
 
-### Step 4 - Scan Code for Security Issues
+## Step 4 - Scan Code for Security Issues
 
 Select an entire file or function and ask:
 
@@ -77,7 +77,7 @@ Review this code for security vulnerabilities based on OWASP Top 10.
 List any issues found and suggest fixes.
 ```
 
-### Step 5 - Generate Secure Code from Scratch
+## Step 5 - Generate Secure Code from Scratch
 
 Ask Copilot to generate secure implementations:
 
@@ -115,7 +115,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ## Tasks
 
-### Task 01 - Find SQL Injection Vulnerabilities
+## Task 01 - Find SQL Injection Vulnerabilities
 
 **Scenario:** Review a data access layer for SQL injection risks.
 
@@ -133,7 +133,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ---
 
-### Task 02 - Remove Hardcoded Credentials
+## Task 02 - Remove Hardcoded Credentials
 
 **Scenario:** A secret key is hardcoded in the source code.
 
@@ -149,7 +149,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ---
 
-### Task 03 - Audit Input Validation
+## Task 03 - Audit Input Validation
 
 **Scenario:** A registration endpoint accepts raw input. Find missing validation.
 
@@ -168,7 +168,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ---
 
-### Task 04 - Fix an IDOR Vulnerability
+## Task 04 - Fix an IDOR Vulnerability
 
 **Scenario:** An API lets users fetch any record by ID without ownership checks.
 
@@ -186,7 +186,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ---
 
-### Task 05 - Identify XSS Risks
+## Task 05 - Identify XSS Risks
 
 **Scenario:** A React component uses `dangerouslySetInnerHTML`.
 
@@ -203,7 +203,7 @@ Continue with [Lab 010 - Agent Mode](../010-AgentMode/README.md)
 
 ---
 
-### Task 06 - Generate a Security Checklist
+## Task 06 - Generate a Security Checklist
 
 **Scenario:** Before deploying the API, create a pre-deployment security checklist.
 

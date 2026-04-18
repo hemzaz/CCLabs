@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Generate a CI Workflow
+## Step 1 - Generate a CI Workflow
 
 ```
 Create a GitHub Actions CI workflow for a Node.js/TypeScript project that:
@@ -34,7 +34,7 @@ Create a GitHub Actions CI workflow for a Node.js/TypeScript project that:
 - Fails fast if lint fails (no need to run tests)
 ```
 
-### Step 2 - Generate a Docker Build & Push Workflow
+## Step 2 - Generate a Docker Build & Push Workflow
 
 ```
 Create a GitHub Actions workflow to:
@@ -46,7 +46,7 @@ Create a GitHub Actions workflow to:
 - Sign the image with Cosign for supply chain security
 ```
 
-### Step 3 - Debug a Failing Workflow
+## Step 3 - Debug a Failing Workflow
 
 Paste the Actions log into Copilot Chat:
 
@@ -62,7 +62,7 @@ Error: Cannot find module '@/utils/logger'
 What's wrong and how do I fix the workflow or the code?
 ```
 
-### Step 4 - Generate a Complete CD Pipeline
+## Step 4 - Generate a Complete CD Pipeline
 
 ```
 Create a GitHub Actions deployment pipeline for a Node.js app to AWS ECS:
@@ -81,7 +81,7 @@ Include:
 - Deployment protection rules
 ```
 
-### Step 5 - Optimize Pipeline Performance
+## Step 5 - Optimize Pipeline Performance
 
 ```
 #file:.github/workflows/ci.yml
@@ -94,7 +94,7 @@ Analyze it and suggest optimizations:
 - Can we use composite actions to reduce duplication?
 ```
 
-### Step 6 - Add Security Scanning
+## Step 6 - Add Security Scanning
 
 ```
 Add security scanning to our CI pipeline:
@@ -107,7 +107,7 @@ Add security scanning to our CI pipeline:
 Format as a reusable workflow that other repos can reference.
 ```
 
-### Step 7 - Create a Release Workflow
+## Step 7 - Create a Release Workflow
 
 ```
 Create a GitHub Actions release workflow triggered by pushing a version tag (v*.*.*):
@@ -147,7 +147,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ## Tasks
 
-### Task 01 - Generate a CI Workflow
+## Task 01 - Generate a CI Workflow
 
 **Scenario:** Create a GitHub Actions CI workflow that runs tests on multiple Node.js versions.
 
@@ -165,7 +165,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ---
 
-### Task 02 - Generate a Docker Build and Push Workflow
+## Task 02 - Generate a Docker Build and Push Workflow
 
 **Scenario:** Build a multi-platform Docker image and push to GitHub Container Registry.
 
@@ -183,7 +183,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ---
 
-### Task 03 - Debug a Failing Workflow
+## Task 03 - Debug a Failing Workflow
 
 **Scenario:** A workflow job fails with a module-not-found error. Diagnose with Copilot.
 
@@ -200,7 +200,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ---
 
-### Task 04 - Generate a Full CD Pipeline
+## Task 04 - Generate a Full CD Pipeline
 
 **Scenario:** Create a pipeline with staging, integration tests, and a manual production gate.
 
@@ -219,7 +219,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ---
 
-### Task 05 - Optimize a Slow Pipeline
+## Task 05 - Optimize a Slow Pipeline
 
 **Scenario:** Your CI takes 18 minutes. Find what can be parallelized or cached.
 
@@ -239,7 +239,7 @@ Continue with [Lab 024 - Regex and Parsing](../024-RegexAndParsing/README.md)
 
 ---
 
-### Task 06 - Add Security Scanning
+## Task 06 - Add Security Scanning
 
 **Scenario:** Add vulnerability scanning for code, dependencies, and container images.
 

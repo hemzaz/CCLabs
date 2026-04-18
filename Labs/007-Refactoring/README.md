@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Refactor Long Functions
+## Step 1 - Refactor Long Functions
 
 Given this complex function:
 
@@ -54,7 +54,7 @@ Refactor this function by extracting validate_order, calculate_subtotal,
 apply_discount, and calculate_tax as separate functions.
 ```
 
-### Step 2 - Rename for Clarity
+## Step 2 - Rename for Clarity
 
 Select poorly named code and ask:
 
@@ -63,7 +63,7 @@ Rename variables and functions in this code to be more descriptive and
 follow Python naming conventions.
 ```
 
-### Step 3 - Remove Code Duplication
+## Step 3 - Remove Code Duplication
 
 ```javascript
 function getAdminUsers(users) {
@@ -93,7 +93,7 @@ Ask Copilot:
 Refactor these two functions to eliminate duplication using a generic filter function.
 ```
 
-### Step 4 - Apply Design Patterns
+## Step 4 - Apply Design Patterns
 
 Ask Copilot to apply a specific pattern:
 
@@ -102,7 +102,7 @@ Refactor this user authentication code to use the Strategy pattern,
 allowing different authentication methods (password, OAuth, API key).
 ```
 
-### Step 5 - Use `/simplify` Command
+## Step 5 - Use `/simplify` Command
 
 Select complex or overly verbose code and use the `/simplify` command in Chat to let Copilot propose a cleaner version.
 
@@ -120,7 +120,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ## Tasks
 
-### Task 01 - Extract a Method
+## Task 01 - Extract a Method
 
 **Scenario:** A long function should have its validation logic extracted into a separate function.
 
@@ -134,7 +134,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ---
 
-### Task 02 - Rename for Clarity
+## Task 02 - Rename for Clarity
 
 **Scenario:** A variable `d` is used throughout a function and needs a better name.
 
@@ -151,7 +151,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ---
 
-### Task 03 - Replace Magic Numbers
+## Task 03 - Replace Magic Numbers
 
 **Scenario:** Replace hardcoded `86400`, `3600`, `1024` with named constants.
 
@@ -169,7 +169,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ---
 
-### Task 04 - Flatten Nested Conditionals
+## Task 04 - Flatten Nested Conditionals
 
 **Scenario:** A function has 4 levels of nested `if` blocks.
 
@@ -186,7 +186,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ---
 
-### Task 05 - Convert if/elif to Strategy Pattern
+## Task 05 - Convert if/elif to Strategy Pattern
 
 **Scenario:** Replace type-checking `if/elif` chains with polymorphic dispatch.
 
@@ -206,7 +206,7 @@ Continue with [Lab 008 - Documentation](../008-Documentation/README.md)
 
 ---
 
-### Task 06 - Optimize a Nested Loop
+## Task 06 - Optimize a Nested Loop
 
 **Scenario:** An O(n²) nested loop is too slow on large inputs.
 

@@ -23,7 +23,7 @@
 
 ## Lab Steps
 
-### Step 1 - Context-Driven Completions
+## Step 1 - Context-Driven Completions
 
 Copilot reads the context around your cursor. Try this:
 
@@ -34,7 +34,7 @@ def parse_csv(file_path):
 
 Observe how Copilot generates a complete function body.
 
-### Step 2 - Comment-to-Code
+## Step 2 - Comment-to-Code
 
 Write a descriptive comment and let Copilot generate the implementation:
 
@@ -42,7 +42,7 @@ Write a descriptive comment and let Copilot generate the implementation:
 // Function to validate an email address using regex
 ```
 
-### Step 3 - Multi-Line Completions
+## Step 3 - Multi-Line Completions
 
 1. Open a new file `sorting.py`
 2. Type the following and wait for completion:
@@ -54,7 +54,7 @@ def merge_sort(arr):
 
 Copilot should generate the entire recursive merge sort implementation.
 
-### Step 4 - Keyboard Shortcuts
+## Step 4 - Keyboard Shortcuts
 
 | Action                 | Windows/Linux | macOS        |
 | :--------------------- | :------------ | :----------- |
@@ -64,7 +64,7 @@ Copilot should generate the entire recursive merge sort implementation.
 | Previous suggestion    | `Alt+[`       | `Option+[`   |
 | Open completions panel | `Ctrl+Enter`  | `Ctrl+Enter` |
 
-### Step 5 - Open Completions Panel
+## Step 5 - Open Completions Panel
 
 1. Type the beginning of a function
 2. Press `Ctrl+Enter` to open the **Copilot Completions Panel**
@@ -84,7 +84,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ## Tasks
 
-### Task 01 - Single-Line Completion
+## Task 01 - Single-Line Completion
 
 **Scenario:** Use Ghost Text to complete a one-line utility function.
 
@@ -105,7 +105,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ---
 
-### Task 02 - Multi-Line Completion from a Docstring
+## Task 02 - Multi-Line Completion from a Docstring
 
 **Scenario:** Write a docstring, then let Copilot generate the entire function body.
 
@@ -126,7 +126,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ---
 
-### Task 03 - Complete a Data Structure
+## Task 03 - Complete a Data Structure
 
 **Scenario:** Start a dictionary with one entry and let Copilot fill in the rest.
 
@@ -144,7 +144,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ---
 
-### Task 04 - Test-Driven Completion
+## Task 04 - Test-Driven Completion
 
 **Scenario:** Write a failing test first, then let Copilot generate the implementation.
 
@@ -167,7 +167,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ---
 
-### Task 05 - Accept One Word at a Time
+## Task 05 - Accept One Word at a Time
 
 **Scenario:** A completion is mostly right but you want to accept it word by word.
 
@@ -187,7 +187,7 @@ Continue with [Lab 003 - Chat Features](../003-ChatFeatures/README.md)
 
 ---
 
-### Task 06 - Fill in the Middle
+## Task 06 - Fill in the Middle
 
 **Scenario:** You have code before AND after the cursor - confirm Copilot fills the gap.
 

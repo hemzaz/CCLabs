@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - File Reference (`#file`)
+## Step 1 - File Reference (`#file`)
 
 Reference specific files to include in context:
 
@@ -38,7 +38,7 @@ and the schema.
 
 **When to use:** When you know exactly which files are relevant. More precise than `@workspace`.
 
-### Step 2 - Editor Reference (`#editor`)
+## Step 2 - Editor Reference (`#editor`)
 
 References the currently active editor tab (including unsaved changes):
 
@@ -52,7 +52,7 @@ changing the behavior.
 
 **When to use:** When working on the specific file you have open.
 
-### Step 3 - Selection Reference (`#selection`)
+## Step 3 - Selection Reference (`#selection`)
 
 References only the highlighted text in the editor:
 
@@ -65,7 +65,7 @@ Add comprehensive JSDoc for this function. Include @param, @returns,
 
 **When to use:** When you want Copilot to focus on a specific block, not the whole file.
 
-### Step 4 - Terminal References
+## Step 4 - Terminal References
 
 ```bash
 # After running a failing command, in Chat:
@@ -87,7 +87,7 @@ Explain what this output means. Is this a warning I should act on?
 
 **When to use:** For debugging CLI errors, explaining build output, analyzing logs.
 
-### Step 5 - Workspace Reference (`@workspace`)
+## Step 5 - Workspace Reference (`@workspace`)
 
 Searches across your entire workspace:
 
@@ -105,7 +105,7 @@ outside of the service layer (bypassing our repository pattern).
 
 **Warning:** `@workspace` can be slow on large projects. Prefer `#file` when you know what's relevant.
 
-### Step 6 - Symbol References (Experimental)
+## Step 6 - Symbol References (Experimental)
 
 Reference specific code symbols:
 
@@ -116,7 +116,7 @@ Trace all the database operations this method triggers,
 including any cascading calls to other services.
 ```
 
-### Step 7 - Combining Multiple Context Variables
+## Step 7 - Combining Multiple Context Variables
 
 The real power is combining variables:
 
@@ -135,7 +135,7 @@ List the files to change, what changes to make in each, and any
 new files to create.
 ```
 
-### Step 8 - Context Window Strategy
+## Step 8 - Context Window Strategy
 
 Copilot's context window has limits. Follow these guidelines:
 
@@ -154,7 +154,7 @@ Copilot's context window has limits. Follow these guidelines:
 - Including irrelevant files reduces response quality
 - For very large files, select only the relevant section
 
-### Step 9 - Copilot Vision (Images)
+## Step 9 - Copilot Vision (Images)
 
 In VS Code, you can drag images into the Chat:
 
@@ -193,7 +193,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ## Tasks
 
-### Task 01 - Use `#file` for Targeted Context
+## Task 01 - Use `#file` for Targeted Context
 
 **Scenario:** Reference two specific files to compare their error handling patterns.
 
@@ -211,7 +211,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ---
 
-### Task 02 - Use `#editor` for the Open File
+## Task 02 - Use `#editor` for the Open File
 
 **Scenario:** Ask about the file you have open without typing its path.
 
@@ -227,7 +227,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ---
 
-### Task 03 - Use `#selection` for a Specific Block
+## Task 03 - Use `#selection` for a Specific Block
 
 **Scenario:** Get review feedback on 10 lines, not the whole file.
 
@@ -243,7 +243,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ---
 
-### Task 04 - Use `#terminalLastCommand` to Debug
+## Task 04 - Use `#terminalLastCommand` to Debug
 
 **Scenario:** After a failed command, use Copilot to diagnose the error.
 
@@ -259,7 +259,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ---
 
-### Task 05 - Use `@workspace` for Architecture Questions
+## Task 05 - Use `@workspace` for Architecture Questions
 
 **Scenario:** Find all places where the database is queried outside the repository layer.
 
@@ -274,7 +274,7 @@ Continue with [Lab 030 - Agent Tools](../030-AgentTools/README.md)
 
 ---
 
-### Task 06 - Combine Multiple Context Variables
+## Task 06 - Combine Multiple Context Variables
 
 **Scenario:** Plan a new feature by combining workspace knowledge with specific file context.
 

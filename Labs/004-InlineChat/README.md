@@ -21,13 +21,13 @@
 
 ## Lab Steps
 
-### Step 1 - Open Inline Chat
+## Step 1 - Open Inline Chat
 
 1. Place your cursor in the editor (or select some code)
 2. Press `Ctrl+I` (Windows/Linux) or `Cmd+I` (macOS)
 3. An inline input box appears at the cursor position
 
-### Step 2 - Generate Code Inline
+## Step 2 - Generate Code Inline
 
 Without selecting anything, type a request:
 
@@ -37,7 +37,7 @@ write a function to calculate fibonacci numbers
 
 Copilot will generate code directly at the cursor. Review it and click **Accept** or **Discard**.
 
-### Step 3 - Modify Selected Code
+## Step 3 - Modify Selected Code
 
 1. Select an existing function
 2. Press `Ctrl+I` / `Cmd+I`
@@ -49,7 +49,7 @@ add input validation and error handling to this function
 
 Copilot will show a diff of the proposed changes. Accept or reject.
 
-### Step 4 - Ask Questions About Code
+## Step 4 - Ask Questions About Code
 
 1. Select a block of code
 2. Open Inline Chat and type:
@@ -60,7 +60,7 @@ explain what this code does line by line
 
 The explanation will appear inline without cluttering the Chat panel.
 
-### Step 5 - Regenerate Responses
+## Step 5 - Regenerate Responses
 
 If you don't like the first suggestion:
 
@@ -81,7 +81,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ## Tasks
 
-### Task 01 - Refactor with Inline Chat
+## Task 01 - Refactor with Inline Chat
 
 **Scenario:** Flatten a deeply nested `if` block using guard clauses.
 
@@ -104,7 +104,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ---
 
-### Task 02 - Translate to Another Language
+## Task 02 - Translate to Another Language
 
 **Scenario:** Convert a Python function to JavaScript without leaving the editor.
 
@@ -118,7 +118,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ---
 
-### Task 03 - Add Error Handling Inline
+## Task 03 - Add Error Handling Inline
 
 **Scenario:** Add try/except to a function that currently has no error handling.
 
@@ -140,7 +140,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ---
 
-### Task 04 - Generate Code on an Empty Line
+## Task 04 - Generate Code on an Empty Line
 
 **Scenario:** Use `Cmd+I` on an empty line to generate a function from scratch.
 
@@ -154,7 +154,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ---
 
-### Task 05 - Explain Code Inline
+## Task 05 - Explain Code Inline
 
 **Scenario:** Get an explanation of a selected expression without opening the Chat panel.
 
@@ -169,7 +169,7 @@ Continue with [Lab 005 - Prompting Techniques](../005-Prompting/README.md)
 
 ---
 
-### Task 06 - Optimize a Function Inline
+## Task 06 - Optimize a Function Inline
 
 **Scenario:** A function works but is slow. Ask Copilot to optimize it in place.
 

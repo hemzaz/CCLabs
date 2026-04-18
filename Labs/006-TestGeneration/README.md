@@ -21,7 +21,7 @@
 
 ## Lab Steps
 
-### Step 1 - Create a Sample Function
+## Step 1 - Create a Sample Function
 
 Create a file `calculator.py` with this code:
 
@@ -33,13 +33,13 @@ def divide(a: float, b: float) -> float:
     return a / b
 ```
 
-### Step 2 - Use the `/tests` Slash Command
+## Step 2 - Use the `/tests` Slash Command
 
 1. Select the `divide` function
 2. Open Copilot Chat and type `/tests`
 3. Review the generated test cases
 
-### Step 3 - Ask for Edge Cases
+## Step 3 - Ask for Edge Cases
 
 In the Chat panel, type:
 
@@ -48,7 +48,7 @@ Generate additional edge case tests for the divide function,
 including very large numbers, floating point precision, and negative numbers.
 ```
 
-### Step 4 - Generate Tests for a JavaScript Function
+## Step 4 - Generate Tests for a JavaScript Function
 
 Create `validator.js`:
 
@@ -66,7 +66,7 @@ Generate Jest unit tests for the isValidEmail function,
 covering valid emails, invalid formats, edge cases like empty string and null.
 ```
 
-### Step 5 - Test-Driven Development (TDD) with Copilot
+## Step 5 - Test-Driven Development (TDD) with Copilot
 
 Write the test first, then ask Copilot to implement the function:
 
@@ -98,7 +98,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ## Tasks
 
-### Task 01 - Generate Tests with `/tests`
+## Task 01 - Generate Tests with `/tests`
 
 **Scenario:** Use the `/tests` slash command to generate a test suite for a function.
 
@@ -112,7 +112,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ---
 
-### Task 02 - Request Missing Edge Cases
+## Task 02 - Request Missing Edge Cases
 
 **Scenario:** Copilot's initial tests missed some edge cases. Request more.
 
@@ -128,7 +128,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ---
 
-### Task 03 - Parametrize Tests
+## Task 03 - Parametrize Tests
 
 **Scenario:** Replace multiple similar test functions with a single parametrized test.
 
@@ -145,7 +145,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ---
 
-### Task 04 - Mock External Dependencies
+## Task 04 - Mock External Dependencies
 
 **Scenario:** A function calls an HTTP API. Generate tests that mock the call.
 
@@ -163,7 +163,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ---
 
-### Task 05 - Generate Tests for a JavaScript Function
+## Task 05 - Generate Tests for a JavaScript Function
 
 **Scenario:** Create a Jest test suite for a form validator.
 
@@ -181,7 +181,7 @@ Continue with [Lab 007 - Refactoring](../007-Refactoring/README.md)
 
 ---
 
-### Task 06 - Improve Test Coverage
+## Task 06 - Improve Test Coverage
 
 **Scenario:** Coverage is at 65%. Ask Copilot to target the uncovered lines.
 

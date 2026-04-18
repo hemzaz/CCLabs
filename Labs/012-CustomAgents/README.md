@@ -33,7 +33,7 @@ Custom agents are defined in `.github/copilot/agents/` or `.vscode/` as `*.agent
 
 ## Lab Steps
 
-### Step 1 - Create Your First Agent
+## Step 1 - Create Your First Agent
 
 Create `.github/copilot/agents/code-reviewer.agent.md`:
 
@@ -66,7 +66,7 @@ Format your response as:
 Be direct and constructive. Cite specific line numbers.
 ```
 
-### Step 2 - Invoke Your Custom Agent
+## Step 2 - Invoke Your Custom Agent
 
 Open Copilot Chat and type `@` to see your custom agents in the picker.
 
@@ -76,7 +76,7 @@ Select **@Code Reviewer** and attach a file:
 @code-reviewer Review this authentication module for security issues.
 ```
 
-### Step 3 - Create a Database Migration Agent
+## Step 3 - Create a Database Migration Agent
 
 Create `.github/copilot/agents/db-migrator.agent.md`:
 
@@ -102,7 +102,7 @@ Output migrations in the project's existing format (check existing migration fil
 Warn loudly about any destructive operations.
 ```
 
-### Step 4 - Create a Documentation Agent
+## Step 4 - Create a Documentation Agent
 
 Create `.github/copilot/agents/doc-writer.agent.md`:
 
@@ -129,7 +129,7 @@ When generating documentation:
 Write for an audience of intermediate developers who are new to this codebase.
 ```
 
-### Step 5 - Create an Architecture Agent
+## Step 5 - Create an Architecture Agent
 
 ```markdown
 ---
@@ -188,7 +188,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ## Tasks
 
-### Task 01 - Create a Code Reviewer Agent
+## Task 01 - Create a Code Reviewer Agent
 
 **Scenario:** Build an agent that specializes in security-focused code review.
 
@@ -212,7 +212,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ---
 
-### Task 02 - Create a Documentation Writer Agent
+## Task 02 - Create a Documentation Writer Agent
 
 **Scenario:** Create an agent that generates docstrings and README files.
 
@@ -233,7 +233,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ---
 
-### Task 03 - Create a Database Migration Agent
+## Task 03 - Create a Database Migration Agent
 
 **Scenario:** An agent specialized in generating and reviewing Prisma migrations.
 
@@ -257,7 +257,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ---
 
-### Task 04 - Test Your Agent
+## Task 04 - Test Your Agent
 
 **Scenario:** Invoke your security reviewer agent and have it review a file.
 
@@ -272,7 +272,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ---
 
-### Task 05 - Create an Architect Agent
+## Task 05 - Create an Architect Agent
 
 **Scenario:** An agent that proposes system architecture and never writes implementation code.
 
@@ -294,7 +294,7 @@ Continue with [Lab 013 - Copilot Extensions](../013-CopilotExtensions/README.md)
 
 ---
 
-### Task 06 - Restrict Agent to Specific Directories
+## Task 06 - Restrict Agent to Specific Directories
 
 **Scenario:** Limit an agent to only read/write files within `src/tests/`.
 

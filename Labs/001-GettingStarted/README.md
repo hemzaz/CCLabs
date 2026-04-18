@@ -26,7 +26,7 @@
 
 Before installing the VS Code extension, you need an active GitHub Copilot subscription (or the free tier) on your GitHub account.
 
-### Option A - Free Plan (GitHub Copilot Free)
+## Option A - Free Plan (GitHub Copilot Free)
 
 **GitHub Copilot Free** is available to any GitHub personal account at no cost. It gives you access to core AI coding features with a monthly usage quota - a great way to get started without a paid subscription.
 
@@ -60,7 +60,7 @@ Before installing the VS Code extension, you need an active GitHub Copilot subsc
 
 ---
 
-### Option B - Copilot Pro / Business / Enterprise
+## Option B - Copilot Pro / Business / Enterprise
 
 If your organization provides a Copilot subscription, you may already have access. Verify at:
 
@@ -75,7 +75,7 @@ If your organization provides a Copilot subscription, you may already have acces
 
 ## Lab Steps
 
-### Step 1 - Install the GitHub Copilot Extension
+## Step 1 - Install the GitHub Copilot Extension
 
 1. Open VS Code
 2. Go to the **Extensions** view (`Ctrl+Shift+X` / `Cmd+Shift+X`)
@@ -86,13 +86,13 @@ If your organization provides a Copilot subscription, you may already have acces
 
     Make sure you install the **GitHub Copilot** extension (not just GitHub Copilot Chat).
 
-### Step 2 - Sign In to GitHub
+## Step 2 - Sign In to GitHub
 
 1. After installation, you will be prompted to sign in to GitHub
 2. Click **Sign in to GitHub** and follow the OAuth flow
 3. Authorize VS Code to use your GitHub Copilot subscription
 
-### Step 3 - Verify the Installation
+## Step 3 - Verify the Installation
 
 1. Open a new file (e.g., `hello.py`)
 2. Start typing a function and observe Ghost Text appearing:
@@ -104,7 +104,7 @@ def greet(
 
 3. Copilot should suggest a completion - press `Tab` to accept it
 
-### Step 4 - Explore Suggestions
+## Step 4 - Explore Suggestions
 
 Try the following in your file and observe how Copilot responds:
 
@@ -129,7 +129,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ## Tasks
 
-### Task 01 - Install the Copilot Extension
+## Task 01 - Install the Copilot Extension
 
 **Scenario:** You have a fresh VS Code install with no Copilot extension. Set it up from scratch.
 
@@ -145,7 +145,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ---
 
-### Task 02 - Verify Ghost Text is Working
+## Task 02 - Verify Ghost Text is Working
 
 **Scenario:** After installation, confirm Copilot inline suggestions are active.
 
@@ -161,7 +161,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ---
 
-### Task 03 - Cycle Through Suggestions
+## Task 03 - Cycle Through Suggestions
 
 **Scenario:** Copilot generates multiple completion options. Practice navigating them.
 
@@ -177,7 +177,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ---
 
-### Task 04 - Reject a Suggestion
+## Task 04 - Reject a Suggestion
 
 **Scenario:** Copilot suggests something you don't want. Dismiss it without inserting.
 
@@ -192,7 +192,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ---
 
-### Task 05 - Use a Comment to Guide Copilot
+## Task 05 - Use a Comment to Guide Copilot
 
 **Scenario:** Write a comment describing a function before writing any code, let Copilot generate the implementation.
 
@@ -214,7 +214,7 @@ Continue with [Lab 002 - Code Completion](../002-CodeCompletion/README.md)
 
 ---
 
-### Task 06 - Disable Copilot for a Specific Language
+## Task 06 - Disable Copilot for a Specific Language
 
 **Scenario:** You want Copilot active for Python but disabled for Markdown files.
 

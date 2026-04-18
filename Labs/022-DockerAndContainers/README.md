@@ -24,7 +24,7 @@
 
 ## Lab Steps
 
-### Step 1 - Generate an Optimized Dockerfile
+## Step 1 - Generate an Optimized Dockerfile
 
 ```
 Create a production-optimized Dockerfile for a Node.js 20 Express API with:
@@ -50,7 +50,7 @@ FROM node:20-alpine AS production
 ...
 ```
 
-### Step 2 - Optimize an Existing Dockerfile
+## Step 2 - Optimize an Existing Dockerfile
 
 Paste this bloated Dockerfile:
 
@@ -76,7 +76,7 @@ and poor layer caching. Rewrite it following best practices:
 - Use .dockerignore
 ```
 
-### Step 3 - Create a Docker Compose Stack
+## Step 3 - Create a Docker Compose Stack
 
 ```
 Write a Docker Compose file for a full-stack application with:
@@ -94,7 +94,7 @@ Include:
 - A separate `docker-compose.dev.yml` override for development
 ```
 
-### Step 4 - Debug Container Issues
+## Step 4 - Debug Container Issues
 
 ```
 My Docker container keeps restarting. Here's the output of `docker logs myapp`:
@@ -115,7 +115,7 @@ Here's my docker-compose.yml:
 What's wrong with the networking configuration?
 ```
 
-### Step 5 - Write a .dockerignore File
+## Step 5 - Write a .dockerignore File
 
 ```
 #file:package.json
@@ -126,7 +126,7 @@ Exclude everything that shouldn't be in the build context:
 dev dependencies, test files, documentation, local configs, etc.
 ```
 
-### Step 6 - Convert Compose to Kubernetes
+## Step 6 - Convert Compose to Kubernetes
 
 ```
 #file:docker-compose.yml
@@ -141,7 +141,7 @@ Convert this Docker Compose file to Kubernetes manifests:
 Generate separate YAML files per resource.
 ```
 
-### Step 7 - Scan for Container Security Issues
+## Step 7 - Scan for Container Security Issues
 
 ```
 #file:Dockerfile
@@ -183,7 +183,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ## Tasks
 
-### Task 01 - Generate an Optimized Dockerfile
+## Task 01 - Generate an Optimized Dockerfile
 
 **Scenario:** Create a production Dockerfile for a Node.js app with multi-stage build.
 
@@ -201,7 +201,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ---
 
-### Task 02 - Improve an Existing Dockerfile
+## Task 02 - Improve an Existing Dockerfile
 
 **Scenario:** Optimize a bloated Dockerfile that uses Ubuntu as a base.
 
@@ -224,7 +224,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ---
 
-### Task 03 - Write a Docker Compose Stack
+## Task 03 - Write a Docker Compose Stack
 
 **Scenario:** Generate a Compose file for a full-stack app with a database and cache.
 
@@ -243,7 +243,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ---
 
-### Task 04 - Debug Container Networking
+## Task 04 - Debug Container Networking
 
 **Scenario:** Two containers can't communicate. Diagnose the issue using Copilot.
 
@@ -262,7 +262,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ---
 
-### Task 05 - Generate a .dockerignore File
+## Task 05 - Generate a .dockerignore File
 
 **Scenario:** Speed up builds by excluding files that don't belong in the Docker context.
 
@@ -280,7 +280,7 @@ Continue with [Lab 023 - CI Workflows](../023-CIWorkflows/README.md)
 
 ---
 
-### Task 06 - Scan a Dockerfile for Security Issues
+## Task 06 - Scan a Dockerfile for Security Issues
 
 **Scenario:** Review a Dockerfile for common security vulnerabilities.
 

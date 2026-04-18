@@ -23,7 +23,7 @@
 
 ## Lab Steps
 
-### Step 1 - Explain a Stack Trace
+## Step 1 - Explain a Stack Trace
 
 Run your application and let it crash. Then in Copilot Chat:
 
@@ -42,7 +42,7 @@ TypeError: Cannot read properties of undefined (reading 'email')
     at async AuthController.register (/app/controllers/AuthController.ts:23:5)
 ```
 
-### Step 2 - Fix Errors with `/fix`
+## Step 2 - Fix Errors with `/fix`
 
 Select the problematic code and use the `/fix` slash command:
 
@@ -50,7 +50,7 @@ Select the problematic code and use the `/fix` slash command:
 2. Use Copilot Chat: `/fix`
 3. Copilot explains the issue and provides a corrected version
 
-### Step 3 - Debug Logical Errors
+## Step 3 - Debug Logical Errors
 
 For bugs where the code runs but produces wrong output:
 
@@ -71,7 +71,7 @@ For input [2, 4, 6], it returns 5.0 instead of 4.0.
 Identify the bug and fix it.
 ```
 
-### Step 4 - Add Strategic Debug Logging
+## Step 4 - Add Strategic Debug Logging
 
 ```
 @workspace Add debug logging to the order processing pipeline
@@ -80,7 +80,7 @@ why some orders are being silently dropped.
 Use a structured logging format with order ID, timestamp, and step name.
 ```
 
-### Step 5 - Debug Async/Promise Issues
+## Step 5 - Debug Async/Promise Issues
 
 Problematic async code:
 
@@ -99,7 +99,7 @@ This function returns a Promise object instead of the actual orders array.
 Identify all missing awaits and other async issues in this function.
 ```
 
-### Step 6 - Memory Leak Detection
+## Step 6 - Memory Leak Detection
 
 ```
 @workspace Analyze the event listener registrations in src/components/.
@@ -107,7 +107,7 @@ Are there any components that register listeners but don't remove them
 on unmount? This could cause memory leaks.
 ```
 
-### Step 7 - Use Copilot with VS Code Debugger
+## Step 7 - Use Copilot with VS Code Debugger
 
 1. Set a breakpoint in your code
 2. Start the VS Code Debugger (`F5`)
@@ -120,7 +120,7 @@ The program is paused at line 47. The variable `user` is null even though
 we checked for it two lines above. What could have caused this?
 ```
 
-### Step 8 - Race Condition Analysis
+## Step 8 - Race Condition Analysis
 
 ```
 We have an intermittent bug where users occasionally see stale data
@@ -160,7 +160,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ## Tasks
 
-### Task 01 - Explain a Stack Trace
+## Task 01 - Explain a Stack Trace
 
 **Scenario:** Your app crashed with a cryptic stack trace. Ask Copilot to explain it.
 
@@ -177,7 +177,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ---
 
-### Task 02 - Fix with `/fix`
+## Task 02 - Fix with `/fix`
 
 **Scenario:** Select error-throwing code and use `/fix` to get a corrected version.
 
@@ -192,7 +192,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ---
 
-### Task 03 - Debug a Logic Error
+## Task 03 - Debug a Logic Error
 
 **Scenario:** A function returns wrong output even though it doesn't crash.
 
@@ -211,7 +211,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ---
 
-### Task 04 - Add Debug Logging
+## Task 04 - Add Debug Logging
 
 **Scenario:** Silent failures make it hard to trace an issue. Add structured logging.
 
@@ -226,7 +226,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ---
 
-### Task 05 - Find a Missing `await`
+## Task 05 - Find a Missing `await`
 
 **Scenario:** A function returns a Promise object instead of the resolved value.
 
@@ -244,7 +244,7 @@ Continue with [Lab 020 - Database Queries](../020-DatabaseQueries/README.md)
 
 ---
 
-### Task 06 - Analyze a Race Condition
+## Task 06 - Analyze a Race Condition
 
 **Scenario:** A bug occurs 1 in 20 times - likely a race condition.
 

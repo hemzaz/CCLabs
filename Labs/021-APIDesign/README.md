@@ -23,7 +23,7 @@
 
 ## Lab Steps
 
-### Step 1 - Design from Requirements
+## Step 1 - Design from Requirements
 
 Give Copilot your requirements and let it propose the API design:
 
@@ -41,7 +41,7 @@ Return:
 4. Status codes
 ```
 
-### Step 2 - Scaffold a Full CRUD API
+## Step 2 - Scaffold a Full CRUD API
 
 ```
 @workspace Scaffold a complete Express.js REST API for a Blog resource with:
@@ -53,7 +53,7 @@ Return:
 - Routes: GET /posts, GET /posts/:id, POST /posts, PUT /posts/:id, DELETE /posts/:id
 ```
 
-### Step 3 - Generate OpenAPI Documentation
+## Step 3 - Generate OpenAPI Documentation
 
 ```
 #file:src/routes/posts.ts
@@ -64,7 +64,7 @@ Include: operation IDs, descriptions, request bodies, response schemas,
 error responses, and authentication (Bearer JWT).
 ```
 
-### Step 4 - Add API Versioning
+## Step 4 - Add API Versioning
 
 ```
 @workspace Our API is at v1. We need to add v2 of the /products endpoint
@@ -76,7 +76,7 @@ that:
 Add the v2 route, keeping v1 fully functional.
 ```
 
-### Step 5 - Design a GraphQL Schema
+## Step 5 - Design a GraphQL Schema
 
 ```
 Design a GraphQL schema for a social media app with:
@@ -89,7 +89,7 @@ Include proper input types, connection types for pagination,
 and clear field descriptions.
 ```
 
-### Step 6 - Generate Resolvers
+## Step 6 - Generate Resolvers
 
 ```
 #file:schema.graphql
@@ -99,7 +99,7 @@ using Apollo Server. Use DataLoader for batching user lookups
 to avoid the N+1 problem.
 ```
 
-### Step 7 - Generate API Tests
+## Step 7 - Generate API Tests
 
 ```
 #file:src/routes/orders.ts
@@ -113,7 +113,7 @@ Test all routes including:
 - Forbidden access (403 when non-admin accesses admin routes)
 ```
 
-### Step 8 - Generate a Postman Collection
+## Step 8 - Generate a Postman Collection
 
 ```
 #file:openapi.yaml
@@ -152,7 +152,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ## Tasks
 
-### Task 01 - Design Endpoints from Requirements
+## Task 01 - Design Endpoints from Requirements
 
 **Scenario:** Describe your domain in plain English and let Copilot propose the REST API design.
 
@@ -168,7 +168,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ---
 
-### Task 02 - Scaffold a CRUD API
+## Task 02 - Scaffold a CRUD API
 
 **Scenario:** Generate a complete Express.js CRUD API for a `Product` resource.
 
@@ -184,7 +184,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ---
 
-### Task 03 - Generate an OpenAPI Spec
+## Task 03 - Generate an OpenAPI Spec
 
 **Scenario:** Generate an OpenAPI 3.0 YAML specification from an existing route file.
 
@@ -202,7 +202,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ---
 
-### Task 04 - Design API Versioning
+## Task 04 - Design API Versioning
 
 **Scenario:** Add a v2 endpoint while keeping v1 fully functional.
 
@@ -217,7 +217,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ---
 
-### Task 05 - Design a GraphQL Schema
+## Task 05 - Design a GraphQL Schema
 
 **Scenario:** Design a GraphQL schema for a task management app.
 
@@ -235,7 +235,7 @@ Continue with [Lab 022 - Docker and Containers](../022-DockerAndContainers/READM
 
 ---
 
-### Task 06 - Generate API Tests
+## Task 06 - Generate API Tests
 
 **Scenario:** Generate a test suite for your API using supertest.
 

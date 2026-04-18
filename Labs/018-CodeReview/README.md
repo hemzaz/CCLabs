@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Pre-Submit Self Review
+## Step 1 - Pre-Submit Self Review
 
 Before opening a PR, select all changed files and ask:
 
@@ -36,7 +36,7 @@ Check for:
 5. Inconsistency with the existing code style
 ```
 
-### Step 2 - Enable Copilot Code Review on GitHub
+## Step 2 - Enable Copilot Code Review on GitHub
 
 1. Go to your repository settings on GitHub.com
 2. Navigate to **Code and automation** → **Code review**
@@ -49,7 +49,7 @@ Now Copilot will automatically review every PR and leave comments on:
 - Performance issues
 - Style inconsistencies
 
-### Step 3 - Review for Specific Concerns
+## Step 3 - Review for Specific Concerns
 
 **Performance review:**
 
@@ -75,7 +75,7 @@ Check for: missing aria labels, keyboard navigation, color contrast, and
 semantic HTML usage.
 ```
 
-### Step 4 - Create a Review Checklist Agent
+## Step 4 - Create a Review Checklist Agent
 
 Create `.github/copilot/agents/reviewer.agent.md`:
 
@@ -114,7 +114,7 @@ You are a meticulous code reviewer. For every review:
 Report issues as: [SEVERITY: CRITICAL/HIGH/MEDIUM/LOW] Description
 ```
 
-### Step 5 - Fix Review Comments Automatically
+## Step 5 - Fix Review Comments Automatically
 
 When you receive review feedback, paste it into Copilot Chat with the file:
 
@@ -128,7 +128,7 @@ has permissions to view this resource. Add authorization check."
 Implement this fix.
 ```
 
-### Step 6 - Review Diff Before Committing
+## Step 6 - Review Diff Before Committing
 
 ```bash
 git diff --staged
@@ -167,7 +167,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ## Tasks
 
-### Task 01 - Pre-Submit Self-Review
+## Task 01 - Pre-Submit Self-Review
 
 **Scenario:** Before creating a PR, do a self-review of your staged changes.
 
@@ -184,7 +184,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ---
 
-### Task 02 - Review for Performance Issues
+## Task 02 - Review for Performance Issues
 
 **Scenario:** Your PR adds a new database query. Check if it could slow things down.
 
@@ -205,7 +205,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ---
 
-### Task 03 - Generate Review Comments
+## Task 03 - Generate Review Comments
 
 **Scenario:** You're reviewing a teammate's PR. Use Copilot to draft your review comments.
 
@@ -224,7 +224,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ---
 
-### Task 04 - Create a Custom Reviewer Agent
+## Task 04 - Create a Custom Reviewer Agent
 
 **Scenario:** Create a `.agent.md` that does code reviews focused on your team's standards.
 
@@ -250,7 +250,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ---
 
-### Task 05 - Fix a Review Comment Automatically
+## Task 05 - Fix a Review Comment Automatically
 
 **Scenario:** A reviewer says "missing input validation on the userId parameter."
 
@@ -270,7 +270,7 @@ Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
 
 ---
 
-### Task 06 - Summarize All Review Feedback
+## Task 06 - Summarize All Review Feedback
 
 **Scenario:** You received 12 review comments. Ask Copilot to group and prioritize them.
 

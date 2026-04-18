@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Be Specific
+## Step 1 - Be Specific
 
 Vague prompts give vague results. Compare:
 
@@ -40,7 +40,7 @@ Vague prompts give vague results. Compare:
 
 Try both and compare the generated output.
 
-### Step 2 - Provide Examples (Few-Shot Prompting)
+## Step 2 - Provide Examples (Few-Shot Prompting)
 
 Show Copilot a pattern and have it continue:
 
@@ -51,7 +51,7 @@ Show Copilot a pattern and have it continue:
 def celsius_to_fahrenheit(celsius):
 ```
 
-### Step 3 - Specify Input and Output Types
+## Step 3 - Specify Input and Output Types
 
 ```typescript
 // Function that takes an array of User objects and returns
@@ -60,7 +60,7 @@ def celsius_to_fahrenheit(celsius):
 function indexUsersById(users: User[]): Map<string, User> {
 ```
 
-### Step 4 - Use Step-by-Step Instructions
+## Step 4 - Use Step-by-Step Instructions
 
 Break complex tasks into steps:
 
@@ -72,7 +72,7 @@ Break complex tasks into steps:
 def get_active_users(csv_path: str) -> list[dict]:
 ```
 
-### Step 5 - Add Constraints
+## Step 5 - Add Constraints
 
 ```javascript
 // Generate a secure random password
@@ -109,7 +109,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ## Tasks
 
-### Task 01 - Assign a Role
+## Task 01 - Assign a Role
 
 **Scenario:** Improve answer quality by starting with a role assignment.
 
@@ -126,7 +126,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ---
 
-### Task 02 - Use Input/Output Examples
+## Task 02 - Use Input/Output Examples
 
 **Scenario:** Describe a transformation with concrete examples instead of abstract requirements.
 
@@ -143,7 +143,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ---
 
-### Task 03 - Add Constraints
+## Task 03 - Add Constraints
 
 **Scenario:** Generate code under specific constraints.
 
@@ -162,7 +162,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ---
 
-### Task 04 - Iterative Refinement
+## Task 04 - Iterative Refinement
 
 **Scenario:** Start with a basic prompt and refine through follow-up messages.
 
@@ -178,7 +178,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ---
 
-### Task 05 - Vague vs Specific Prompt
+## Task 05 - Vague vs Specific Prompt
 
 **Scenario:** Experience the quality difference between under-specified and well-specified prompts.
 
@@ -199,7 +199,7 @@ Continue with [Lab 006 - Test Generation](../006-TestGeneration/README.md)
 
 ---
 
-### Task 06 - Chain of Thought Prompting
+## Task 06 - Chain of Thought Prompting
 
 **Scenario:** Ask Copilot to reason about the approach before writing code.
 

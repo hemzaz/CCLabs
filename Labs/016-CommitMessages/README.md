@@ -23,7 +23,7 @@
 
 ## Lab Steps
 
-### Step 1 - Auto-Generate Commit Messages
+## Step 1 - Auto-Generate Commit Messages
 
 1. Make some changes to files in your workspace
 2. Stage the changes (`git add`)
@@ -32,7 +32,7 @@
 
 Copilot analyzes the full diff and writes a commit message following the staged changes.
 
-### Step 2 - Conventional Commits
+## Step 2 - Conventional Commits
 
 Ask Copilot Chat to format commit messages as [Conventional Commits](https://www.conventionalcommits.org/):
 
@@ -55,7 +55,7 @@ feat(auth): add email validation to registration form
 BREAKING CHANGE: validateLegacyEmail() removed from auth utils
 ```
 
-### Step 3 - Explain a Git Diff
+## Step 3 - Explain a Git Diff
 
 Paste or pipe a diff into Copilot:
 
@@ -70,7 +70,7 @@ Explain what changed in this diff and what the impact might be:
 [paste diff here]
 ```
 
-### Step 4 - Explain Git Blame Output
+## Step 4 - Explain Git Blame Output
 
 ```
 #terminalLastCommand
@@ -79,7 +79,7 @@ Who introduced the retry logic and roughly when?
 Should any of these sections be refactored?
 ```
 
-### Step 5 - Write a Pull Request Description
+## Step 5 - Write a Pull Request Description
 
 After implementing a feature, ask:
 
@@ -93,7 +93,7 @@ The changes are in src/auth/. Write a pull request description with:
 - Related issues checklist
 ```
 
-### Step 6 - Automate with `.github/copilot-instructions.md`
+## Step 6 - Automate with `.github/copilot-instructions.md`
 
 Add commit message guidelines to your Copilot instructions file:
 
@@ -139,7 +139,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ## Tasks
 
-### Task 01 - Generate a Commit Message from Staged Diff
+## Task 01 - Generate a Commit Message from Staged Diff
 
 **Scenario:** Stage some changes and use Copilot to write the commit message.
 
@@ -154,7 +154,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ---
 
-### Task 02 - Configure Conventional Commits Format
+## Task 02 - Configure Conventional Commits Format
 
 **Scenario:** Make Copilot always generate commit messages in Conventional Commits format.
 
@@ -174,7 +174,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ---
 
-### Task 03 - Write a Commit for a Bug Fix
+## Task 03 - Write a Commit for a Bug Fix
 
 **Scenario:** You fixed a null pointer exception. Write an appropriate commit message.
 
@@ -192,7 +192,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ---
 
-### Task 04 - Write a Multi-Scope Commit Message
+## Task 04 - Write a Multi-Scope Commit Message
 
 **Scenario:** One commit touches the API, the database, and the tests.
 
@@ -207,7 +207,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ---
 
-### Task 05 - Compare AI vs Manual Commit Messages
+## Task 05 - Compare AI vs Manual Commit Messages
 
 **Scenario:** Write a manual commit message, then compare it with Copilot's version.
 
@@ -228,7 +228,7 @@ Continue with [Lab 017 - Pull Requests](../017-PullRequests/README.md)
 
 ---
 
-### Task 06 - Generate a Squash Commit Message
+## Task 06 - Generate a Squash Commit Message
 
 **Scenario:** You have 8 commits on a feature branch. Generate a single squash commit message.
 

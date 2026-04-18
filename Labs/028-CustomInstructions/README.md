@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - User-Level Instructions (VS Code Settings)
+## Step 1 - User-Level Instructions (VS Code Settings)
 
 These apply to all your conversations across all projects.
 
@@ -56,7 +56,7 @@ These apply to all your conversations across all projects.
 }
 ```
 
-### Step 2 - Repo-Level Instructions with `applyTo`
+## Step 2 - Repo-Level Instructions with `applyTo`
 
 Create instruction files that apply only to specific file patterns:
 
@@ -98,7 +98,7 @@ applyTo: "src/components/**/*.tsx"
 EOF
 ```
 
-### Step 3 - Create Reusable Prompt Files (`.prompt.md`)
+## Step 3 - Create Reusable Prompt Files (`.prompt.md`)
 
 Prompt files are saved, parameterized prompts you can invoke by name:
 
@@ -119,10 +119,10 @@ Review the selected code for:
 5. **Test coverage** - Missing test cases, untested edge cases
 
 Format your response as:
-### Summary
+## Summary
 [1-2 sentence overall assessment]
 
-### Issues Found (sorted by severity: Critical → High → Medium → Low)
+## Issues Found (sorted by severity: Critical → High → Medium → Low)
 For each issue:
 - **Severity**: Critical/High/Medium/Low
 - **Location**: [file:line]
@@ -149,7 +149,7 @@ EOF
 
 Use prompt files by typing `/` in Copilot Chat and selecting from the list.
 
-### Step 4 - Agent Instruction Files (`.agent.md`)
+## Step 4 - Agent Instruction Files (`.agent.md`)
 
 Create instruction files for agent mode:
 
@@ -167,7 +167,7 @@ When running in agent mode:
 EOF
 ```
 
-### Step 5 - Instruction Priority Order
+## Step 5 - Instruction Priority Order
 
 When multiple instructions apply, they are merged in this order:
 
@@ -178,7 +178,7 @@ When multiple instructions apply, they are merged in this order:
 | 3           | `.github/instructions/*.instructions.md` | Pattern-matched              |
 | 4           | Inline chat context                      | What you type in the prompt  |
 
-### Step 6 - Test Your Instructions
+## Step 6 - Test Your Instructions
 
 ```
 Generate a React component for a UserAvatar that shows the user's profile picture
@@ -206,7 +206,7 @@ Continue with [Lab 029 - Context Variables](../029-ContextVariables/README.md)
 
 ## Tasks
 
-### Task 01 - Add a User-Level Instruction
+## Task 01 - Add a User-Level Instruction
 
 **Scenario:** Make Copilot always add return type annotations to functions across all projects.
 
@@ -224,7 +224,7 @@ Continue with [Lab 029 - Context Variables](../029-ContextVariables/README.md)
 
 ---
 
-### Task 02 - Create a TypeScript-Specific Instruction File
+## Task 02 - Create a TypeScript-Specific Instruction File
 
 **Scenario:** Apply TypeScript conventions only to `.ts` and `.tsx` files.
 
@@ -246,7 +246,7 @@ Continue with [Lab 029 - Context Variables](../029-ContextVariables/README.md)
 
 ---
 
-### Task 03 - Create a Test File Instruction
+## Task 03 - Create a Test File Instruction
 
 **Scenario:** Apply specific testing conventions only to test files.
 
@@ -268,7 +268,7 @@ Continue with [Lab 029 - Context Variables](../029-ContextVariables/README.md)
 
 ---
 
-### Task 04 - Create a Reusable Prompt File
+## Task 04 - Create a Reusable Prompt File
 
 **Scenario:** Create a `.prompt.md` file for code review that can be re-invoked.
 
@@ -292,7 +292,7 @@ Review the selected code for: 1. Correctness and edge cases 2. Security (injecti
 
 ---
 
-### Task 05 - Understand Instruction Priority
+## Task 05 - Understand Instruction Priority
 
 **Scenario:** You have conflicting instructions - one says "use semicolons", another says "no semicolons". Which wins?
 
@@ -306,7 +306,7 @@ Review the selected code for: 1. Correctness and edge cases 2. Security (injecti
 
 ---
 
-### Task 06 - Create an Agent-Mode Instruction
+## Task 06 - Create an Agent-Mode Instruction
 
 **Scenario:** Restrict the agent from running migrations automatically.
 

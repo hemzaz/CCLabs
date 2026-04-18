@@ -24,12 +24,12 @@
 
 ## Lab Steps
 
-### Step 1 - Open Copilot Chat
+## Step 1 - Open Copilot Chat
 
 1. Click the **GitHub Copilot Chat** icon in the Activity Bar (or press `Ctrl+Alt+I` / `Cmd+I`)
 2. The Chat panel opens on the right side
 
-### Step 2 - Ask a Question
+## Step 2 - Ask a Question
 
 Try asking a general programming question:
 
@@ -43,7 +43,7 @@ Then ask something specific to your code:
 How do I read a JSON file in Python?
 ```
 
-### Step 3 - Explain Code
+## Step 3 - Explain Code
 
 1. Select a block of code in your editor
 2. Right-click and choose **Copilot > Explain This**
@@ -51,7 +51,7 @@ How do I read a JSON file in Python?
 
 Copilot will explain what the selected code does in plain English.
 
-### Step 4 - Slash Commands
+## Step 4 - Slash Commands
 
 | Command     | Description                              |
 | :---------- | :--------------------------------------- |
@@ -64,7 +64,7 @@ Copilot will explain what the selected code does in plain English.
 
 Try each command on different code snippets.
 
-### Step 5 - Context Variables
+## Step 5 - Context Variables
 
 Use `@` to include context in your chat:
 
@@ -92,7 +92,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ## Tasks
 
-### Task 01 - Explain Code
+## Task 01 - Explain Code
 
 **Scenario:** You open a one-liner you don't understand and want a plain-English explanation.
 
@@ -112,7 +112,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ---
 
-### Task 02 - Ask a Conceptual Question
+## Task 02 - Ask a Conceptual Question
 
 **Scenario:** You want to understand the difference between `==` and `is` in Python.
 
@@ -126,7 +126,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ---
 
-### Task 03 - Fix Broken Code with `/fix`
+## Task 03 - Fix Broken Code with `/fix`
 
 **Scenario:** Find and fix a syntax error on a function with a missing comma.
 
@@ -147,7 +147,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ---
 
-### Task 04 - Request a Code Example
+## Task 04 - Request a Code Example
 
 **Scenario:** You want to see how to read a CSV file without remembering the exact API.
 
@@ -161,7 +161,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ---
 
-### Task 05 - Compare Two Approaches
+## Task 05 - Compare Two Approaches
 
 **Scenario:** Decide whether to use a list comprehension vs a for loop.
 
@@ -178,7 +178,7 @@ Continue with [Lab 004 - Inline Chat](../004-InlineChat/README.md)
 
 ---
 
-### Task 06 - Diagnose an Error Message
+## Task 06 - Diagnose an Error Message
 
 **Scenario:** You get a cryptic `ValueError` and don't understand the cause.
 

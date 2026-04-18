@@ -22,14 +22,14 @@
 
 ## Lab Steps
 
-### Step 1 - Create Your Instructions File
+## Step 1 - Create Your Instructions File
 
 ```bash
 mkdir -p .github
 touch .github/copilot-instructions.md
 ```
 
-### Step 2 - Write Your First Instructions File
+## Step 2 - Write Your First Instructions File
 
 Here is a well-structured example for a full-stack TypeScript project:
 
@@ -94,14 +94,14 @@ Message queue: BullMQ
 - Test database: use `@testcontainers/postgresql` for integration tests
 ```
 
-### Step 3 - Add Domain Knowledge Sections
+## Step 3 - Add Domain Knowledge Sections
 
 Effective knowledge bases include:
 
 ````markdown
 ## Known Patterns
 
-### Creating a Service Method
+## Creating a Service Method
 
 All service methods follow this pattern:
 
@@ -118,14 +118,14 @@ async methodName(input: ValidatedInput): Promise<Result<Output, AppError>> {
 ```
 ````
 
-### Database Queries
+## Database Queries
 
 Always use Prisma client from `@repo/db`. Never import a second Prisma client.
 Use `db.tenant` scope for all tenant queries.
 
 ````
 
-### Step 4 - Use Per-File Instructions
+## Step 4 - Use Per-File Instructions
 
 For directory-level overrides, create `.instructions.md` files in subdirectories:
 
@@ -142,7 +142,7 @@ All service files in this directory:
 EOF
 ````
 
-### Step 5 - What to Include vs Exclude
+## Step 5 - What to Include vs Exclude
 
 **Include:**
 
@@ -161,7 +161,7 @@ EOF
 - Content that applies to only one file (use inline comments instead)
 - Very long documents (under 2,000 words is ideal)
 
-### Step 6 - Verify Instructions are Active
+## Step 6 - Verify Instructions are Active
 
 After saving, in Copilot Chat:
 
@@ -196,7 +196,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ## Tasks
 
-### Task 01 - Create the Instructions File
+## Task 01 - Create the Instructions File
 
 **Scenario:** Create `.github/copilot-instructions.md` with your project's tech stack.
 
@@ -220,7 +220,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ---
 
-### Task 02 - Add Coding Standards
+## Task 02 - Add Coding Standards
 
 **Scenario:** Ensure Copilot always follows your team's coding conventions.
 
@@ -240,7 +240,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ---
 
-### Task 03 - Add Domain Vocabulary
+## Task 03 - Add Domain Vocabulary
 
 **Scenario:** Your app has domain-specific terms that differ from everyday language.
 
@@ -260,7 +260,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ---
 
-### Task 04 - Add API Conventions
+## Task 04 - Add API Conventions
 
 **Scenario:** Ensure consistent API design across all generated endpoints.
 
@@ -280,7 +280,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ---
 
-### Task 05 - Verify Instructions are Active
+## Task 05 - Verify Instructions are Active
 
 **Scenario:** Confirm Copilot is reading your instructions file.
 
@@ -295,7 +295,7 @@ Continue with [Lab 028 - Custom Instructions](../028-CustomInstructions/README.m
 
 ---
 
-### Task 06 - Add Common Code Patterns
+## Task 06 - Add Common Code Patterns
 
 **Scenario:** Document the patterns Copilot should follow when generating service methods.
 

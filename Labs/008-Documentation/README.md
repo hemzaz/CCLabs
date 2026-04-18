@@ -21,7 +21,7 @@
 
 ## Lab Steps
 
-### Step 1 - Generate Docstrings (Python)
+## Step 1 - Generate Docstrings (Python)
 
 Given this function:
 
@@ -44,7 +44,7 @@ Select it and use `/doc` in Chat, or place your cursor above the function and ty
 
 Copilot will auto-complete the docstring.
 
-### Step 2 - Generate JSDoc (JavaScript/TypeScript)
+## Step 2 - Generate JSDoc (JavaScript/TypeScript)
 
 ```typescript
 function calculateCompoundInterest(
@@ -59,7 +59,7 @@ function calculateCompoundInterest(
 
 Place your cursor above the function and type `/**` - Copilot will generate a complete JSDoc comment.
 
-### Step 3 - Add Inline Comments
+## Step 3 - Add Inline Comments
 
 Select a complex piece of code and ask:
 
@@ -67,7 +67,7 @@ Select a complex piece of code and ask:
 Add clear inline comments to explain what each step of this algorithm does.
 ```
 
-### Step 4 - Generate a README
+## Step 4 - Generate a README
 
 Open Copilot Chat and type:
 
@@ -76,7 +76,7 @@ Open Copilot Chat and type:
 Prerequisites, Installation, Usage, and Contributing.
 ```
 
-### Step 5 - Document an API
+## Step 5 - Document an API
 
 Given a REST controller, ask:
 
@@ -98,7 +98,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ## Tasks
 
-### Task 01 - Generate a Docstring
+## Task 01 - Generate a Docstring
 
 **Scenario:** Add a complete docstring to an undocumented function.
 
@@ -112,7 +112,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ---
 
-### Task 02 - Generate a README
+## Task 02 - Generate a README
 
 **Scenario:** Your project has no README. Generate one from the codebase.
 
@@ -131,7 +131,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ---
 
-### Task 03 - Document an API Endpoint
+## Task 03 - Document an API Endpoint
 
 **Scenario:** Add JSDoc comments to a REST route handler.
 
@@ -151,7 +151,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ---
 
-### Task 04 - Generate a CHANGELOG Entry
+## Task 04 - Generate a CHANGELOG Entry
 
 **Scenario:** Format 5 merged PR descriptions as a proper CHANGELOG entry.
 
@@ -172,7 +172,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ---
 
-### Task 05 - Add Inline Comments to an Algorithm
+## Task 05 - Add Inline Comments to an Algorithm
 
 **Scenario:** A complex sorting algorithm has no inline comments.
 
@@ -189,7 +189,7 @@ Continue with [Lab 009 - Security](../009-Security/README.md)
 
 ---
 
-### Task 06 - Generate a CONTRIBUTING.md
+## Task 06 - Generate a CONTRIBUTING.md
 
 **Scenario:** New contributors don't know how to submit PRs or set up the project.
 

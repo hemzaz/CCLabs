@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Generate Regex from Description
+## Step 1 - Generate Regex from Description
 
 Instead of writing regex manually, describe what you need:
 
@@ -43,7 +43,7 @@ Write a regex to extract all URLs from a text block, including:
 - Do NOT match URLs inside HTML attribute values like href="..."
 ```
 
-### Step 2 - Explain Existing Regex
+## Step 2 - Explain Existing Regex
 
 Paste a cryptic pattern:
 
@@ -52,7 +52,7 @@ Explain this regex pattern step by step:
 ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
 ```
 
-### Step 3 - Log File Parser
+## Step 3 - Log File Parser
 
 ```
 Write a Python function to parse Apache access log lines into structured data.
@@ -64,7 +64,7 @@ Return a dict with: ip, user, timestamp (as datetime), method, path,
 http_version, status_code, bytes_sent
 ```
 
-### Step 4 - Build a Config File Parser
+## Step 4 - Build a Config File Parser
 
 ```
 Write a parser for this custom config format:
@@ -87,7 +87,7 @@ Parse it into a nested Python dict. Support comments (lines starting with #),
 sections ([name]), and key=value pairs. Strip whitespace around keys and values.
 ```
 
-### Step 5 - CSV/TSV Data Transformation
+## Step 5 - CSV/TSV Data Transformation
 
 ```
 Write a Python script to transform this CSV data:
@@ -99,7 +99,7 @@ Write a Python script to transform this CSV data:
   total revenue
 ```
 
-### Step 6 - JSON Log Analyzer
+## Step 6 - JSON Log Analyzer
 
 ```
 Write a script that:
@@ -111,7 +111,7 @@ Write a script that:
    sample message
 ```
 
-### Step 7 - Markdown to HTML Converter
+## Step 7 - Markdown to HTML Converter
 
 ````
 Write a simple Markdown to HTML converter (without using a library) that handles:
@@ -138,7 +138,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ## Tasks
 
-### Task 01 - Generate a Regex from Description
+## Task 01 - Generate a Regex from Description
 
 **Scenario:** Generate a pattern to match valid IPv4 addresses.
 
@@ -155,7 +155,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ---
 
-### Task 02 - Explain a Cryptic Regex
+## Task 02 - Explain a Cryptic Regex
 
 **Scenario:** You inherit a complex password-validation regex. Ask Copilot to explain it.
 
@@ -169,7 +169,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ---
 
-### Task 03 - Parse a Log File
+## Task 03 - Parse a Log File
 
 **Scenario:** Parse Apache access log lines into structured Python dicts.
 
@@ -186,7 +186,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ---
 
-### Task 04 - Build a Config File Parser
+## Task 04 - Build a Config File Parser
 
 **Scenario:** Parse an INI-style config file into a nested Python dictionary.
 
@@ -211,7 +211,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ---
 
-### Task 05 - Transform CSV Data
+## Task 05 - Transform CSV Data
 
 **Scenario:** Clean and enrich CSV data: validate emails, convert dates, add calculated columns.
 
@@ -230,7 +230,7 @@ Continue with [Lab 025 - Shell Scripting](../025-ShellScripting/README.md)
 
 ---
 
-### Task 06 - Explain an `awk` Command
+## Task 06 - Explain an `awk` Command
 
 **Scenario:** Understand a complex awk one-liner for log analysis.
 

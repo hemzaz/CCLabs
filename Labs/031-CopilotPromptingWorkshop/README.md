@@ -1,10 +1,10 @@
-# 031 – Copilot Prompting Workshop
+# 031 - Copilot Prompting Workshop
 
 ## Overview
 
 Welcome to the **Copilot Prompting Workshop**, a comprehensive 13-section learning module designed to take you from GitHub Copilot basics to advanced customization and prompt engineering. This workshop is structured as a progressive learning path that builds upon itself, starting with setup and foundational concepts, and advancing through powerful features like Agent Mode, custom instructions, and prompt engineering.
 
-### What You'll Learn
+## What You'll Learn
 
 Throughout this workshop, you'll master:
 
@@ -13,7 +13,7 @@ Throughout this workshop, you'll master:
 - **Customization**: Custom instructions, reusable prompts, and custom agents
 - **Best Practices**: Effective prompt engineering and code generation strategies
 
-### Prerequisites
+## Prerequisites
 
 - VS Code or compatible IDE with GitHub Copilot installed
 - Basic Python knowledge
@@ -24,32 +24,32 @@ Throughout this workshop, you'll master:
 
 ## Table of Contents
 
-1. [Section 1 – Setup](#section-1--setup)
-2. [Section 2 – Inline Suggestions](#section-2--inline-suggestions)
-3. [Section 3 – Inline Chat](#section-3--inline-chat)
-4. [Section 4 – Chat](#section-4--chat)
-5. [Section 5 – Built-in Prompts](#section-5--built-in-prompts)
-6. [Section 6 – Plan Mode](#section-6--plan-mode)
-7. [Section 7 – Agent Mode (Part 1)](#section-7--agent-mode-part-1)
-8. [Section 8 – Building a CLI with Agent](#section-8--building-a-cli-with-agent)
-9. [Section 9 – Custom Instructions](#section-9--custom-instructions)
-10. [Section 10 – Advanced Instructions](#section-10--advanced-instructions)
-11. [Section 11 – Reusable Prompts](#section-11--reusable-prompts)
-12. [Section 12 – Custom Agents & Chat Extensions](#section-12--custom-agents--chat-extensions)
-13. [Section 13 – Custom Prompts & Prompt Engineering](#section-13--custom-prompts--prompt-engineering)
+1. [Section 1 - Setup](#section-1--setup)
+2. [Section 2 - Inline Suggestions](#section-2--inline-suggestions)
+3. [Section 3 - Inline Chat](#section-3--inline-chat)
+4. [Section 4 - Chat](#section-4--chat)
+5. [Section 5 - Built-in Prompts](#section-5--built-in-prompts)
+6. [Section 6 - Plan Mode](#section-6--plan-mode)
+7. [Section 7 - Agent Mode (Part 1)](#section-7--agent-mode-part-1)
+8. [Section 8 - Building a CLI with Agent](#section-8--building-a-cli-with-agent)
+9. [Section 9 - Custom Instructions](#section-9--custom-instructions)
+10. [Section 10 - Advanced Instructions](#section-10--advanced-instructions)
+11. [Section 11 - Reusable Prompts](#section-11--reusable-prompts)
+12. [Section 12 - Custom Agents & Chat Extensions](#section-12--custom-agents--chat-extensions)
+13. [Section 13 - Custom Prompts & Prompt Engineering](#section-13--custom-prompts--prompt-engineering)
 
 ---
 
-## Section 1 – Setup
+## Section 1 - Setup
 
 In this section, we will guide you through the initial setup required to get started with the Copilot Prompting Workshop.
 
-### 01 - Create Workshop Directory
+## 01 - Create Workshop Directory
 
 - Open your VS Code and create new directory named `Copilot-Prompts-Workshop`.
 - Open the created directory in VS Code.
 
-### 02 - Create Virtual Environment
+## 02 - Create Virtual Environment
 
 - The virtual environment will help us manage dependencies for the workshop.
 - Run the following command in your terminal to create a virtual environment named `venv`
@@ -58,7 +58,7 @@ In this section, we will guide you through the initial setup required to get sta
   python -m venv .venv
   ```
 
-### 03 - Activate the venv
+## 03 - Activate the venv
 
 === "Windows (cmd)"
 `cmd
@@ -88,7 +88,7 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-### 04 - Create Project Structure
+## 04 - Create Project Structure
 
 - Create a new directory named `calculator` in your workshop folder.
 
@@ -111,7 +111,7 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-### 05 - Install Required Extensions
+## 05 - Install Required Extensions
 
 - Install the following Python Packages:
 
@@ -126,7 +126,7 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-### 06 - Optional .github folders
+## 06 - Optional .github folders
 
 - (Optional) Create a `.github` folder in the root of your project directory.
 - The `.github` folder is a special directory used to store configuration files and templates that are specific to GitHub's platform features.
@@ -160,9 +160,9 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-## Section 2 – Inline Suggestions
+## Section 2 - Inline Suggestions
 
-### 01 - Single Inline Suggestion
+## 01 - Single Inline Suggestion
 
 - In this step, we will use `GitHub Copilot` to help us add a new function to our calculator.
 
@@ -171,8 +171,8 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
   !!! tip "Using GitHub Copilot to add subtract function" - Place your cursor below the `add` function. - Type a comment describing the function you want to create:
   `python
-          # Add function to subtract two numbers
-          ` - Wait for `GitHub Copilot` to suggest the implementation of the `subtract` function. - Accept the suggestion by pressing `Tab` or `Enter`.
+        # Add function to subtract two numbers
+        ` - Wait for `GitHub Copilot` to suggest the implementation of the `subtract` function. - Accept the suggestion by pressing `Tab` or `Enter`.
 
 * After adding the function, your `calculator.py` should look like this:
 
@@ -189,7 +189,7 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-### 02 - Multiple Inline Suggestion
+## 02 - Multiple Inline Suggestion
 
 - Now, based upon what we used above, add 2 more methods for multiply and divide.
 
@@ -201,9 +201,9 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
   _ Place your cursor below the `subtract` function.
   _ Type a comment describing the function you want to create:
   `python
-          # Add function to multiply two numbers
-          # Add function to divide two numbers
-          `
+        # Add function to multiply two numbers
+        # Add function to divide two numbers
+        `
   _ Wait for `GitHub Copilot` to suggest the implementation of the `multiply` and `divide` functions.
   _ Accept the suggestion by pressing `Tab` or `Enter`.
 
@@ -236,7 +236,7 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
 
 ---
 
-### 03 - Contextual Suggestions
+## 03 - Contextual Suggestions
 
 - GitHub Copilot understands the context of your code. Since we are building a calculator with arithmetic operations, it can anticipate other common mathematical functions.
 
@@ -247,13 +247,13 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
   !!! tip "Adding power function"
   Type:
   `python
-          def power
-          `
+        def power
+        `
   _ Copilot will likely suggest:
   `python
-          def power(a, b):
-              return a ** b
-          `
+        def power(a, b):
+            return a ** b
+        `
   _ Accept the suggestion.
 
 - Now, let's try to add a square root function.
@@ -262,19 +262,19 @@ In this section, you will set up the basic code skeleton for the Copilot Prompti
   !!! tip "Adding square root function"
   _ Type:
   `python
-          def sq
-          `
+        def sq
+        `
   _ Copilot should suggest a square root implementation.
   _ Note that it might suggest importing `math` or using `** 0.5`.
   _ If it suggests `math.sqrt`, make sure to add `import math` at the top of the file if it's not there, or let Copilot handle it.
 
 ---
 
-## Section 3 – Inline Chat
+## Section 3 - Inline Chat
 
 In this section, we will explore the **Inline Chat** feature of GitHub Copilot.
 
-### Overview
+## Overview
 
 - Inline Chat allows you to ask Copilot to generate code, refactor existing code, or explain code directly within the editor, without switching to a separate chat window.
 - This feature enhances productivity by providing context-aware assistance right where you need it.
@@ -290,7 +290,7 @@ In this section, we will explore the **Inline Chat** feature of GitHub Copilot.
 
 ---
 
-### Steps to Use Inline Chat
+## Steps to Use Inline Chat
 
 #### 01. Open Inline Chat:
 
@@ -417,11 +417,11 @@ In this section, we will explore the **Inline Chat** feature of GitHub Copilot.
 
 ---
 
-## Section 4 – Chat
+## Section 4 - Chat
 
 In this section we will write prompts in the chat asking it to create main python code which will test our calculator.
 
-### Overview
+## Overview
 
 - The chat feature allows you to have a more interactive experience with GitHub Copilot
 - `GitHub Copilot Chat`, enabling you to `ask` questions, `request` code snippets, and much more.
@@ -437,7 +437,7 @@ In this section we will write prompts in the chat asking it to create main pytho
 
 ---
 
-### Steps to Use Chat
+## Steps to Use Chat
 
 #### 01. Open Chat:
 
@@ -595,13 +595,13 @@ In this section we will write prompts in the chat asking it to create main pytho
 
 ---
 
-## Section 5 – Built-in Prompts
+## Section 5 - Built-in Prompts
 
 In this section, we will explore how to use `GitHub Copilot's` built-in prompts to upgrade and maintain our calculator code. Those built-in prompts help you quickly generate explanations, documentation, and tests for your code. Those commands are available in both Chat and Inline Chat modes and known as `Slash commands`.
 
 ---
 
-### Overview
+## Overview
 
 - GitHub Copilot provides several slash commands that act as shortcuts for common tasks:
 
@@ -619,7 +619,7 @@ In this section, we will explore how to use `GitHub Copilot's` built-in prompts 
 
 ---
 
-### Exercises
+## Exercises
 
 #### 1. Explain Code
 
@@ -643,7 +643,7 @@ In this section, we will explore how to use `GitHub Copilot's` built-in prompts 
 
 ---
 
-## Section 6 – Plan Mode
+## Section 6 - Plan Mode
 
 In this section, we will explore **Plan Mode**, a powerful feature that allows GitHub Copilot to **analyze complex requests** and **propose** structured plans before implementation. This is particularly useful for architectural changes, refactoring, or implementing large features.
 
@@ -651,7 +651,7 @@ In this section, we will explore **Plan Mode**, a powerful feature that allows G
 
 !!! danger "Plan Mode" \* `Github Copilot` Plan Mode **DOES NOT** work with Agent mode, you need to update the code manually based on the plan provided.
 
-### Overview
+## Overview
 
 - **Plan Mode** enables Copilot to:
   - Analyze your entire workspace context.
@@ -669,7 +669,7 @@ In this section, we will explore **Plan Mode**, a powerful feature that allows G
 
 ---
 
-### Exercises
+## Exercises
 
 #### 1. Planning a Class-Based Calculator
 
@@ -787,11 +787,11 @@ In this section, we will explore **Plan Mode**, a powerful feature that allows G
 
 ---
 
-## Section 7 – Agent Mode (Part 1)
+## Section 7 - Agent Mode (Part 1)
 
 In this section, we will explore **Agent Mode**. `Agent Mode` can **run terminal commands**, **create and edit files**, and **iterate** on (user and automate) requests until the task is complete. `Agent Mode` is ideal for tasks like "fix all linting errors", "implement this feature and add tests", or "refactor this module".
 
-### Overview
+## Overview
 
 - **Agent Mode** enables Copilot to:
   - Execute terminal commands (run tests, list files, etc.).
@@ -803,7 +803,7 @@ In this section, we will explore **Agent Mode**. `Agent Mode` can **run terminal
 
 ---
 
-### Exercises
+## Exercises
 
 #### 1. TDD with Agent
 
@@ -903,7 +903,7 @@ In this section, we will explore **Agent Mode**. `Agent Mode` can **run terminal
 
 ---
 
-### Summary
+## Summary
 
 - You have successfully used **Agent Mode** to:
   - Detect failing tests.
@@ -913,11 +913,11 @@ In this section, we will explore **Agent Mode**. `Agent Mode` can **run terminal
 
 ---
 
-## Section 8 – Building a CLI with Agent
+## Section 8 - Building a CLI with Agent
 
 In this section, we will leverage the power of GitHub Copilot Agent to expand our calculator project. We will create a command-line interface (CLI) that interacts with our existing `Calculator` class. This demonstrates how Agent mode can understand project structure (importing existing classes) and implement new functionality (user input handling) based on high-level instructions.
 
-### Objectives
+## Objectives
 
 1.  **Use Copilot Agent** to generate a new Python script `cli_calculator.py`.
 2.  **Implement an interactive CLI** that prompts users for operations and inputs.
@@ -926,7 +926,7 @@ In this section, we will leverage the power of GitHub Copilot Agent to expand ou
 
 ---
 
-### Step-by-Step Instructions
+## Step-by-Step Instructions
 
 #### 1. Create the Prompt
 
@@ -1089,9 +1089,9 @@ Result: 8.0
 
 ---
 
-## Section 9 – Custom Instructions
+## Section 9 - Custom Instructions
 
-### 01 - Preface
+## 01 - Preface
 
 - `GitHub Copilot` allows you to provide **Custom Instructions** to tailor its responses to your specific needs, coding style, and project requirements.
 - **Custom Instructions** act as a persistent context that Copilot considers for **every chat interaction** and code generation.
@@ -1119,7 +1119,7 @@ Result: 8.0
 
 ---
 
-### 02 - User Custom Instructions (GUI)
+## 02 - User Custom Instructions (GUI)
 
 You can configure custom instructions directly through your IDE's settings. This is useful for setting your personal preferences (e.g., "Always use Python type hints", "Prefer concise answers").
 
@@ -1147,7 +1147,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 03 - Repository Instructions
+## 03 - Repository Instructions
 
 - For shared projects, it is best practice to use a `.github/copilot-instructions.md` file.
 - This ensures that all team members (and Copilot) adhere to the same project standards.
@@ -1227,7 +1227,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 04 - Hands-On
+## 04 - Hands-On
 
 #### Generating Custom Instructions
 
@@ -1238,7 +1238,8 @@ You can configure custom instructions directly through your IDE's settings. This
 - Use the following prompt to generate a comprehensive instruction file.
 
   !!! tip "Prompting Copilot"
-  ```text
+
+  ````text
   @workspace I want to create a .github/copilot-instructions.md file for this repository.
   Please analyze the current codebase (Python, Calculator project)
   and generate a comprehensive set of custom instructions.
@@ -1258,6 +1259,8 @@ You can configure custom instructions directly through your IDE's settings. This
 
         Format the instructions in Markdown and save it in the `.github/copilot-instructions.md` file.
         ```
+
+  ````
 
 - Copy the generated content into `.github/copilot-instructions.md`.
     <details>
@@ -1361,7 +1364,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 05 - Testing the Instructions
+## 05 - Testing the Instructions
 
 - Now that you've created the file, let's test if Copilot is respecting it.
   1.  Open `calculator/calculator.py`.
@@ -1382,16 +1385,16 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-## Section 10 – Advanced Instructions
+## Section 10 - Advanced Instructions
 
-### 01. Preface
+## 01. Preface
 
 - This section is all about Advanced Instructions for GitHub Copilot.
 - We will explore how to create custom instructions for specific coding styles, best practices, and project conventions.
 
 ---
 
-### 02. Objectives
+## 02. Objectives
 
 - Understand the concept of Advanced Instructions in GitHub Copilot.
 - Learn how to create and implement custom instructions for your projects.
@@ -1400,7 +1403,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 03. Advanced File-Specific Scoping
+## 03. Advanced File-Specific Scoping
 
 - In this section, we will learn how to create file-specific instructions for GitHub Copilot.
 - This allows us to tailor Copilot's behavior based on the specific files or directories in our project.
@@ -1425,19 +1428,20 @@ You can configure custom instructions directly through your IDE's settings. This
 
 #### Step-by-Step Instructions
 
-### 04. Set Up the Folder Structure
+## 04. Set Up the Folder Structure
 
 - Create a folder named `.github/instructions/` in the root of your project.
 - This folder will contain our custom instruction files.
 
-### 05. Create the Instruction File
+## 05. Create the Instruction File
 
 - Inside the `.github/instructions/` folder, create a new file named `script.instructions.md`.
 - This file will contain the specific instructions for files in the `script` directory.
 
-### 06. Add Scoped Instructions
+## 06. Add Scoped Instructions
 
 - Open the `.github/instructions/script.instructions.md` file and add the following frontmatter at the top:
+
   ```markdown
   ---
   applyTo: "script/**/*.sh"
@@ -1466,11 +1470,12 @@ You can configure custom instructions directly through your IDE's settings. This
   - All scripts must be POSIX-compliant unless Bash-specific features are required.
   - Add a usage/help function if the script takes arguments.
   ```
+
 - Save the file.
 
 ---
 
-### 07. Instructions in Action
+## 07. Instructions in Action
 
 - Now, when you will create bash scripts in the `script` directory, GitHub Copilot will follow the custom instructions defined in `script.instructions.md`.
 - Test this by creating a new bash script in the `script` directory and observing how Copilot generates code based on the specified instructions.
@@ -1531,9 +1536,9 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-## Section 11 – Reusable Prompts (.github/prompts)
+## Section 11 - Reusable Prompts (.github/prompts)
 
-### 01 - Introduction
+## 01 - Introduction
 
 - **Reusable Prompts** (also known as Prompt Files) allow you to define and share complex prompts across your team.
 - They are stored as Markdown files in a `.github/prompts` directory.
@@ -1541,7 +1546,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 02 - Setup
+## 02 - Setup
 
 - To use this feature, you need to create a specific directory structure in your repository.
 
@@ -1558,7 +1563,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 03 - Anatomy of a Prompt File
+## 03 - Anatomy of a Prompt File
 
 - A prompt file is a standard Markdown file with the `.prompt.md` extension.
 - It can contain:
@@ -1577,7 +1582,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 04 - Using Prompt Files
+## 04 - Using Prompt Files
 
 - Once you have created a prompt file, you can use it in Copilot Chat.
 - In the Chat input, type `#` followed by the name of your prompt file (e.g., `#explain-code`).
@@ -1585,7 +1590,7 @@ You can configure custom instructions directly through your IDE's settings. This
 
 ---
 
-### 05 - Hands-On: Creating a Reusable Prompt
+## 05 - Hands-On: Creating a Reusable Prompt
 
 #### Exercise 1: Create the Directory Structure
 
@@ -1643,9 +1648,9 @@ Provide your feedback in a markdown table with columns:
 
 ---
 
-## Section 12 – Custom Agents & Chat Extensions
+## Section 12 - Custom Agents & Chat Extensions
 
-### 01 - Introduction
+## 01 - Introduction
 
 - GitHub Copilot Chat can be extended using **Chat Extensions** (also known as Agents or Participants).
 - These allow you to bring your own domain knowledge, tools, and workflows directly into the Copilot Chat interface.
@@ -1653,7 +1658,7 @@ Provide your feedback in a markdown table with columns:
 
 ---
 
-### 02 - Custom Agents Types
+## 02 - Custom Agents Types
 
 There are two main approaches to creating custom agents:
 
@@ -1699,7 +1704,7 @@ There are two main approaches to creating custom agents:
 
 ---
 
-### 03 - YAML-Based Agent
+## 03 - YAML-Based Agent
 
 - YAML-based agents are defined in the `.github/agents/` folder of your repository.
 - Each agent is a single YAML file that describes its behavior, expertise, and instructions.
@@ -1718,7 +1723,7 @@ There are two main approaches to creating custom agents:
 
 ---
 
-### 04 - Example: @agent-time
+## 04 - Example: @agent-time
 
 - **Example**: **The most advanced World Time Agent** located in `.github/agents/agent-time.yml`.
 - Unique development made in **Elbit's** Secret Labs.
@@ -1832,14 +1837,13 @@ The `@agent-time` agent is designed to:
 
   1. **Use Python's datetime and zoneinfo modules:**
 
+     ```python
+     from datetime import datetime
+     from zoneinfo import ZoneInfo
 
-      ```python
-      from datetime import datetime
-      from zoneinfo import ZoneInfo
-
-      def get_city_time(timezone_name):
-          return datetime.now(ZoneInfo(timezone_name))
-      ```
+     def get_city_time(timezone_name):
+         return datetime.now(ZoneInfo(timezone_name))
+     ```
   ````
 
   !!! tip "Implementation Guidelines"
@@ -1998,6 +2002,7 @@ Let's test how well the agent follows its instructions:
    - Does it follow the code patterns in the YAML?
 
 4. **Test DST Knowledge:**
+
    ```
    @agent-time Explain daylight saving time for New York
    ```
@@ -2160,9 +2165,9 @@ examples:
 
 ---
 
-## Section 13 – Custom Prompts & Prompt Engineering
+## Section 13 - Custom Prompts & Prompt Engineering
 
-### 01 - Preface
+## 01 - Preface
 
 - While GitHub Copilot is powerful out of the box, the quality of its output is directly related to the quality of your input.
 - This skill is often called **Prompt Engineering**.
@@ -2170,7 +2175,7 @@ examples:
 
 ---
 
-### 02 - The Basics of Prompting
+## 02 - The Basics of Prompting
 
 - A good prompt provides Copilot with the **Intent** (what you want) and the **Context** (what you have).
 - Follow the **4 S's** of prompting:
@@ -2213,13 +2218,13 @@ examples:
 
 ---
 
-### Advanced Strategies
+## Advanced Strategies
 
 - To get the most out of Copilot, use these advanced techniques:
 
 ---
 
-### 03. Role Prompting (Persona)
+## 03. Role Prompting (Persona)
 
 - Tell Copilot who it should be.
 
@@ -2231,7 +2236,7 @@ examples:
 
 #### Zero-Shot / One-Shot / Few-Shot Prompting
 
-### 04. Zero-Shot Prompting
+## 04. Zero-Shot Prompting
 
 - Ask Copilot to perform a task without any examples.
 
@@ -2243,41 +2248,43 @@ examples:
 
 ---
 
-### 05. One-Shot Prompting
+## 05. One-Shot Prompting
 
 - Provide a single example to guide Copilot.
 
   !!! tip "Example One-Shot Prompt"
-  _ **Example**: "Here is a function that adds two numbers:
+  \_ **Example**: "Here is a function that adds two numbers:
   `python
-          def add(a: int, b: int) -> int:
-              return a + b
-          `
+        def add(a: int, b: int) -> int:
+            return a + b
+        `
   Now, write a function that subtracts two numbers.
-  ---
-  _ **Example**: "Here is a unit test for the `add` function:
+
+  ***
+
+  \_ **Example**: "Here is a unit test for the `add` function:
   `python
-          def test_add():
-              assert add(2, 3) == 5
-              assert add(-1, 1) == 0
-          `
+        def test_add():
+            assert add(2, 3) == 5
+            assert add(-1, 1) == 0
+        `
   Now, write a unit test for the `add` function.
 
 ---
 
-### 06. Few-Shot Prompting
+## 06. Few-Shot Prompting
 
 - Provide examples of what you want.
 
   !!! tip "Example Few-Shot Prompt"
   _ Convert these file names to snake_case:
-  _ Input: UserLogin.py -> Output: user_login.py
-  _ Input: DataManager.js -> Output: data_manager.js
-  _ Input: PageLayout.css -> Output:
+  _ Input: UserLogin.py -> Output: user*login.py
+  * Input: DataManager.js -> Output: data*manager.js
+  * Input: PageLayout.css -> Output:
 
 ---
 
-### 07. Explicit Reasoning
+## 07. Explicit Reasoning
 
 - Ask Copilot to think through the problem step-by-step.
 - Ask Copilot to explain its reasoning step-by-step.
@@ -2289,7 +2296,7 @@ examples:
 
 ---
 
-### 08. Iterative Refinement
+## 08. Iterative Refinement
 
 - Don't stop at the first answer.
 - Refine **your** prompt based on the output.
@@ -2302,7 +2309,7 @@ examples:
 
 ---
 
-### 09. Mastering Context
+## 09. Mastering Context
 
 - Copilot needs context to understand your codebase.
 - You can explicitly provide this using **Context Variables**.
@@ -2318,7 +2325,7 @@ examples:
 
 ---
 
-### 10. Hands-On: Prompt Engineering
+## 10. Hands-On: Prompt Engineering
 
 In this section, you will practice the prompt engineering techniques discussed above by creating a Python script to display dates in different countries.
 
@@ -2371,7 +2378,7 @@ In this section, you will practice the prompt engineering techniques discussed a
 
 Congratulations! You have completed the **Copilot Prompting Workshop**, a comprehensive 13-section learning module covering everything from basic setup to advanced prompt engineering and custom agents.
 
-### Key Takeaways
+## Key Takeaways
 
 1. **GitHub Copilot Features**: From inline suggestions to full Chat integration, you've learned to leverage all of Copilot's capabilities.
 2. **Advanced Workflows**: You've mastered Plan Mode, Agent Mode, and complex multi-file refactoring scenarios.
@@ -2379,7 +2386,7 @@ Congratulations! You have completed the **Copilot Prompting Workshop**, a compre
 4. **Prompt Engineering**: You've learned the art and science of crafting effective prompts that yield high-quality code generation.
 5. **Team Collaboration**: You know how to share Copilot customizations across teams through repository-level instructions and reusable prompts.
 
-### Next Steps
+## Next Steps
 
 - **Experiment**: Continue exploring Copilot with your own projects
 - **Customize**: Create custom instructions and agents for your specific domain
@@ -2387,7 +2394,7 @@ Congratulations! You have completed the **Copilot Prompting Workshop**, a compre
 - **Iterate**: Continuously refine your prompts and instructions based on results
 - **Learn**: Stay updated with new Copilot features and capabilities
 
-### Resources
+## Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 - [GitHub Copilot Chat](https://github.com/features/copilot)

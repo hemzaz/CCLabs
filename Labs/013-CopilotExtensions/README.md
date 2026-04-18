@@ -35,13 +35,13 @@
 
 ## Lab Steps
 
-### Step 1 - Browse the Copilot Extensions Marketplace
+## Step 1 - Browse the Copilot Extensions Marketplace
 
 1. Go to [github.com/marketplace?type=apps&copilot_app=true](https://github.com/marketplace?type=apps&copilot_app=true)
 2. Browse available extensions
 3. Note the categories: Monitoring, Issue Tracking, Cloud, Security, etc.
 
-### Step 2 - Install the Sentry Extension
+## Step 2 - Install the Sentry Extension
 
 1. Find **Sentry** in the Marketplace
 2. Click **Install** and authorize via GitHub OAuth
@@ -55,7 +55,7 @@
 @sentry What's the root cause of error CHECKOUT-3X2F? Give me the stack trace and affected users.
 ```
 
-### Step 3 - Install the Docker Extension
+## Step 3 - Install the Docker Extension
 
 1. Install the **Docker** extension from Marketplace
 2. Try these queries:
@@ -68,7 +68,7 @@
 @docker What's the difference between my local image and the latest published image nirgeier/myapp?
 ```
 
-### Step 4 - Using the Jira Extension
+## Step 4 - Using the Jira Extension
 
 After installing the Jira extension:
 
@@ -81,7 +81,7 @@ priority: High, assign to me, add to current sprint.
 @jira What tickets are blocking the Q2 release? List the blockers with their owners.
 ```
 
-### Step 5 - Using the Datadog Extension
+## Step 5 - Using the Datadog Extension
 
 ```
 @datadog Show memory usage for the API service over the last 24 hours.
@@ -92,7 +92,7 @@ Are there any anomalies?
 @datadog Create a monitor alert for when p99 latency exceeds 500ms on the payment service.
 ```
 
-### Step 6 - Building a Simple Copilot Extension
+## Step 6 - Building a Simple Copilot Extension
 
 A Copilot Extension is a GitHub App that responds to Copilot Chat messages.
 
@@ -156,7 +156,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ## Tasks
 
-### Task 01 - Install a Copilot Extension
+## Task 01 - Install a Copilot Extension
 
 **Scenario:** Install the Docker Copilot Extension from the VS Code Marketplace.
 
@@ -171,7 +171,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ---
 
-### Task 02 - Use the `@docker` Extension
+## Task 02 - Use the `@docker` Extension
 
 **Scenario:** Generate a Dockerfile using the Docker Copilot Extension.
 
@@ -186,7 +186,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ---
 
-### Task 03 - Understand Extension vs MCP
+## Task 03 - Understand Extension vs MCP
 
 **Scenario:** Explain to a teammate when to use a Copilot Extension vs an MCP server.
 
@@ -203,7 +203,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ---
 
-### Task 04 - Use `@github` Extension
+## Task 04 - Use `@github` Extension
 
 **Scenario:** Use the built-in `@github` extension to search issues without leaving VS Code.
 
@@ -218,7 +218,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ---
 
-### Task 05 - Install and Use the Sentry Extension
+## Task 05 - Install and Use the Sentry Extension
 
 **Scenario:** Connect Copilot to your Sentry error tracking to get AI-assisted fixes.
 
@@ -235,7 +235,7 @@ Continue with [Lab 014 - Workspace Context](../014-WorkspaceContext/README.md)
 
 ---
 
-### Task 06 - List All Active Extensions
+## Task 06 - List All Active Extensions
 
 **Scenario:** Find out which Copilot Extensions are currently active in your environment.
 

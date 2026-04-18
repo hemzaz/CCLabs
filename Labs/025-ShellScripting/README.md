@@ -22,7 +22,7 @@
 
 ## Lab Steps
 
-### Step 1 - Explain a Complex One-Liner
+## Step 1 - Explain a Complex One-Liner
 
 Ask Copilot to explain this pipeline:
 
@@ -37,7 +37,7 @@ Explain this shell command step by step. What does each part do?
 Is there a safer or more reliable way to write this?
 ```
 
-### Step 2 - Generate a Deployment Script
+## Step 2 - Generate a Deployment Script
 
 ```
 Write a production deployment bash script for a Node.js app that:
@@ -54,7 +54,7 @@ Write a production deployment bash script for a Node.js app that:
 Include set -euo pipefail, colored output, and a timestamped log file.
 ```
 
-### Step 3 - Write a Backup Script
+## Step 3 - Write a Backup Script
 
 ```
 Write a bash script that:
@@ -68,7 +68,7 @@ Write a bash script that:
 - Runs via cron (add the cron entry as a comment)
 ```
 
-### Step 4 - Debug a Script Error
+## Step 4 - Debug a Script Error
 
 ```
 #terminalLastCommand
@@ -83,7 +83,7 @@ Common errors Copilot can fix:
 - `permission denied` → missing `chmod +x`
 - Quoting issues with spaces in filenames
 
-### Step 5 - Write a System Health Check Script
+## Step 5 - Write a System Health Check Script
 
 ```
 Write a bash script that checks system health and outputs a report:
@@ -96,7 +96,7 @@ Write a bash script that checks system health and outputs a report:
 - Output: colored terminal report + JSON file for monitoring systems
 ```
 
-### Step 6 - Process Management Script
+## Step 6 - Process Management Script
 
 ```
 Write a bash script to manage a set of worker processes:
@@ -107,7 +107,7 @@ Write a bash script to manage a set of worker processes:
 - Log start/stop/restart events with timestamps
 ```
 
-### Step 7 - Explain `awk` and `sed` One-Liners
+## Step 7 - Explain `awk` and `sed` One-Liners
 
 ```
 Explain what this awk command does and rewrite it in Python for readability:
@@ -159,7 +159,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ## Tasks
 
-### Task 01 - Explain a Shell One-Liner
+## Task 01 - Explain a Shell One-Liner
 
 **Scenario:** Understand a complex pipe chain before using it in production.
 
@@ -176,7 +176,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ---
 
-### Task 02 - Write a Deployment Script
+## Task 02 - Write a Deployment Script
 
 **Scenario:** Create a bash deployment script with health checks and rollback.
 
@@ -196,7 +196,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ---
 
-### Task 03 - Create a Backup Script
+## Task 03 - Create a Backup Script
 
 **Scenario:** Generate a PostgreSQL backup script that runs via cron.
 
@@ -215,7 +215,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ---
 
-### Task 04 - Debug a Script Error
+## Task 04 - Debug a Script Error
 
 **Scenario:** A bash script fails with an unbound variable error.
 
@@ -232,7 +232,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ---
 
-### Task 05 - Write a System Health Check
+## Task 05 - Write a System Health Check
 
 **Scenario:** Create a script that monitors CPU, memory, disk, and service status.
 
@@ -249,7 +249,7 @@ Continue with [Lab 026 - Copilot in CLI](../026-CopilotInCLI/README.md)
 
 ---
 
-### Task 06 - Write an `awk` Log Analyzer
+## Task 06 - Write an `awk` Log Analyzer
 
 **Scenario:** Use awk to find the top 20 IPs from an Nginx access log.
 

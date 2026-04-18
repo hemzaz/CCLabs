@@ -41,7 +41,7 @@ Copilot ←→ MCP Client (VS Code) ←→ MCP Server ←→ External Resource
 
 ## Lab Steps
 
-### Step 1 - Enable MCP in VS Code
+## Step 1 - Enable MCP in VS Code
 
 Open your VS Code settings (`Cmd+,` / `Ctrl+,`) and enable:
 
@@ -53,7 +53,7 @@ Open your VS Code settings (`Cmd+,` / `Ctrl+,`) and enable:
 
 Or add it to your workspace `.vscode/settings.json`.
 
-### Step 2 - Configure Your First MCP Server (Filesystem)
+## Step 2 - Configure Your First MCP Server (Filesystem)
 
 Create or open `.vscode/mcp.json` in your workspace:
 
@@ -78,7 +78,7 @@ This gives Copilot the ability to read and write files in `~/Documents`.
 
     MCP servers run as local processes. They are sandboxed to what you configure - Copilot cannot access paths you haven't explicitly granted.
 
-### Step 3 - Configure the GitHub MCP Server
+## Step 3 - Configure the GitHub MCP Server
 
 ```json
 {
@@ -102,7 +102,7 @@ Now ask Copilot in Agent mode:
 @github List the last 5 open issues in this repository.
 ```
 
-### Step 4 - Configure the Fetch MCP Server
+## Step 4 - Configure the Fetch MCP Server
 
 ```json
 {
@@ -121,7 +121,7 @@ Then ask Copilot:
 Fetch the content from https://docs.github.com/en/copilot and summarize the key features.
 ```
 
-### Step 5 - Configure a PostgreSQL MCP Server
+## Step 5 - Configure a PostgreSQL MCP Server
 
 ```json
 {
@@ -144,7 +144,7 @@ Ask Copilot:
 Show me the schema of the users table and write a query to find all users who signed up in the last 30 days.
 ```
 
-### Step 6 - Verify MCP Server Status
+## Step 6 - Verify MCP Server Status
 
 Open the Copilot Chat panel → click the **Tools** icon (🔧) to see all available MCP tools and their status.
 
@@ -183,7 +183,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ## Tasks
 
-### Task 01 - Create an MCP Configuration File
+## Task 01 - Create an MCP Configuration File
 
 **Scenario:** Set up the MCP configuration for the filesystem server.
 
@@ -208,7 +208,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ---
 
-### Task 02 - Add the GitHub MCP Server
+## Task 02 - Add the GitHub MCP Server
 
 **Scenario:** Connect Copilot to your GitHub repositories via MCP.
 
@@ -232,7 +232,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ---
 
-### Task 03 - Connect to a PostgreSQL Database
+## Task 03 - Connect to a PostgreSQL Database
 
 **Scenario:** Let the agent read your database schema and query data directly.
 
@@ -251,7 +251,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ---
 
-### Task 04 - Add a Fetch/Web Search Server
+## Task 04 - Add a Fetch/Web Search Server
 
 **Scenario:** Let Copilot fetch documentation or URLs during a conversation.
 
@@ -270,7 +270,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ---
 
-### Task 05 - Verify MCP Servers Are Active
+## Task 05 - Verify MCP Servers Are Active
 
 **Scenario:** Confirm your MCP servers started successfully.
 
@@ -286,7 +286,7 @@ Continue with [Lab 012 - Custom Agents](../012-CustomAgents/README.md)
 
 ---
 
-### Task 06 - Use MCP to Audit the Codebase via GitHub
+## Task 06 - Use MCP to Audit the Codebase via GitHub
 
 **Scenario:** Use the GitHub MCP server to list all open PRs and summarize what each changes.
 

@@ -23,19 +23,19 @@
 
 ## Lab Steps
 
-### Step 1 - Install the GitHub Pull Requests Extension
+## Step 1 - Install the GitHub Pull Requests Extension
 
 1. Open Extensions (`Ctrl+Shift+X`)
 2. Search for **GitHub Pull Requests**
 3. Install and authenticate with your GitHub account
 
-### Step 2 - Open a PR in VS Code
+## Step 2 - Open a PR in VS Code
 
 1. Open the **GitHub Pull Requests** panel
 2. Click on any open PR to check it out locally
 3. Copilot now has full context of the PR diff
 
-### Step 3 - Summarize a PR
+## Step 3 - Summarize a PR
 
 With a PR checked out in VS Code, open Copilot Chat:
 
@@ -46,7 +46,7 @@ What is the intent of these changes? Are there any risks?
 
 On GitHub.com, click **Copilot** → **Summary** to get an auto-generated PR summary.
 
-### Step 4 - Address Review Comments with Copilot
+## Step 4 - Address Review Comments with Copilot
 
 When a reviewer leaves a comment like:
 
@@ -56,7 +56,7 @@ Click the **Copilot** button next to the review comment → **Suggest Fix**.
 
 Copilot will generate a code change addressing the comment, which you can apply with one click.
 
-### Step 5 - Generate a PR Template
+## Step 5 - Generate a PR Template
 
 Ask Copilot to create a PR template for your repo:
 
@@ -71,7 +71,7 @@ for a Node.js/TypeScript REST API project. Include sections for:
 - Checklist (tests pass, docs updated, reviewed security)
 ```
 
-### Step 6 - PR Description from Diff
+## Step 6 - PR Description from Diff
 
 After making changes, run:
 
@@ -91,7 +91,7 @@ Using this diff, write a PR description with:
 4. "Testing" - how to verify the changes work
 ```
 
-### Step 7 - Automate PR Quality Checks
+## Step 7 - Automate PR Quality Checks
 
 Create `.github/copilot-instructions.md`:
 
@@ -121,7 +121,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ## Tasks
 
-### Task 01 - Generate a PR Summary
+## Task 01 - Generate a PR Summary
 
 **Scenario:** You've pushed a feature branch. Generate a PR description using Copilot.
 
@@ -137,7 +137,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ---
 
-### Task 02 - Write a PR Template
+## Task 02 - Write a PR Template
 
 **Scenario:** Create a PR template that Copilot and humans will fill in consistently.
 
@@ -155,7 +155,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ---
 
-### Task 03 - Address a Review Comment In-Line
+## Task 03 - Address a Review Comment In-Line
 
 **Scenario:** A reviewer commented "this could throw a NullPointerException". Fix it with Copilot.
 
@@ -170,7 +170,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ---
 
-### Task 04 - Generate a PR Description from Commits
+## Task 04 - Generate a PR Description from Commits
 
 **Scenario:** Your 5 commits don't have great messages. Generate a PR description from the diff.
 
@@ -189,7 +189,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ---
 
-### Task 05 - Summarize a PR You're Reviewing
+## Task 05 - Summarize a PR You're Reviewing
 
 **Scenario:** You're assigned to review a large PR. Get a quick summary of what it does.
 
@@ -204,7 +204,7 @@ Continue with [Lab 018 - Code Review](../018-CodeReview/README.md)
 
 ---
 
-### Task 06 - Check for Breaking Changes
+## Task 06 - Check for Breaking Changes
 
 **Scenario:** Before approving a PR, check if it introduces any breaking API changes.
 

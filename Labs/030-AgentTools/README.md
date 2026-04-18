@@ -23,14 +23,14 @@
 
 ## Lab Steps
 
-### Step 1 - Enable Agent Mode
+## Step 1 - Enable Agent Mode
 
 1. Open Copilot Chat (`Cmd+Shift+I`)
 2. Click the mode selector at the bottom of the chat
 3. Select **Agent**
 4. You will see the tools indicator showing available tools
 
-### Step 2 - Understand Built-in Agent Tools
+## Step 2 - Understand Built-in Agent Tools
 
 The built-in agent tools include:
 
@@ -45,7 +45,7 @@ The built-in agent tools include:
 | `grep_search`      | Searches files with regex             |
 | `file_search`      | Finds files by name pattern           |
 
-### Step 3 - Tool Approval Workflow
+## Step 3 - Tool Approval Workflow
 
 By default, Copilot asks for approval before:
 
@@ -67,7 +67,7 @@ The agent will:
 4. Call `run_in_terminal` to run `tsc --noEmit` (ask for approval)
 5. Verify errors are resolved
 
-### Step 4 - Multi-Tool Chain Example
+## Step 4 - Multi-Tool Chain Example
 
 A single agent request can trigger a chain of tool calls:
 
@@ -89,7 +89,7 @@ Watch the agent:
 - Use `run_in_terminal` to run `npx prisma migrate dev`
 - Use `get_errors` to verify no TypeScript errors
 
-### Step 5 - Configure Tool Permissions
+## Step 5 - Configure Tool Permissions
 
 In `.vscode/settings.json`:
 
@@ -117,7 +117,7 @@ When in agent mode:
 - Ask before running any database migrations
 ```
 
-### Step 6 - Add MCP Tools to the Agent
+## Step 6 - Add MCP Tools to the Agent
 
 MCP servers dramatically extend what the agent can do. Configure in `.vscode/mcp.json`:
 
@@ -158,7 +158,7 @@ Create a GitHub issue for each TODO comment in the codebase.
 Label them `tech-debt`, assign to me, and link to the relevant file and line.
 ```
 
-### Step 7 - Tool Chaining Pattern: Refactor + Test + Validate
+## Step 7 - Tool Chaining Pattern: Refactor + Test + Validate
 
 ```
 Refactor the authentication system to use JWT instead of sessions:
@@ -172,7 +172,7 @@ Refactor the authentication system to use JWT instead of sessions:
 
 The agent will systematically work through each step, using `search_workspace`, `write_file`, `run_in_terminal`, and `get_errors` in sequence.
 
-### Step 8 - Monitor and Review Agent Actions
+## Step 8 - Monitor and Review Agent Actions
 
 The agent logs every tool call in the Chat panel. Review the tool call log to:
 
@@ -218,7 +218,7 @@ You have now completed all 30 labs. Congratulations!
 
 ## Tasks
 
-### Task 01 - Discover Available Tools
+## Task 01 - Discover Available Tools
 
 **Scenario:** Switch to Agent mode and list all available tools.
 
@@ -232,7 +232,7 @@ You have now completed all 30 labs. Congratulations!
 
 ---
 
-### Task 02 - Approve and Reject Tool Calls
+## Task 02 - Approve and Reject Tool Calls
 
 **Scenario:** The agent wants to run a terminal command. Approve one and reject another.
 
@@ -247,7 +247,7 @@ You have now completed all 30 labs. Congratulations!
 
 ---
 
-### Task 03 - Watch a Multi-Tool Chain
+## Task 03 - Watch a Multi-Tool Chain
 
 **Scenario:** Ask the agent to add a new endpoint and watch its tool-calling sequence.
 
@@ -263,7 +263,7 @@ You have now completed all 30 labs. Congratulations!
 
 ---
 
-### Task 04 - Constrain Agent File Access
+## Task 04 - Constrain Agent File Access
 
 **Scenario:** Prevent the agent from modifying files outside `src/tests/`.
 
@@ -283,7 +283,7 @@ You have now completed all 30 labs. Congratulations!
 
 ---
 
-### Task 05 - Extend Agent with MCP Tools
+## Task 05 - Extend Agent with MCP Tools
 
 **Scenario:** Add the GitHub MCP server so the agent can create GitHub issues.
 
@@ -300,7 +300,7 @@ You have now completed all 30 labs. Congratulations!
 
 ---
 
-### Task 06 - Iterate Until Tests Pass
+## Task 06 - Iterate Until Tests Pass
 
 **Scenario:** Let the agent make a change and keep fixing until all tests pass.
 

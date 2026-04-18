@@ -35,3 +35,33 @@ nav:
       - 028-CustomInstructions: 028-CustomInstructions/README.md
       - 029-ContextVariables: 029-ContextVariables/README.md
       - 030-AgentTools: 030-AgentTools/README.md
+      # --- Copilot Prompting Workshop (031-043) ---
+      - 031-CopilotPromptingWorkshop_01: 031-CopilotPromptingWorkshop_01/README.md
+      - 032-CopilotPromptingWorkshop_02: 032-CopilotPromptingWorkshop_02/README.md
+      - 033-CopilotPromptingWorkshop_03: 033-CopilotPromptingWorkshop_03/README.md
+      - 034-CopilotPromptingWorkshop_04: 034-CopilotPromptingWorkshop_04/README.md
+      - 035-CopilotPromptingWorkshop_05: 035-CopilotPromptingWorkshop_05/README.md
+      - 036-CopilotPromptingWorkshop_06: 036-CopilotPromptingWorkshop_06/README.md
+      - 037-CopilotPromptingWorkshop_07: 037-CopilotPromptingWorkshop_07/README.md
+      - 038-CopilotPromptingWorkshop_08: 038-CopilotPromptingWorkshop_08/README.md
+      - 039-CopilotPromptingWorkshop_09: 039-CopilotPromptingWorkshop_09/README.md
+      - 040-CopilotPromptingWorkshop_10: 040-CopilotPromptingWorkshop_10/README.md
+      - 041-CopilotPromptingWorkshop_11: 041-CopilotPromptingWorkshop_11/README.md
+      - 042-CopilotPromptingWorkshop_12: 042-CopilotPromptingWorkshop_12/README.md
+      - 043-CopilotPromptingWorkshop_13: 043-CopilotPromptingWorkshop_13/README.md
+      # --- Tasks ---
+      - Tasks:
+          - Tasks/index.md
+          - Tasks/Lab-01.md
+          - Tasks/Lab-02.md
+          - Tasks/Lab-03.md
+          - Tasks/Lab-04.md
+          - Tasks/Lab-05.md
+          - Tasks/Lab-06.md
+          - Tasks/Lab-07.md
+          - Tasks/Lab-08.md
+          - Tasks/Lab-09.md
+          - Tasks/Lab-10.md
+          - Tasks/Lab-11.md
+          - Tasks/Lab-12.md
+          - Tasks/Lab-13.md

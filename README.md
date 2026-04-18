@@ -61,6 +61,24 @@
 | [029 - Context Variables](Labs/029-ContextVariables/)        | Master every `#file`, `#editor`, `#selection`, `@workspace` variable.            |
 | [030 - Agent Tools](Labs/030-AgentTools/)                    | Understand agent tool calling and how to chain multi-step autonomous tasks.      |
 
+## Copilot Prompting Workshop (031-043)
+
+| Lab | Description |
+|:---|:---|
+| [031 - Setup](Labs/031-CopilotPromptingWorkshop_01/) | Initialize your prompting workshop environment with Python and virtual environment. |
+| [032 - Inline Suggestions](Labs/032-CopilotPromptingWorkshop_02/) | Master inline code suggestions and ghost text recommendations. |
+| [033 - Inline Chat](Labs/033-CopilotPromptingWorkshop_03/) | Use inline chat for real-time coding assistance and explanations. |
+| [034 - Chat Features](Labs/034-CopilotPromptingWorkshop_04/) | Explore the Chat panel for complex queries and multi-turn conversations. |
+| [035 - Built-in Prompts](Labs/035-CopilotPromptingWorkshop_05/) | Learn Copilot's built-in prompting capabilities and templates. |
+| [036 - Plan Mode](Labs/036-CopilotPromptingWorkshop_06/) | Use Plan Mode to outline and organize implementation strategies. |
+| [037 - Agent Mode Part 1](Labs/037-CopilotPromptingWorkshop_07/) | Introduction to Agent Mode for autonomous task execution. |
+| [038 - Agent Mode Part 2](Labs/038-CopilotPromptingWorkshop_08/) | Advanced Agent Mode techniques and multi-step workflows. |
+| [039 - Custom Instructions](Labs/039-CopilotPromptingWorkshop_09/) | Write effective custom instructions for consistent behavior. |
+| [040 - Advanced Instructions](Labs/040-CopilotPromptingWorkshop_10/) | Master advanced instruction patterns and context control. |
+| [041 - Custom Prompts](Labs/041-CopilotPromptingWorkshop_11/) | Create reusable custom prompts for specific workflows. |
+| [042 - Custom Agents](Labs/042-CopilotPromptingWorkshop_12/) | Build specialized agents with custom instructions and behaviors. |
+| [043 - Custom Prompts Advanced](Labs/043-CopilotPromptingWorkshop_13/) | Advanced patterns for prompt optimization and reusability. |
+
 ---
 
 Open VS Code in the repository root and start with `Labs/001-GettingStarted/`.

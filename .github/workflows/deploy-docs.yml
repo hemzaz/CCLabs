@@ -1,11 +1,10 @@
 # GitHub Pages deployment workflow
 name: Deploy MkDocs to GitHub Pages
 
+# DISABLED: Use 'vercel --prod' manually for deployment
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_dispatch: null
+  # Automatic push trigger disabled
 
 permissions:
   contents: read

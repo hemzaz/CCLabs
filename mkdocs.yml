@@ -1,0 +1,254 @@
+###
+### mkdocs-site.yml
+###
+docs_dir: Labs
+edit_uri:
+repo_name: nirgeier/GithubCopilotLabs
+repo_url: https://github.com/nirgeier/GithubCopilotLabs
+site_author: Nir Geier - nirgeier@gmail.com
+site_description: A collection of GithubCopilotLabs Labs
+site_dir: ./mkdocs-site
+site_name: GithubCopilotLabs
+site_url: https://nirgeier.github.io/GithubCopilotLabs/
+###
+### mkdocs-theme.yml
+###
+copyright:
+  '©2026 Nir Geier<br/><a href="https://visitor-badge.laobi.icu/badge?page_id=nirgeier" target="_blank" rel="noopener"><img
+  src="https://visitor-badge.laobi.icu/badge?page_id=nirgeier" alt="Visitor Badge"></a>'
+theme:
+  name: material
+  custom_dir: .mkdocs-build/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - content.footer.last-updated
+    - content.footer.contributors
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    #- navigation.prune        # Disabled - hides sections when tabs are off
+    - navigation.sections
+    #- navigation.tabs          # Disabled - left nav only
+    #- navigation.tabs.sticky   # Disabled - left nav only
+    #- navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate # Disabled - replaces full nav with per-page TOC in sidebar
+    - toc.sticky
+
+    #- header.autohide  # Disabled to keep top nav always visible
+
+  # 👈 enables avatar display
+  palette:
+    # Dark mode only
+    - scheme: slate
+      primary: indigo # You can choose any color here
+
+  font:
+    text: Mulish
+    code: JetBrains Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    admonition:
+      note: material/lightbulb
+###
+### mkdocs-extra.yml
+###
+
+extra:
+  assets:
+    - ./assets/images/
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nirgeier/GithubCopilotLabs
+      name: View on GitHub
+      class: social-class__github
+
+    - icon: octicons/repo-forked-16
+      link: https://github.com/nirgeier/GithubCopilotLabs/network/members
+      name: Fork this repo
+      class: social-class__fork
+
+    - icon: octicons/star-16
+      link: https://github.com/nirgeier/GithubCopilotLabs/stargazers
+      name: Star this repo
+      class: social-class__star
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nirgeier/
+      name: Connect on LinkedIn
+      class: social-class__linkedin
+
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/U6xW23Ss
+      name: Follow me on Discord
+      class: social-class__discord
+
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/1755598/codewizard
+      name: Follow me on Stack Overflow
+      class: social-class__stackoverflow
+
+    - icon: fontawesome/brands/whatsapp
+      link: https://wa.me/972548122310
+      name: Follow me on WhatsApp
+      class: social-class__whatsapp
+
+    - icon: fontawesome/solid/envelope
+      link: mailto:nirg@codewizard.co.il
+      name: Email me
+      class: social-class__email
+
+extra_css:
+  - ./assets/stylesheets/codewizard.css?v=1776569250
+extra_javascript:
+  - https://buttons.github.io/buttons.js?v=1776569250
+###
+### mkdocs-plugins.yml
+###
+
+plugins:
+  - awesome-pages
+  - meta
+  # - pdf-export:
+  #     combined: true # all pages in one PDF
+  #     combined_output_path: docs/Full-Documentation.pdf
+  #     media_type: print
+  #     verbose: true
+  # Git
+  #- git-authors
+  - git-committers:
+      branch: main
+      docs_path: Labs # set if your docs folder is not root
+      enabled: true
+      repository: nirgeier/GithubCopilotLabs
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enable_git_follow: false
+      fallback_to_build_date: true
+      locale: en
+      timezone: UTC
+      type: date
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+  # Leave this one as the last one in the list
+  - print-site
+  - include-markdown
+###
+### mkdocs-extensions.yml
+###
+
+markdown_extensions:
+      - toc:
+              permalink: false
+              baselevel: 3
+              toc_depth: 3
+      - abbr
+      - tables
+      - admonition # For callouts/notes
+      - footnotes # Footnotes support
+      - attr_list # Attribute lists for elements
+      - def_list # Definition lists
+      - md_in_html # Markdown inside HTML blocks
+      - smarty # Smart punctuation
+      - meta
+      - codehilite:
+              guess_lang: true # Fallback code highlighting
+      - pymdownx.tabbed:
+              alternate_style: true
+      - pymdownx.details # Collapsible details
+      - pymdownx.inlinehilite # Inline code highlighting
+      - pymdownx.keys # Keyboard key formatting
+      - pymdownx.tasklist:
+              custom_checkbox: true
+      - pymdownx.betterem:
+              smart_enable: all
+      - pymdownx.tilde # Subscript/superscript
+      - pymdownx.snippets # Snippet includes
+      - pymdownx.highlight:
+              anchor_linenums: true
+              line_spans: __span
+              pygments_lang_class: true
+      - pymdownx.superfences:
+              custom_fences:
+                    - name: mermaid
+                      class: mermaid
+                      format: "!!python/name:pymdownx.superfences.fence_code_format"
+      - pymdownx.emoji:
+              emoji_index: !!python/name:material.extensions.emoji.twemoji
+              emoji_generator: !!python/name:material.extensions.emoji.to_svg
+###
+### mkdocs-nav.yml
+###
+
+nav:
+  - Labs:
+      - index.md
+      - 001-GettingStarted: 001-GettingStarted/README.md
+      - 002-CodeCompletion: 002-CodeCompletion/README.md
+      - 003-ChatFeatures: 003-ChatFeatures/README.md
+      - 004-InlineChat: 004-InlineChat/README.md
+      - 005-Prompting: 005-Prompting/README.md
+      - 006-TestGeneration: 006-TestGeneration/README.md
+      - 007-Refactoring: 007-Refactoring/README.md
+      - 008-Documentation: 008-Documentation/README.md
+      - 009-Security: 009-Security/README.md
+      - 010-AgentMode: 010-AgentMode/README.md
+      - 011-MCPSetup: 011-MCPSetup/README.md
+      - 012-CustomAgents: 012-CustomAgents/README.md
+      - 013-CopilotExtensions: 013-CopilotExtensions/README.md
+      - 014-WorkspaceContext: 014-WorkspaceContext/README.md
+      - 015-MultiFileEditing: 015-MultiFileEditing/README.md
+      - 016-CommitMessages: 016-CommitMessages/README.md
+      - 017-PullRequests: 017-PullRequests/README.md
+      - 018-CodeReview: 018-CodeReview/README.md
+      - 019-Debugging: 019-Debugging/README.md
+      - 020-DatabaseQueries: 020-DatabaseQueries/README.md
+      - 021-APIDesign: 021-APIDesign/README.md
+      - 022-DockerAndContainers: 022-DockerAndContainers/README.md
+      - 023-CIWorkflows: 023-CIWorkflows/README.md
+      - 024-RegexAndParsing: 024-RegexAndParsing/README.md
+      - 025-ShellScripting: 025-ShellScripting/README.md
+      - 026-CopilotInCLI: 026-CopilotInCLI/README.md
+      - 027-KnowledgeBases: 027-KnowledgeBases/README.md
+      - 028-CustomInstructions: 028-CustomInstructions/README.md
+      - 029-ContextVariables: 029-ContextVariables/README.md
+      - 030-AgentTools: 030-AgentTools/README.md
+      # --- Copilot Prompting Workshop (Consolidated) ---
+      - 031-CopilotPromptingWorkshop: 031-CopilotPromptingWorkshop/README.md
+      # --- Tasks ---
+      - Tasks:
+          - Tasks/index.md
+          - Tasks/Lab-01.md
+          - Tasks/Lab-02.md
+          - Tasks/Lab-03.md
+          - Tasks/Lab-04.md
+          - Tasks/Lab-05.md
+          - Tasks/Lab-06.md
+          - Tasks/Lab-07.md
+          - Tasks/Lab-08.md
+          - Tasks/Lab-09.md
+          - Tasks/Lab-10.md
+          - Tasks/Lab-11.md
+          - Tasks/Lab-12.md
+          - Tasks/Lab-13.md

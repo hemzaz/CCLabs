@@ -29,6 +29,6 @@ Most AI coding tutorials stop at "look at this cool autocomplete." ClaudeCodeLab
 |---|---|
 | Claude Code docs | [docs.claude.com/en/docs/claude-code](https://docs.claude.com/en/docs/claude-code/overview) |
 | Claude Code GitHub | [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code) |
-| This repository | [github.com/claudecodelabs/claudecodelabs](https://github.com/claudecodelabs/claudecodelabs) |
+| This repository | [github.com/hemzaz/CCLabs](https://github.com/hemzaz/CCLabs) |
 
 Start with [Lab 001 — Install and Auth](001-InstallAuth/README.md).

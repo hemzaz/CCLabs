@@ -68,13 +68,13 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
    ```
    Expected: `column present`
 
-4. **Modify** — repeat for tasks (b) and (c). For each, run the BAD version first, note Claude's response, then run the GOOD version.
+4. **Modify** — repeat for tasks b and c. For each, run the BAD version first, note Claude's response, then run the GOOD version.
 
-   Task (b) — write a test:
+   Task b — write a test:
    - BAD: `write a test`
    - GOOD: `Add a Vitest test in test/server.test.js for GET /quips that asserts the response is an array and each item has id, text, and tags fields. Use resetDb() in beforeEach.`
 
-   Task (c) — explain a function:
+   Task c — explain a function:
    - BAD: `explain the code`
    - GOOD: `Explain the createQuip function in src/db.js in three bullet points: what SQL it runs, what it returns on success, and what happens if text is null.`
 

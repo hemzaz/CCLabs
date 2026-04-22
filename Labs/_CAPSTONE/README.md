@@ -10,7 +10,7 @@ This is the summative task for the Claude Code curriculum. Unlike the labs and c
 
 You will deliver a working feature to the Quips API. That means: planning the work in plan mode, writing failing tests first, letting Claude implement while you review every diff, running a subagent review pass before accepting, protecting the workflow with hooks, pushing to a branch, and opening a pull request whose body demonstrates the communication norms from Part VI. The CI workflow you built in Lab 028 will run on that PR.
 
-The evidence you produce — a PR URL, a reflection, and key Claude transcript excerpts — is what gets scored against the rubric in `rubric.md`. There is no automated pass/fail for the quality of your work; `verify.sh` only confirms the artifacts exist. The rubric is scored by you (self-assessment) or by an instructor. The pass bar is ≥3 on all four dimensions.
+The evidence you produce — a PR URL, a reflection, and key Claude transcript excerpts — is what gets scored against the rubric in `rubric.md`. No automated pass/fail exists for the quality of your work; `verify.sh` only confirms the artifacts exist. You or an instructor score the rubric. The pass bar is ≥3 on all four dimensions.
 
 ---
 

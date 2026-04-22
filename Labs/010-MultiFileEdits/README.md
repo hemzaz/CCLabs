@@ -48,7 +48,7 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
 
    Then type this prompt inside the REPL:
 
-   > Add an optional `author` TEXT column to the quips table. Update `createQuip()` to accept an `author` field (default null). Update POST /quips to accept it in the body. Update GET responses to include it. Add tests covering (a) create with author, (b) create without author, (c) retrieve shows null/value correctly. Run `npm test` after. Coordinate all edits.
+   > Add an optional `author` TEXT column to the quips table. Update `createQuip()` to accept an `author` field (default null). Update POST /quips to accept it in the body. Update GET responses to include it. Add tests covering three cases: create with author, create without author, and retrieve shows null or value correctly. Run `npm test` after. Coordinate all edits.
 
    Verify that Claude proposes or applies edits touching all three files — confirm by checking each is mentioned in Claude's output before you accept any writes.
 

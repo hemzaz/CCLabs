@@ -96,7 +96,7 @@ One sentence — which of your three review criteria from step 1 did Claude's fi
 | Symptom | Cause | Fix | Source |
 |---|---|---|---|
 | Claude agrees with every challenge immediately | it is sycophantic unless pressed with specifics | Quote a specific line from its diff and ask "what input breaks this exact line?" | https://docs.claude.com/en/docs/claude-code/overview |
-| Challenges uncover no gaps | your prompt was too broad and Claude hedged safely | Ask for pathological inputs: empty string, null, very long input, unicode, concurrent requests | https://github.com/anthropics/anthropic-cookbook |
+| Challenges uncover no gaps | your prompt was too broad and Claude hedged safely | Ask for pathological inputs: empty string, null, long input, unicode, concurrent requests | https://github.com/anthropics/anthropic-cookbook |
 | Second diff is worse than the first | Claude over-corrected and added speculative defensive code | Compare both diffs; reject speculative guards not backed by a test | https://docs.claude.com/en/docs/claude-code/common-workflows |
 
 ## Stretch (optional, ~10 min)

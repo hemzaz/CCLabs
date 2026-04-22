@@ -107,7 +107,7 @@ One sentence — did Claude route to `test-writer` automatically, or did it need
 
 | Symptom | Cause | Fix | Source |
 |---|---|---|---|
-| Claude never routes to test-writer automatically | description was too generic | Rewrite description with an action verb and a trigger: "Draft Vitest tests when..." | https://docs.claude.com/en/docs/claude-code/sub-agents |
+| Claude never routes to test-writer automatically | description was too generic | Rewrite description with an action verb and a trigger, such as "Draft Vitest tests when the user adds a new route" | https://docs.claude.com/en/docs/claude-code/sub-agents |
 | test-writer edits src/ files | tools allowlist included Edit | Restrict tools to Read, Grep, Write — and Write only to test/ via permission rules | https://docs.claude.com/en/docs/claude-code/settings |
 | Reviewer and test-writer give conflicting advice | no orchestrator — both are peers | Use a main-agent prompt that sequences them: draft → review → revise | https://docs.claude.com/en/docs/claude-code/sub-agents |
 

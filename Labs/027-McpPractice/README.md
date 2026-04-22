@@ -104,7 +104,7 @@ One sentence — when Claude had both servers available, how did it decide which
 |---|---|---|---|
 | git MCP server fails to start | Package name or `--repository` arg is wrong | Check the package is `@modelcontextprotocol/server-git`; pass `--repository` with an absolute path | https://github.com/modelcontextprotocol/servers |
 | Claude uses fs-scoped when you meant git-read | Router matched the first useful server | Be explicit in the prompt: "Use the `git-read` server, not fs-scoped" | https://docs.claude.com/en/docs/claude-code/mcp |
-| Both MCP servers see your home directory | Scope args missing on at least one server | Every server must pass its own scope arg — fs path for filesystem, repo path for git | https://modelcontextprotocol.io/introduction |
+| Both MCP servers see your home directory | Scope args missing on at least one server | Every server must pass its own scope arg — filesystem path for fs-scoped, repo path for git-read | https://modelcontextprotocol.io/introduction |
 
 ## Stretch (optional, ~10 min)
 

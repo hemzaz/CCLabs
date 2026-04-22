@@ -20,13 +20,13 @@ Answer from memory. Write your answers in `answers.md`, then compare against the
 
 Add a `GET /version` endpoint to Quips that returns `{"version": "0.1.0"}` with status 200. Use Claude Code to implement it — but before executing, dry-run in your head: which files change? Which tests should you add?
 
-**(a)** Read `quips/package.json` and note the `version` field.
+**a.** Read `quips/package.json` and note the `version` field.
 
 ```bash
 grep '"version"' quips/package.json
 ```
 
-**(b)** Open Claude Code inside the Quips project and ask it to add the route, reading the version dynamically from `package.json` — not hardcoded.
+**b.** Open Claude Code inside the Quips project and ask it to add the route, reading the version dynamically from `package.json` — not hardcoded.
 
 ```bash
 cd quips && claude
@@ -36,7 +36,7 @@ Prompt to use:
 
 > Add a `GET /version` route that reads the `version` field from `package.json` at startup and returns `{"version": "<value>"}` with status 200. Follow the existing style in `src/server.js`.
 
-**(c)** Still in the REPL, ask Claude to add a Vitest test for it:
+**c.** Still in the REPL, ask Claude to add a Vitest test for it:
 
 > Add a Vitest test for `GET /version` that asserts status 200 and that the body has a `version` string. Add it to `test/server.test.js` following the existing `describe` block style.
 

@@ -64,9 +64,9 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
    Verify: the answer lists at least 3 of: `POST /quips`, `GET /quips`, `GET /quips/:id`, `DELETE /quips/:id`, `GET /health`.
 
 5. **Make** — synthesize what you've learned. Write `Labs/004-ReadingCodebase/summary.md` with exactly three bullets:
-   - **(a)** what Quips is in one line
-   - **(b)** its storage (database engine, table name, columns)
-   - **(c)** its HTTP endpoints
+   - **a.** what Quips is in one line
+   - **b.** its storage (database engine, table name, columns)
+   - **c.** its HTTP endpoints
 
    Verify:
    ```bash

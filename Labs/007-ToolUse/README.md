@@ -32,7 +32,7 @@ Expected output: `OK lab 007 pre-flight green`
 
 Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step ends with a verify command.
 
-1. **Predict** — before running anything, list the tools you think Claude will use to answer "How many test files are in `quips/`?" Write your list down (e.g. Bash, Grep, Glob). There is no wrong answer yet — this is your baseline.
+1. **Predict** — before running anything, list the tools you think Claude will use to answer "How many test files are in `quips/`?" Write your list down (e.g. Bash, Grep, Glob). No answer is wrong yet — this is your baseline.
 
    Verify that the `quips/` directory is present:
    ```bash
@@ -70,7 +70,7 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
 
 4. **Modify** — still in the REPL (or reopen it), ask Claude to edit a file using a tool sequence:
 
-   > Now add a TODO comment on line 1 of quips/src/db.js.
+   > Now add a placeholder comment on line 1 of quips/src/db.js.
 
    Watch the transcript: Claude should call Read (to load the file) then Edit (to insert the comment).
 
@@ -85,7 +85,7 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
    ```
    - Bash: ran `find quips -name '*.test.*' | wc -l` to count test files
    - Read: loaded quips/src/db.js before editing it
-   - Edit: inserted a TODO comment at line 1 of db.js
+   - Edit: inserted a placeholder comment at line 1 of db.js
    ```
 
    Verify:
@@ -108,11 +108,11 @@ Which tool does Claude prefer for "find X in files" — Bash, Grep, or Glob — 
 
 ## Stretch (optional, ~10 min)
 
-Ask Claude to use ONLY the Grep tool (no Bash) to find all TODO comments across the repo:
+Ask Claude to use ONLY the Grep tool (no Bash) to find every placeholder comment across the repo:
 
-> Using only the Grep tool — no Bash — find every TODO comment in the quips/ directory.
+> Using only the Grep tool — no Bash — find every placeholder comment in the quips/ directory.
 
-Note whether it complies. If it falls back to Bash, ask why. There is no single right answer — this is productive failure that reveals how Claude reasons about tool choice.
+Note whether it complies. If it falls back to Bash, ask why. No single right answer exists — this is productive failure that reveals how Claude reasons about tool choice.
 
 ## Recall
 

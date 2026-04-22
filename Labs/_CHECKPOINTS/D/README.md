@@ -70,7 +70,7 @@ Replace `X` with your actual score.
 
 ### References
 
-- https://docs.claude.com/en/docs/claude-code/testing
+- https://docs.claude.com/en/docs/claude-code/common-workflows
 
 ---
 

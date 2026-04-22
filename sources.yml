@@ -1,0 +1,50 @@
+# Canonical Anthropic source manifest for ClaudeCodeLabs.
+#
+# Rules (see docs/DESIGN.md §14):
+# - Every lab MUST cite >= 1 entry from `canonical` below in its `primary` list.
+# - Third-party sources are "supplementary" only, allowed in Stretch sections.
+# - CI (.github/workflows/link-check.yml) validates every URL on PR and weekly.
+# - Dead-link SLA: author patches in <= 48h or the lab is removed from nav.
+
+canonical:
+  claude_code_docs:
+    url: https://docs.claude.com/en/docs/claude-code/overview
+    use_for: CLI, hooks, skills, subagents, settings, permissions, MCP config, IDE, headless
+  claude_api_docs:
+    url: https://docs.claude.com/en/api/overview
+    use_for: API reference, messages, tool use, prompt caching, extended thinking
+  anthropic_cookbook:
+    url: https://github.com/anthropics/anthropic-cookbook
+    use_for: Tool use, RAG, classification, evals, caching recipes
+  anthropic_courses:
+    url: https://github.com/anthropics/courses
+    use_for: Prompt engineering, API fundamentals, real-world prompting
+  claude_quickstarts:
+    url: https://github.com/anthropics/claude-quickstarts
+    use_for: Starter projects
+  claude_code_repo:
+    url: https://github.com/anthropics/claude-code
+    use_for: Changelog, release notes, authoritative CLI behavior
+  claude_code_action:
+    url: https://github.com/anthropics/claude-code-action
+    use_for: CI labs
+  agent_sdk_python:
+    url: https://github.com/anthropics/claude-agent-sdk-python
+    use_for: Agent SDK elective lab
+  agent_sdk_typescript:
+    url: https://github.com/anthropics/claude-agent-sdk-typescript
+    use_for: Agent SDK elective lab
+  mcp_spec:
+    url: https://modelcontextprotocol.io/introduction
+    use_for: MCP protocol specification
+  mcp_servers:
+    url: https://github.com/modelcontextprotocol/servers
+    use_for: Reference MCP servers
+
+# Per-lab citations. Schema:
+#   "NNN":
+#     primary:       # required, >= 1 entry, from canonical URLs (full URLs, not keys)
+#       - https://docs.claude.com/en/docs/claude-code/quickstart
+#     supplementary: # optional, third-party links allowed
+#       - https://...
+labs: {}

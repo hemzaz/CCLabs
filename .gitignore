@@ -35,3 +35,14 @@ node_modules/
 *.bak
 *.tmp
 .vercel
+
+# OMC / local agent state
+.omc/
+.labs/
+
+# Quips local DB
+*.db
+
+# Vale fetched styles (auto-downloaded by CI + locally)
+.vale/styles/*
+!.vale/styles/.gitkeep

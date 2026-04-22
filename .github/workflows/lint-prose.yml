@@ -1,0 +1,24 @@
+name: Lint Prose
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "Labs/**"
+      - "Labs/_TEMPLATE/**"
+  workflow_dispatch:
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vale prose lint
+        uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: Labs/
+          config: .vale.ini
+          fail_on_error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

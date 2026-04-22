@@ -9,7 +9,7 @@ CI enforces it; reviewers check it. See `docs/DESIGN.md` for the full rationale.
 
 Every lab PR MUST:
 
-- Conform to `Labs/_TEMPLATE/README.md` exactly (linted)
+- Conform to `Labs/_TEMPLATE/README.md` exactly (enforced by `./scripts/lint-labs.sh`)
 - Include `doctor.sh` and `verify.sh` inside the lab directory, both executable
 - Include exactly 3 "If stuck" entries, each with a source URL
 - Add any new term to `glossary.md` before first use in the lab
@@ -30,8 +30,8 @@ Every lab PR MUST:
 ## PR workflow
 
 1. Branch from `main`: `git checkout -b lab-NNN-title`
-2. Run `make lab NNN` to scaffold a template-conformant directory (coming in Week 1)
-3. Author the lab; run `./scripts/doctor.sh NNN && ./scripts/verify.sh NNN` locally until both green
+2. Run `make lab NNN=NNN TITLE=MyLabTitle` to scaffold a template-conformant directory
+3. Author the lab; run `make lint-labs` then `./scripts/doctor.sh NNN && ./scripts/verify.sh NNN` locally until all green
 4. Open the PR; the PR template auto-loads the review checklist
 5. CI must be green before review; reviewers will not start otherwise
 

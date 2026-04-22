@@ -1,4 +1,4 @@
-.PHONY: help serve build verify lab clean
+.PHONY: help serve build verify lint-labs lab clean
 
 help:
 	@echo "ClaudeCodeLabs - developer entry points"
@@ -6,6 +6,7 @@ help:
 	@echo "  make serve       - run MkDocs with live reload"
 	@echo "  make build       - build the static site into mkdocs-site/"
 	@echo "  make verify      - run every lab's verify.sh"
+	@echo "  make lint-labs   - run the structural linter across all labs"
 	@echo "  make lab NNN=042 - scaffold a new lab directory from the template"
 	@echo "  make clean       - remove build output"
 
@@ -21,6 +22,9 @@ verify:
 	  echo "== lab $$num =="; \
 	  ./scripts/verify.sh $$num || exit 1; \
 	done
+
+lint-labs:
+	@./scripts/lint-labs.sh
 
 lab:
 	@if [ -z "$(NNN)" ]; then echo "usage: make lab NNN=042 TITLE=MyLabTitle" >&2; exit 2; fi

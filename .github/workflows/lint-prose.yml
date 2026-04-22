@@ -1,0 +1,28 @@
+name: Lint Prose
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "Labs/**"
+      - "Labs/_TEMPLATE/**"
+  workflow_dispatch:
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Vale
+        run: |
+          VALE_VERSION="3.14.1"
+          curl -fsSL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz" \
+            | sudo tar -xz -C /usr/local/bin vale
+          vale --version
+
+      - name: Sync Vale packages
+        run: vale sync
+
+      - name: Run Vale at error level
+        run: vale --minAlertLevel=error Labs/

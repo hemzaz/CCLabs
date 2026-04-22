@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout submodules
+      - name: Checkout submodules (best-effort)
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
@@ -25,7 +25,9 @@ jobs:
           if [ -n "$GH_PAT" ]; then
             git config --global url."https://x-access-token:${GH_PAT}@github.com/".insteadOf "https://github.com/"
           fi
-          git submodule update --init --recursive
+          # Submodule is optional - upstream nirgeier/mkdocs may be unavailable.
+          # MkDocs build falls back to the pinned deps in the install step.
+          git submodule update --init --recursive || echo "::warning::submodule init failed; continuing with pip-installed mkdocs fallback"
 
       - name: Set up Python
         uses: actions/setup-python@v5

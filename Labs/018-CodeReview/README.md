@@ -1,287 +1,120 @@
-# Lab 018 - Code Review with Copilot
+# Lab 018 — Code Review
 
-!!! hint "Overview"
+⏱ **30 min**   📦 **You'll add**: `quips/REVIEW-NOTES.md`   🔗 **Builds on**: Lab 017   🎯 **Success**: `quips/REVIEW-NOTES.md` exists with ≥10 lines and at least one line containing "Challenge"
 
-    - GitHub Copilot can perform automated code reviews and catch issues before human reviewers see them.
-    - In this lab, you will build a code review workflow using Copilot to check for bugs, security issues, and style violations.
-    - You will use Copilot both in VS Code before committing and on GitHub.com during an active review to respond to feedback.
-    - By the end of this lab, you will have a pre-submit and in-review Copilot workflow that raises your code review standards.
+<!--
+  Template contract - do not remove this comment.
+  CI (lint-prose + structure linter) enforces:
+    1. Header line above (one line, five fields, in this exact order)
+    2. Nine sections below (in this exact order, same H2 titles)
+    3. Single new concept (a "Concept:" Bloom-tagged line)
+    4. Every Do step ends with a verify COMMAND, not a screenshot
+  See CONTRIBUTING.md and docs/DESIGN.md §7 for the full author contract.
+-->
 
-## Prerequisites
-
-- Completed [Lab 017 - Pull Requests](../017-PullRequests/README.md)
-
-## What You Will Learn
-
-- How to use Copilot for self-review before submitting a PR
-- How to automate code review with custom review agents
-- How to use `/fix` for common code quality issues
-- How to configure Copilot code review rules on GitHub.com
+**Concept**: `Critique your own diff before accepting it` (Bloom: Evaluate)
 
 ---
 
-## Lab Steps
+## Why
 
-## Step 1 - Pre-Submit Self Review
+Accepting a diff without review is how bugs ship. Claude generates plausible code fast, but plausible is not correct. A route that works on the happy path can still break on an empty table, a missing tag filter, or a concurrent request. The discipline here is simple: Claude proposes, you challenge, Claude revises. One round of "why did you do it that way?" before you accept a diff catches more issues than any amount of post-merge debugging.
 
-Before opening a PR, select all changed files and ask:
-
-```
-@workspace Review the changes I'm about to submit.
-Check for:
-1. Missing error handling
-2. Functions that are too long (>50 lines)
-3. Any hardcoded values that should be constants or config
-4. Missing tests for new functions
-5. Inconsistency with the existing code style
-```
-
-## Step 2 - Enable Copilot Code Review on GitHub
-
-1. Go to your repository settings on GitHub.com
-2. Navigate to **Code and automation** → **Code review**
-3. Enable **Copilot code review**
-
-Now Copilot will automatically review every PR and leave comments on:
-
-- Potential bugs and logic errors
-- Security vulnerabilities
-- Performance issues
-- Style inconsistencies
-
-## Step 3 - Review for Specific Concerns
-
-**Performance review:**
-
-```
-@workspace Review this module for performance issues.
-Look for unnecessary database queries in loops (N+1 problem),
-missing memoization, and synchronous operations that should be async.
-```
-
-**Security review:**
-
-```
-@workspace Perform a security review of the authentication module.
-Check for: JWT validation issues, session fixation, missing rate limiting,
-improper password handling, and CORS misconfigurations.
-```
-
-**Accessibility review:**
-
-```
-@workspace Review the React components in src/components/ for accessibility issues.
-Check for: missing aria labels, keyboard navigation, color contrast, and
-semantic HTML usage.
-```
-
-## Step 4 - Create a Review Checklist Agent
-
-Create `.github/copilot/agents/reviewer.agent.md`:
-
-```markdown
----
-name: Reviewer
-description: Performs automated pre-commit code review
-model: gpt-4o
-tools:
-  - codebase
-  - problems
----
-
-You are a meticulous code reviewer. For every review:
-
-## Security
-
-- [ ] No hardcoded credentials or secrets
-- [ ] SQL queries use parameterization
-- [ ] User input is sanitized before use
-- [ ] Authentication is required where needed
-
-## Code Quality
-
-- [ ] Functions are single-responsibility (<30 lines)
-- [ ] No magic numbers (use named constants)
-- [ ] Error cases are handled explicitly
-- [ ] No dead code or commented-out blocks
-
-## Testing
-
-- [ ] New functions have unit tests
-- [ ] Edge cases are tested
-- [ ] Test descriptions clearly state what is being tested
-
-Report issues as: [SEVERITY: CRITICAL/HIGH/MEDIUM/LOW] Description
-```
-
-## Step 5 - Fix Review Comments Automatically
-
-When you receive review feedback, paste it into Copilot Chat with the file:
-
-```
-#file:src/api/users.ts
-
-A reviewer left this comment:
-"The getUserById function makes a database call without checking if the user
-has permissions to view this resource. Add authorization check."
-
-Implement this fix.
-```
-
-## Step 6 - Review Diff Before Committing
+## Check
 
 ```bash
-git diff --staged
+./scripts/doctor.sh 018
 ```
 
-Then in Chat:
+Expected output: `OK lab 018 pre-flight green`
 
-```
-#terminalLastCommand
+## Do
 
-Review these staged changes. Are there any issues I should fix before committing?
-```
+Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step ends with a verify command.
 
----
+1. **Predict** — before prompting Claude, write down three review criteria a senior engineer applies to any new route: correctness, edge cases, and one more you choose (examples: error handling, security, performance). Record your three criteria before continuing.
 
-## Code Review Severity Guide
+   Verify the quips project exists:
+   ```bash
+   [[ -f quips/src/server.js ]] && echo "ready" || echo "missing quips/src/server.js"
+   ```
+   Expected: `ready`
 
-| Level        | Examples                                               |
-| :----------- | :----------------------------------------------------- |
-| **Critical** | SQL injection, exposed secrets, auth bypass            |
-| **High**     | Unhandled errors, data loss risk, broken logic         |
-| **Medium**   | Performance issues, poor error messages, missing tests |
-| **Low**      | Style inconsistencies, minor naming issues             |
+2. **Run** — launch Claude Code inside the quips project and ask for a new route. Do not accept the diff yet.
 
----
+   ```bash
+   cd quips && claude
+   ```
 
-## Summary
+   Then type this prompt inside the REPL:
 
-Building a Copilot-assisted code review workflow catches issues earlier, reduces review cycles, and lets human reviewers focus on higher-level concerns.
+   > Add a GET /quips/count route that returns the total row count as JSON: `{ "count": N }`. Propose the diff but wait — do not apply it yet.
 
-## Next Steps
+   Paste or screenshot Claude's proposed diff into a scratch file so you have a record. Then verify you have captured it:
+   ```bash
+   echo "diff 1 captured"
+   ```
+   Expected: `diff 1 captured`
 
-Continue with [Lab 019 - Debugging](../019-Debugging/README.md)
+3. **Investigate** — challenge Claude in the same session with two questions. Send each as a separate message:
 
----
+   - "What edge cases would this route miss?"
+   - "Write 3 tests for this route. At least one test must currently fail against your proposed implementation."
 
-## Tasks
+   Read Claude's responses. Identify at least one gap it names or demonstrates (for example: empty table, a tag-filtered count that the route ignores, or a DB error path).
 
-## Task 01 - Pre-Submit Self-Review
+   Verify Claude produced test output you can inspect:
+   ```bash
+   echo "challenge responses captured"
+   ```
+   Expected: `challenge responses captured`
 
-**Scenario:** Before creating a PR, do a self-review of your staged changes.
+4. **Modify** — ask Claude to incorporate the fix for the gap you identified:
 
-**Hint:** Show the git diff to Copilot and ask for a review.
+   > Update the implementation to fix the gap you just identified. Apply the changes now.
 
-??? success "Solution"
+   After Claude applies the edits, capture the final diff with git:
+   ```bash
+   git diff quips/src/
+   ```
+   Expected: at least one line starting with `+` in the output (showing new code).
 
-    ````
-    Here is my git diff. Review it as a senior developer would before I submit a PR.
-    Focus on: correctness, edge cases, security, and anything that might cause issues in production.
+5. **Make** — write `quips/REVIEW-NOTES.md` with exactly three sections: `## Diff 1` (summary of Claude's first proposal), `## Challenge prompts` (the two questions you sent and key parts of Claude's answers), and `## Diff 2` (what changed between the first and second proposal, and why the gap mattered).
 
-    [paste git diff output]
-    ```
+   Verify the file meets the minimum requirement:
+   ```bash
+   wc -l quips/REVIEW-NOTES.md
+   ```
+   Expected: a number ≥ 10.
 
----
+## Observe
 
-## Task 02 - Review for Performance Issues
+One sentence — which of your three review criteria from step 1 did Claude's first diff fail, and what exact prompt forced it to acknowledge that?
 
-**Scenario:** Your PR adds a new database query. Check if it could slow things down.
+## If stuck
 
-**Hint:** Show the query and surrounding code.
+| Symptom | Cause | Fix | Source |
+|---|---|---|---|
+| Claude agrees with every challenge immediately | it is sycophantic unless pressed with specifics | Quote a specific line from its diff and ask "what input breaks this exact line?" | https://docs.claude.com/en/docs/claude-code/overview |
+| Challenges uncover no gaps | your prompt was too broad and Claude hedged safely | Ask for pathological inputs: empty string, null, long input, unicode, concurrent requests | https://github.com/anthropics/anthropic-cookbook |
+| Second diff is worse than the first | Claude over-corrected and added speculative defensive code | Compare both diffs; reject speculative guards not backed by a test | https://docs.claude.com/en/docs/claude-code/common-workflows |
 
-??? success "Solution"
+## Stretch (optional, ~10 min)
 
-    ````
+Add a fourth section to `REVIEW-NOTES.md` called `## Diff 3`. Ask Claude: "Add an optional `?tag=` query param to the count route so it filters by tag." Challenge it with the same two questions from step 3. Note whether the gap it finds this time is different from the first round.
 
-    #file:src/services/ReportService.ts
+## Recall
 
-    Review the generateMonthlyReport function for performance issues:
-    - N+1 query problems
-    - Missing indexes
-    - Large result sets loaded into memory
-    - Missing pagination
-    ```
+In Lab 013, settings are read from three scopes. Which scope wins when the same key appears in both project `settings.json` and user `~/.claude/settings.json`?
 
----
+> Expected: project scope (`settings.json` checked into the repo) wins over user scope for that key, because more-specific scopes override less-specific ones.
 
-## Task 03 - Generate Review Comments
+## References
 
-**Scenario:** You're reviewing a teammate's PR. Use Copilot to draft your review comments.
+<!-- Auto-rendered from sources.yml at mkdocs build time. Do not edit by hand. -->
+- https://docs.claude.com/en/docs/claude-code/overview
+- https://docs.claude.com/en/docs/claude-code/common-workflows
 
-**Hint:** Show the PR diff and ask Copilot to generate review comments.
+## Next
 
-??? success "Solution"
-
-    ````
-    I'm reviewing this code change. Generate professional, constructive review comments
-    for each issue you find:
-
-    [paste the diff]
-
-    Format: file:line - Issue type - Comment
-    ```
-
----
-
-## Task 04 - Create a Custom Reviewer Agent
-
-**Scenario:** Create a `.agent.md` that does code reviews focused on your team's standards.
-
-**Hint:** Reference Lab 012 patterns and specific team conventions.
-
-??? success "Solution"
-
-    Create `.github/copilot/agents/code-reviewer.agent.md`:
-
-    ```markdown
-    ---
-    name: Code Reviewer
-    description: Reviews PRs against team coding standards
-    tools: [read_file, search_workspace]
-    ---
-    Review code for violations of our standards:
-    - All functions must have TypeScript return types
-    - No console.log in production code
-    - Services must return Result<T, AppError>, not throw exceptions
-    - Tests required for all service methods
-    Rate each issue P0/P1/P2 (blocker/important/suggestion).
-    ```
-
----
-
-## Task 05 - Fix a Review Comment Automatically
-
-**Scenario:** A reviewer says "missing input validation on the userId parameter."
-
-**Hint:** Show the comment and the relevant code, ask Copilot to implement the fix.
-
-??? success "Solution"
-
-    ````
-
-    The code review says: "userId parameter has no validation - could be any string."
-
-    #file:src/controllers/UserController.ts
-
-    Add UUID format validation to the userId parameter in the getUser endpoint.
-    Return 400 Bad Request with a descriptive error if the format is invalid.
-    ```
-
----
-
-## Task 06 - Summarize All Review Feedback
-
-**Scenario:** You received 12 review comments. Ask Copilot to group and prioritize them.
-
-**Hint:** Paste all comments into Chat and ask for a prioritized action plan.
-
-??? success "Solution"
-
-    ````
-    I received these 12 review comments on my PR. Group them by: 1. Critical (must fix before merge) 2. Important (should fix) 3. Suggestions (optional improvements)
-    Then give me an ordered action plan to address them.
-
-    [paste all comments]
-    ```
-    ````
+→ **Lab 019 — Verify Scripts** — write a `verify.sh` that asserts your own lab outputs meet acceptance criteria, closing the loop between authoring and automated checking.

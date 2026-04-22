@@ -1,0 +1,22 @@
+{
+  "name": "quips",
+  "version": "0.1.0",
+  "description": "Minimal HTTP API — ClaudeCodeLabs spine project",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "better-sqlite3": "^9.6.0",
+    "fastify": "^4.28.1"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,34 @@
+ClaudeCodeLabs
+Copyright 2026 the ClaudeCodeLabs authors
+
+================================================================================
+ATTRIBUTION
+================================================================================
+
+Originally forked from:
+  GithubCopilotLabs by Nir Geier <nirgeier@gmail.com>
+  Licensed under the Apache License, Version 2.0
+  https://github.com/nirgeier/GithubCopilotLabs
+
+Portions of the curriculum may port exercises from the following Anthropic
+projects (MIT License):
+
+  anthropics/courses
+    https://github.com/anthropics/courses
+
+  anthropics/anthropic-cookbook
+    https://github.com/anthropics/anthropic-cookbook
+
+  anthropics/claude-quickstarts
+    https://github.com/anthropics/claude-quickstarts
+
+================================================================================
+LICENSE
+================================================================================
+
+This repository is distributed under the terms of the Apache License, Version
+2.0 inherited from the upstream project. See the LICENSE file for the full
+license text.
+
+"Claude" and "Claude Code" are trademarks of Anthropic, PBC. Use of these names
+in this repository is descriptive and does not imply endorsement.

@@ -1,0 +1,86 @@
+name: Verify Labs
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "Labs/**"
+      - "quips/**"
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  structural-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make lint-labs.sh executable
+        run: chmod +x scripts/lint-labs.sh
+      - name: Run structural linter
+        run: ./scripts/lint-labs.sh
+
+  discover:
+    runs-on: ubuntu-latest
+    needs: structural-lint
+    outputs:
+      labs: ${{ steps.list.outputs.labs }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Discover labs
+        id: list
+        run: |
+          raw=$(ls Labs 2>/dev/null | grep -E '^[0-9]{3}-' | sort || true)
+          if [ -z "$raw" ]; then
+            echo "labs=[]" >> "$GITHUB_OUTPUT"
+          else
+            # Build JSON array: ["001-Foo","002-Bar",...]
+            json=$(printf '%s\n' $raw | jq -R . | jq -sc .)
+            echo "labs=$json" >> "$GITHUB_OUTPUT"
+          fi
+
+  summary:
+    runs-on: ubuntu-latest
+    needs: discover
+    if: needs.discover.outputs.labs == '[]'
+    steps:
+      - name: No labs yet
+        run: |
+          echo "ℹ no labs authored yet — skipping verify matrix"
+          exit 0
+
+  verify:
+    runs-on: ubuntu-latest
+    needs: discover
+    if: needs.discover.outputs.labs != '[]'
+    fail-fast: false
+    strategy:
+      matrix:
+        lab: ${{ fromJSON(needs.discover.outputs.labs) }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install quips dependencies
+        run: cd quips && npm ci
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Extract lab number
+        id: lab_num
+        run: |
+          num=$(echo "${{ matrix.lab }}" | grep -oE '^[0-9]{3}')
+          echo "num=$num" >> "$GITHUB_OUTPUT"
+
+      - name: Run doctor
+        run: ./scripts/doctor.sh ${{ steps.lab_num.outputs.num }}
+
+      - name: Run verify
+        run: ./scripts/verify.sh ${{ steps.lab_num.outputs.num }}

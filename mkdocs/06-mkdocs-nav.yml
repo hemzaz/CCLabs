@@ -3,53 +3,48 @@
 ###
 
 nav:
-  - Labs:
-      - index.md
-      - 001-GettingStarted: 001-GettingStarted/README.md
-      - 002-CodeCompletion: 002-CodeCompletion/README.md
-      - 003-ChatFeatures: 003-ChatFeatures/README.md
-      - 004-InlineChat: 004-InlineChat/README.md
-      - 005-Prompting: 005-Prompting/README.md
-      - 006-TestGeneration: 006-TestGeneration/README.md
-      - 007-Refactoring: 007-Refactoring/README.md
-      - 008-Documentation: 008-Documentation/README.md
-      - 009-Security: 009-Security/README.md
-      - 010-AgentMode: 010-AgentMode/README.md
-      - 011-MCPSetup: 011-MCPSetup/README.md
-      - 012-CustomAgents: 012-CustomAgents/README.md
-      - 013-CopilotExtensions: 013-CopilotExtensions/README.md
-      - 014-WorkspaceContext: 014-WorkspaceContext/README.md
-      - 015-MultiFileEditing: 015-MultiFileEditing/README.md
-      - 016-CommitMessages: 016-CommitMessages/README.md
-      - 017-PullRequests: 017-PullRequests/README.md
-      - 018-CodeReview: 018-CodeReview/README.md
-      - 019-Debugging: 019-Debugging/README.md
-      - 020-DatabaseQueries: 020-DatabaseQueries/README.md
-      - 021-APIDesign: 021-APIDesign/README.md
-      - 022-DockerAndContainers: 022-DockerAndContainers/README.md
-      - 023-CIWorkflows: 023-CIWorkflows/README.md
-      - 024-RegexAndParsing: 024-RegexAndParsing/README.md
-      - 025-ShellScripting: 025-ShellScripting/README.md
-      - 026-CopilotInCLI: 026-CopilotInCLI/README.md
-      - 027-KnowledgeBases: 027-KnowledgeBases/README.md
-      - 028-CustomInstructions: 028-CustomInstructions/README.md
-      - 029-ContextVariables: 029-ContextVariables/README.md
-      - 030-AgentTools: 030-AgentTools/README.md
-      # --- Copilot Prompting Workshop (Consolidated) ---
-      - 031-CopilotPromptingWorkshop: 031-CopilotPromptingWorkshop/README.md
-      # --- Tasks ---
-      - Tasks:
-          - Tasks/index.md
-          - Tasks/Lab-01.md
-          - Tasks/Lab-02.md
-          - Tasks/Lab-03.md
-          - Tasks/Lab-04.md
-          - Tasks/Lab-05.md
-          - Tasks/Lab-06.md
-          - Tasks/Lab-07.md
-          - Tasks/Lab-08.md
-          - Tasks/Lab-09.md
-          - Tasks/Lab-10.md
-          - Tasks/Lab-11.md
-          - Tasks/Lab-12.md
-          - Tasks/Lab-13.md
+  - Home: index.md
+  - About: welcome.md
+  - Part I - Orientation:
+      - 001 Install and Auth: 001-InstallAuth/README.md
+      - 002 First Session: 002-FirstSession/README.md
+      - 003 Slash Commands: 003-SlashCommands/README.md
+      - 004 Reading a Codebase: 004-ReadingCodebase/README.md
+      - 005 Writing First Code: 005-WritingFirstCode/README.md
+      - Checkpoint A: _CHECKPOINTS/A/README.md
+  - Part II - Working Loop:
+      - 006 Prompting: 006-Prompting/README.md
+      - 007 Tool Use: 007-ToolUse/README.md
+      - 008 Plan Mode: 008-PlanMode/README.md
+      - 009 Permission Modes: 009-PermissionModes/README.md
+      - 010 Multi-File Edits: 010-MultiFileEdits/README.md
+      - Checkpoint B: _CHECKPOINTS/B/README.md
+  - Part III - Context and Memory:
+      - 011 CLAUDE.md: 011-ClaudeMd/README.md
+      - 012 At Mentions: 012-AtMentions/README.md
+      - 013 Settings Layering: 013-SettingsLayering/README.md
+      - 014 Compaction: 014-Compaction/README.md
+      - 015 Custom Instructions: 015-CustomInstructions/README.md
+      - Checkpoint C: _CHECKPOINTS/C/README.md
+  - Part IV - Quality Gates:
+      - 016 TDD: 016-TDD/README.md
+      - 017 Rescue and Recover: 017-RescueRecover/README.md
+      - 018 Code Review: 018-CodeReview/README.md
+      - 019 Verify Scripts: 019-VerifyScripts/README.md
+      - 020 Refactor Safely: 020-RefactorSafely/README.md
+      - Checkpoint D: _CHECKPOINTS/D/README.md
+  - Part V - Autonomy and Orchestration:
+      - 021 Subagents: 021-Subagents/README.md
+      - 022 Subagent Delegation: 022-SubagentDelegation/README.md
+      - 023 Hooks: 023-Hooks/README.md
+      - 024 Skills: 024-Skills/README.md
+      - 025 MCP: 025-MCP/README.md
+      - Checkpoint E: _CHECKPOINTS/E/README.md
+  - Part VI - Shipping:
+      - 026 Skills Practice: 026-SkillsPractice/README.md
+      - 027 MCP Practice: 027-McpPractice/README.md
+      - 028 Claude in CI: 028-ClaudeInCi/README.md
+      - 029 PR Review Loop: 029-PrReviewLoop/README.md
+      - 030 Ship Feature PR: 030-ShipFeaturePr/README.md
+      - Checkpoint F: _CHECKPOINTS/F/README.md
+  - Capstone: _CAPSTONE/README.md

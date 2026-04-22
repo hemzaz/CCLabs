@@ -35,3 +35,22 @@ node_modules/
 *.bak
 *.tmp
 .vercel
+
+# OMC / local agent state
+.omc/
+.labs/
+
+# Quips local DB
+*.db
+
+# Vale fetched styles (auto-downloaded by CI + locally) — keep vocab committed
+.vale/styles/*
+!.vale/styles/.gitkeep
+!.vale/styles/config
+.vale/styles/config/*
+!.vale/styles/config/vocabularies
+.vale/styles/config/vocabularies/*
+!.vale/styles/config/vocabularies/Code
+.vale/styles/config/vocabularies/Code/*
+!.vale/styles/config/vocabularies/Code/accept.txt
+.claude/

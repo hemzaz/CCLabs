@@ -179,3 +179,11 @@ nav:
       - 008 Plan Mode: 008-PlanMode/README.md
       - 009 Permission Modes: 009-PermissionModes/README.md
       - 010 Multi-File Edits: 010-MultiFileEdits/README.md
+      - Checkpoint B: _CHECKPOINTS/B/README.md
+  - Part III - Context and Memory:
+      - 011 CLAUDE.md: 011-ClaudeMd/README.md
+      - 012 At Mentions: 012-AtMentions/README.md
+      - 013 Settings Layering: 013-SettingsLayering/README.md
+      - 014 Compaction: 014-Compaction/README.md
+      - 015 Custom Instructions: 015-CustomInstructions/README.md
+      - Checkpoint C: _CHECKPOINTS/C/README.md

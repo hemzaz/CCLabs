@@ -90,8 +90,34 @@ labs:
     primary:
       - https://docs.claude.com/en/docs/claude-code/overview
       - https://docs.claude.com/en/docs/claude-code/settings
+  "011":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/memory
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "012":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "013":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/settings
+      - https://docs.claude.com/en/docs/claude-code/iam
+  "014":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "015":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/memory
+      - https://docs.claude.com/en/docs/claude-code/overview
 
 checkpoints:
   A:
     primary:
       - https://docs.claude.com/en/docs/claude-code/overview
+  B:
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+  C:
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/memory

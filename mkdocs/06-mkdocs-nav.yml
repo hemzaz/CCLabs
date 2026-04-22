@@ -26,3 +26,25 @@ nav:
       - 014 Compaction: 014-Compaction/README.md
       - 015 Custom Instructions: 015-CustomInstructions/README.md
       - Checkpoint C: _CHECKPOINTS/C/README.md
+  - Part IV - Quality Gates:
+      - 016 TDD: 016-TDD/README.md
+      - 017 Rescue and Recover: 017-RescueRecover/README.md
+      - 018 Code Review: 018-CodeReview/README.md
+      - 019 Verify Scripts: 019-VerifyScripts/README.md
+      - 020 Refactor Safely: 020-RefactorSafely/README.md
+      - Checkpoint D: _CHECKPOINTS/D/README.md
+  - Part V - Autonomy and Orchestration:
+      - 021 Subagents: 021-Subagents/README.md
+      - 022 Subagent Delegation: 022-SubagentDelegation/README.md
+      - 023 Hooks: 023-Hooks/README.md
+      - 024 Skills: 024-Skills/README.md
+      - 025 MCP: 025-MCP/README.md
+      - Checkpoint E: _CHECKPOINTS/E/README.md
+  - Part VI - Shipping:
+      - 026 Skills Practice: 026-SkillsPractice/README.md
+      - 027 MCP Practice: 027-McpPractice/README.md
+      - 028 Claude in CI: 028-ClaudeInCi/README.md
+      - 029 PR Review Loop: 029-PrReviewLoop/README.md
+      - 030 Ship Feature PR: 030-ShipFeaturePr/README.md
+      - Checkpoint F: _CHECKPOINTS/F/README.md
+  - Capstone: _CAPSTONE/README.md

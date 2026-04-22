@@ -110,6 +110,69 @@ labs:
     primary:
       - https://docs.claude.com/en/docs/claude-code/memory
       - https://docs.claude.com/en/docs/claude-code/overview
+  "016":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "017":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "018":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/anthropic-cookbook
+  "019":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "020":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "021":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/sub-agents
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "022":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/sub-agents
+      - https://docs.claude.com/en/docs/claude-code/settings
+  "023":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/hooks
+      - https://docs.claude.com/en/docs/claude-code/settings
+  "024":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/skills
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "025":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/mcp
+      - https://modelcontextprotocol.io/introduction
+      - https://github.com/modelcontextprotocol/servers
+  "026":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/skills
+      - https://github.com/anthropics/anthropic-cookbook
+  "027":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/mcp
+      - https://github.com/modelcontextprotocol/servers
+      - https://modelcontextprotocol.io/introduction
+  "028":
+    primary:
+      - https://github.com/anthropics/claude-code-action
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "029":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/sdk
+      - https://github.com/anthropics/claude-code-action
+      - https://docs.claude.com/en/docs/claude-code/settings
+  "030":
+    primary:
+      - https://github.com/anthropics/claude-code-action
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
 
 checkpoints:
   A:
@@ -121,3 +184,20 @@ checkpoints:
   C:
     primary:
       - https://docs.claude.com/en/docs/claude-code/memory
+  D:
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+  E:
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/sub-agents
+      - https://docs.claude.com/en/docs/claude-code/hooks
+  F:
+    primary:
+      - https://github.com/anthropics/claude-code-action
+      - https://docs.claude.com/en/docs/claude-code/overview
+
+capstone:
+  primary:
+    - https://docs.claude.com/en/docs/claude-code/overview
+    - https://github.com/anthropics/claude-code-action

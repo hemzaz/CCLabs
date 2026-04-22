@@ -14,11 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Vale prose lint
-        uses: errata-ai/vale-action@v2.1.1
-        with:
-          files: Labs/
-          fail_on_error: true
-          reporter: github-check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Vale
+        run: |
+          VALE_VERSION="3.14.1"
+          curl -fsSL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz" \
+            | sudo tar -xz -C /usr/local/bin vale
+          vale --version
+
+      - name: Sync Vale packages
+        run: vale sync
+
+      - name: Run Vale at error level
+        run: vale --minAlertLevel=error Labs/

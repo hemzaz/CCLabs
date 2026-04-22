@@ -16,7 +16,7 @@ site_url: https://claudecodelabs.github.io/
 copyright: '&copy;2026 ClaudeCodeLabs authors &middot; Forked from <a href="https://github.com/nirgeier/GithubCopilotLabs">GithubCopilotLabs</a>'
 theme:
   name: material
-  custom_dir: .mkdocs-build/overrides
+  custom_dir: mkdocs/overrides
   features:
     - announce.dismiss
     - content.action.edit
@@ -88,7 +88,6 @@ extra_javascript:
 
 plugins:
   - awesome-pages
-  - meta
   # - pdf-export:
   #     combined: true # all pages in one PDF
   #     combined_output_path: docs/Full-Documentation.pdf

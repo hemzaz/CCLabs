@@ -135,7 +135,7 @@ Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step en
 
    > Run `rm -rf /tmp/safe-test-dir` and tell me what happened.
 
-   Verify Claude reports the hook blocked the command. You should see the denial message in Claude's output. Confirm with:
+   Verify the hook fires and blocks the command by invoking it directly with a test payload:
 
    ```bash
    echo '{"tool_input":{"command":"rm -rf /tmp/test"}}' | quips/.claude/hooks/no-rm.sh; echo "exit: $?"

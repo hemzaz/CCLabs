@@ -29,15 +29,7 @@ The series is organized into six parts:
 - **Part V — Autonomy & Orchestration**: agents, sub-agents, parallel tasks
 - **Part VI — Shipping**: pull requests, releases, deployment pipelines
 
-Five labs are available today:
-
-| # | Lab | Artifact |
-|---|-----|----------|
-| 001 | Install & Auth | `claude --version` works |
-| 002 | First Session | saved REPL transcript |
-| 003 | Slash Commands | notes on `/help` `/clear` `/memory` |
-| 004 | Reading a Codebase | 3-bullet Quips summary |
-| 005 | Writing First Code | `GET /random` endpoint added to Quips |
+All 30 labs plus six checkpoints and the Capstone are live. Start at Lab 001 and advance with `./scripts/labs.sh next`. Full lab index: [Labs/index.md](Labs/index.md).
 
 ## Quips — the Spine Project
 
@@ -46,11 +38,40 @@ Each lab adds one capability to Quips so you always have a real artifact to show
 
 ## Run Locally
 
+Clone, install, and preview the site:
+
 ```bash
-git clone https://github.com/claudecodelabs/claudecodelabs.git
+git clone https://github.com/hemzaz/CCLabs.git
+cd CCLabs
+pip install uv && uv pip install --system -r mkdocs/requirements.txt
+make serve     # dev server with live reload at http://localhost:8000
+# OR
+make run       # build and preview the shippable artifact at http://localhost:8000
+```
+
+To work through the labs:
+
+```bash
 cd quips && npm ci && npm test
 ./scripts/labs.sh next
 ```
+
+## Deploy
+
+Production deploys run on push-to-main via GitHub Actions:
+
+- **Vercel** — `.github/workflows/deploy-vercel.yml` (needs `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` secrets)
+- **Netlify** — `.github/workflows/deploy-netlify.yml` (needs `NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID` secrets)
+- **GitHub Pages** — `.github/workflows/deploy-ghpages.yml`
+
+For one-off preview deployments from your machine:
+
+```bash
+npm i -g vercel && vercel login && make deploy-vercel
+npm i -g netlify-cli && netlify login && make deploy-netlify
+```
+
+Both targets check the CLI is installed and print install hints if it isn't.
 
 ## Contributing
 

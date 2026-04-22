@@ -69,3 +69,29 @@ labs:
       - https://docs.claude.com/en/docs/claude-code/overview
       - https://docs.claude.com/en/docs/claude-code/common-workflows
       - https://github.com/anthropics/claude-code
+  "006":
+    primary:
+      - https://github.com/anthropics/courses
+      - https://docs.claude.com/en/docs/claude-code/overview
+  "007":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "008":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "009":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/settings
+      - https://docs.claude.com/en/docs/claude-code/iam
+      - https://github.com/anthropics/claude-code
+  "010":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/settings
+
+checkpoints:
+  A:
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview

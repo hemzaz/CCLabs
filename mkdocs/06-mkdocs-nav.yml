@@ -11,3 +11,10 @@ nav:
       - 003 Slash Commands: 003-SlashCommands/README.md
       - 004 Reading a Codebase: 004-ReadingCodebase/README.md
       - 005 Writing First Code: 005-WritingFirstCode/README.md
+      - Checkpoint A: _CHECKPOINTS/A/README.md
+  - Part II - Working Loop:
+      - 006 Prompting: 006-Prompting/README.md
+      - 007 Tool Use: 007-ToolUse/README.md
+      - 008 Plan Mode: 008-PlanMode/README.md
+      - 009 Permission Modes: 009-PermissionModes/README.md
+      - 010 Multi-File Edits: 010-MultiFileEdits/README.md

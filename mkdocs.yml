@@ -3,13 +3,13 @@
 ###
 docs_dir: Labs
 edit_uri:
-repo_name: claudecodelabs/claudecodelabs
-repo_url: https://github.com/claudecodelabs/claudecodelabs
+repo_name: hemzaz/CCLabs
+repo_url: https://github.com/hemzaz/CCLabs
 site_author: ClaudeCodeLabs authors
 site_description: 30 hands-on labs for Claude Code - from zero to shipping.
 site_dir: ./mkdocs-site
 site_name: ClaudeCodeLabs
-site_url: https://claudecodelabs.github.io/
+site_url: https://hemzaz.github.io/CCLabs/
 ###
 ### mkdocs-theme.yml
 ###
@@ -75,7 +75,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/claudecodelabs/claudecodelabs
+      link: https://github.com/hemzaz/CCLabs
       name: View on GitHub
 
 extra_css:
@@ -99,7 +99,7 @@ plugins:
       branch: main
       docs_path: Labs # set if your docs folder is not root
       enabled: true
-      repository: claudecodelabs/claudecodelabs
+      repository: hemzaz/CCLabs
   - git-revision-date-localized:
       enable_creation_date: true
       enable_git_follow: false

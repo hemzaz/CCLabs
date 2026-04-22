@@ -47,4 +47,25 @@ canonical:
 #       - https://docs.claude.com/en/docs/claude-code/quickstart
 #     supplementary: # optional, third-party links allowed
 #       - https://...
-labs: {}
+labs:
+  "001":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "002":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "003":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "004":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://github.com/anthropics/claude-code
+  "005":
+    primary:
+      - https://docs.claude.com/en/docs/claude-code/overview
+      - https://docs.claude.com/en/docs/claude-code/common-workflows
+      - https://github.com/anthropics/claude-code

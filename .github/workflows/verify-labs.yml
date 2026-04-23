@@ -53,8 +53,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: discover
     if: needs.discover.outputs.labs != '[]'
-    fail-fast: false
     strategy:
+      fail-fast: false
       matrix:
         lab: ${{ fromJSON(needs.discover.outputs.labs) }}
 

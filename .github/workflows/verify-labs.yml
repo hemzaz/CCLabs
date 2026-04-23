@@ -1,12 +1,18 @@
 name: Verify Labs
 
+# This workflow runs each lab's verify.sh in a matrix. Those scripts assert
+# that the LEARNER-PRODUCED artifact exists (e.g. transcript.md for Lab 002,
+# `/random` route in quips/ for Lab 005, etc.) — so they only pass on a
+# branch where a learner has actually completed the exercises.
+#
+# Running it on every PR that touches Labs/** would produce cosmetic failures
+# on the repo itself, because the repo intentionally does NOT ship the
+# learner artifacts. So this workflow is manual-dispatch only: a learner or
+# reviewer triggers it from a branch where they've done the work.
+#
+# The structural template contract is validated separately by the Lint Prose
+# + Test MkDocs Build workflows, which run automatically on every PR.
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - "Labs/**"
-      - "quips/**"
-      - "scripts/**"
   workflow_dispatch:
 
 jobs:

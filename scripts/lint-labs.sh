@@ -115,8 +115,9 @@ check_lab_rich() {
   done
 
   # --- Overview admonition: !!! hint "Overview" with >=3 bullets
+  # Anchor to start-of-line so we skip any literal mention inside an HTML <!-- comment -->.
   local overview_line
-  overview_line=$(grep -nF '!!! hint "Overview"' "$file" | head -1 | cut -d: -f1 || true)
+  overview_line=$(grep -nE '^!!! hint "Overview"' "$file" | head -1 | cut -d: -f1 || true)
   if [ -z "$overview_line" ]; then
     errors_ref+=("missing '!!! hint \"Overview\"' admonition")
   else

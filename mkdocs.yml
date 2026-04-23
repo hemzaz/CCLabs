@@ -210,3 +210,5 @@ nav:
       - 030 Ship Feature PR: 030-ShipFeaturePr/README.md
       - Checkpoint F: _CHECKPOINTS/F/README.md
   - Capstone: _CAPSTONE/README.md
+  - Extras:
+      - 031 Prompting Workshop: 031-PromptingWorkshop/README.md

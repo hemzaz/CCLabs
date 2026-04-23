@@ -1581,8 +1581,9 @@
             </div>
         </section>
         <section class="print-page" id="index" heading-number="1"><h1 id="index-index">Home</h1><h3 id="claudecodelabs">ClaudeCodeLabs</h3>
-<p>ClaudeCodeLabs is a series of 30 hands-on labs that teach Claude Code from first install to shipping real features — every lab produces a concrete artifact you can point to. The labs are built around <strong>Quips</strong>, a small Fastify API that grows with you across the curriculum.</p>
-<p>This site is for anyone new to Claude Code who wants a structured, practical path. No prior AI tooling experience is required — just Node 20, Git, and a GitHub account.</p>
+<p><strong>30 hands-on labs + a capstone + an optional prompting workshop</strong>, teaching Claude Code from first install to shipping real features. Every lab produces a concrete artifact you can point to, and includes tasks, a quiz, and recall questions so you actually remember what you learned.</p>
+<p>The labs are built around <strong>Quips</strong>, a small Fastify API that grows with you across the curriculum. By the time you finish, you&rsquo;ll have shipped a reviewed PR to a real codebase — and know exactly how you did it.</p>
+<p>This site is for anyone new to Claude Code who wants a structured, practical path. No prior AI tooling experience is required — just Node 20, Git, and a GitHub account. If you break something, every lab has an <code>If stuck</code> troubleshooting table. You&rsquo;ll be fine.</p>
 <h4 id="index-the-curriculum">The curriculum</h4>
 <ul>
 <li><strong>Part I — Orientation</strong> (Labs 001–005): install, first session, slash commands, reading a codebase, writing first code</li>
@@ -1595,6 +1596,7 @@
 </ul>
 <h4 id="index-how-to-start">How to start</h4>
 <p>Open <a href="#001-installauth">Lab 001 — Install and Auth</a> and follow the steps. Once Claude Code is running, use <code>./scripts/labs.sh next</code> to advance through the series.</p>
+<p><strong>Tip:</strong> your task checkboxes and quiz answers are saved in your browser&rsquo;s localStorage — close the tab, come back tomorrow, and your progress is still there. No accounts, no tracking.</p>
 <h4 id="index-labs">Labs</h4>
 <table>
 <thead>
@@ -1757,15 +1759,45 @@
 </tr>
 </tbody>
 </table>
-<p>Six checkpoints close each Part (A after 005, B after 010, C after 015, D after 020, E after 025, F after 030). The <a href="#_capstone">Capstone</a> closes the curriculum. See the <a href="#..-docs-design.md">design document</a> for the full curriculum map and outcome coverage.</p></section><section class="print-page" id="welcome" heading-number="2"><h1 id="welcome-welcome">About</h1><h3 id="about-claudecodelabs">About ClaudeCodeLabs</h3>
+<p>Six checkpoints close each Part (A after 005, B after 010, C after 015, D after 020, E after 025, F after 030). The <a href="#_capstone">Capstone</a> closes the curriculum with a reviewed PR to Quips, scored against a 4×4 rubric.</p>
+<h4 id="index-extras">Extras</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Lab</th>
+<th>Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#031-promptingworkshop">031</a></td>
+<td>Prompting Workshop</td>
+<td><code>Labs/031-PromptingWorkshop/prompts.md</code> — 8 timed prompt drills across 6 patterns</td>
+</tr>
+</tbody>
+</table>
+<p>The Prompting Workshop is optional and sits after the Capstone. Take it when you want deliberate practice on prompt craft without the commit-and-ship loop.</p>
+<p>See the <a href="https://github.com/hemzaz/CCLabs/blob/main/docs/DESIGN.md">design document</a> for the full curriculum map and outcome coverage.</p></section><section class="print-page" id="welcome" heading-number="2"><h1 id="welcome-welcome">About</h1><h3 id="about-claudecodelabs">About ClaudeCodeLabs</h3>
 <h4 id="welcome-why-this-exists">Why this exists</h4>
-<p>Most AI coding tutorials stop at &ldquo;look at this cool autocomplete.&rdquo; ClaudeCodeLabs goes further: every lab is a repeatable exercise that ends with working code checked into a real repository. The curriculum is grounded in Anthropic&rsquo;s official documentation so it stays accurate as Claude Code evolves.</p>
+<p>Most AI coding tutorials stop at &ldquo;look at this cool autocomplete.&rdquo; ClaudeCodeLabs goes further: every lab ends with working code, a saved artifact, or a PR — checked into a real repo, graded by a real verify script. The curriculum is grounded in Anthropic&rsquo;s official documentation so it stays accurate as Claude Code evolves.</p>
+<h4 id="welcome-what-each-lab-gives-you">What each lab gives you</h4>
+<p>Every lab is the same shape, so you never waste energy parsing structure:</p>
+<ul>
+<li><strong>Overview</strong> — three bullets of what you&rsquo;ll learn, build, and practice</li>
+<li><strong>Walkthrough</strong> — the teaching section (read here, practice below)</li>
+<li><strong>PRIMM steps</strong> — Predict, Run, Investigate, Modify, Make; each with a verify command</li>
+<li><strong>Tasks</strong> — five to eight scenario drills with hints and collapsible solutions</li>
+<li><strong>Quiz</strong> — four multiple-choice questions with instant feedback (answers persist locally in your browser)</li>
+<li><strong>Recall</strong> — one question about a lab 5+ steps back, to keep the thread alive</li>
+</ul>
+<p>The tasks and quiz progress you make survives browser refreshes — there&rsquo;s a small client-side tracker (localStorage) so you can come back tomorrow and pick up where you left off.</p>
 <h4 id="welcome-design-principles">Design principles</h4>
 <ul>
-<li><strong>Relentless</strong> — each lab has one clear goal, one deliverable, and one verify command. No busywork.</li>
-<li><strong>Cohesive</strong> — all labs build on the same Quips project, so context accumulates rather than resets.</li>
+<li><strong>Relentless</strong> — one clear goal, one deliverable, one verify command per lab. No busywork.</li>
+<li><strong>Cohesive</strong> — every lab builds on the same Quips project, so context accumulates.</li>
 <li><strong>Continuous</strong> — each lab&rsquo;s ending sets up the next. No gaps, no concept jumps.</li>
-<li><strong>Uniform</strong> — every lab follows the same template: Why, Check, Do (PRIMM), Observe, If stuck, Stretch, Recall, References, Next.</li>
+<li><strong>Uniform</strong> — fourteen sections, same order, every time. Predictable is fast.</li>
 </ul>
 <h4 id="welcome-prerequisites">Prerequisites</h4>
 <ul>
@@ -5739,88 +5771,177 @@ Expected: <code>0</code></p>
 </ul>
 <h4 id="012-atmentions-next">Next</h4>
 <p>→ <strong>Lab 013 — Settings Layering</strong> — control Claude&rsquo;s behaviour per-project and per-user with layered settings files.</p></section><section class="print-page" id="013-settingslayering" heading-number="5.3"><h1 id="013-settingslayering-013-settingslayering">013 Settings Layering</h1><h3 id="lab-013-settings-layering">Lab 013 — Settings Layering</h3>
-<p>⏱ <strong>20 min</strong>   📦 <strong>You&rsquo;ll add</strong>: <code>Labs/013-SettingsLayering/observations.md</code> describing which layer won in each experiment   🔗 <strong>Builds on</strong>: Lab 012   🎯 <strong>Success</strong>: <code>observations.md exists, non-empty, mentions all three scopes: user, project, local (case-insensitive)</code></p>
+<p>⏱ <strong>20 min</strong>   📦 <strong>You&rsquo;ll add</strong>: <code>Labs/013-SettingsLayering/observations.md</code> that mentions all three scopes: user, project, local   🔗 <strong>Builds on</strong>: Lab 012   🎯 <strong>Success</strong>: <code>observations.md exists, non-empty, mentions all three scopes: user, project, local (case-insensitive)</code></p>
 <!--
   Template contract - do not remove this comment.
   CI (lint-prose + structure linter) enforces:
     1. Header line above (one line, five fields, in this exact order)
-    2. Nine sections below (in this exact order, same H2 titles)
-    3. Single new concept (a "Concept:" Bloom-tagged line)
-    4. Every Do step ends with a verify COMMAND, not a screenshot
+    2. !!! hint "Overview" admonition with >=3 bullets
+    3. Concept: line with a Bloom tag
+    4. Fourteen H2 sections below in this exact order:
+       Prerequisites, What You Will Learn, Why, Walkthrough, Check, Do,
+       Observe, If stuck, Tasks, Quiz, Stretch, Recall, References, Next
+    5. >=5 Tasks, each with a ??? success "Solution" block
+    6. >=3 MCQ questions inside a <div class="ccg-quiz">
   See CONTRIBUTING.md and docs/DESIGN.md §7 for the full author contract.
 -->
 
-<p><strong>Concept</strong>: <code>User vs project vs local settings precedence</code> (Bloom: Analyze)</p>
+<div class="admonition hint">
+<p class="admonition-title">Overview</p>
+<ul>
+<li>You will learn the five-level settings precedence chain and be able to recite it from memory.</li>
+<li>You will set the same key at two different scopes, observe which one wins, and record why.</li>
+<li>You will understand why <code>settings.json</code> belongs in version control but <code>settings.local.json</code> does not.</li>
+<li>By the end you will have an <code>observations.md</code> that captures which scope won in your live experiment.</li>
+</ul>
+</div>
+<p><strong>Concept</strong>: <code>Settings precedence: enterprise → CLI flag → local → project → user</code> (Bloom: Analyze)</p>
 <hr />
+<h4 id="013-settingslayering-prerequisites">Prerequisites</h4>
+<ul>
+<li>Lab 012 complete — <code>quips/</code> submodule is present and <code>@</code> mentions work</li>
+<li><code>claude --version</code> exits 0 and <code>~/.claude/settings.json</code> exists (or you can create it)</li>
+<li>Basic familiarity with JSON syntax</li>
+</ul>
+<h4 id="013-settingslayering-what-you-will-learn">What You Will Learn</h4>
+<ul>
+<li>The full five-level precedence chain Claude Code uses when merging settings</li>
+<li>Which scope wins when two files set the same key — and why</li>
+<li>Why <code>settings.local.json</code> exists as a separate file rather than just overwriting <code>settings.json</code></li>
+<li>How to inspect the effective merged config from inside the REPL with <code>/permissions</code></li>
+<li>Why teams check in <code>settings.json</code> but <code>.gitignore</code> <code>settings.local.json</code></li>
+</ul>
 <h4 id="013-settingslayering-why">Why</h4>
-<p>Claude Code reads settings from three scopes — user, project, and local — and merges them in a defined order. When two scopes set the same key, one wins silently. Knowing the precedence order means you can predict Claude&rsquo;s behaviour before running it, and design team configs that stay safe even when individuals override them locally.</p>
+<p>Claude Code reads settings from up to five sources and merges them silently. When something behaves unexpectedly — a tool that should be allowed is blocked, a model you set globally is ignored — the root cause is almost always a higher-priority scope overriding a lower one without you noticing. Understanding the precedence order lets you predict Claude&rsquo;s behaviour before you run anything, design team configs that stay safe even when individuals fiddle locally, and debug surprises in under a minute rather than staring at config files wondering which one &ldquo;won.&rdquo;</p>
+<h4 id="013-settingslayering-walkthrough">Walkthrough</h4>
+<h5 id="013-settingslayering-the-five-level-precedence-chain">The five-level precedence chain</h5>
+<p>Claude Code evaluates settings from highest priority to lowest:</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Scope</th>
+<th>File / mechanism</th>
+<th>Who controls it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (highest)</td>
+<td>Enterprise</td>
+<td>Centrally managed policy</td>
+<td>IT / platform team</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CLI flag</td>
+<td><code>--permission-mode</code> etc. at invocation time</td>
+<td>The person running the command</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Local</td>
+<td><code>&lt;project&gt;/.claude/settings.local.json</code></td>
+<td>Individual developer (not committed)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Project</td>
+<td><code>&lt;project&gt;/.claude/settings.json</code></td>
+<td>Team (committed to the repo)</td>
+</tr>
+<tr>
+<td>5 (lowest)</td>
+<td>User</td>
+<td><code>~/.claude/settings.json</code></td>
+<td>Individual (global across all projects)</td>
+</tr>
+</tbody>
+</table>
+<p>When two scopes set the same key, the <strong>higher-priority scope wins entirely</strong> for that key. There is no deep-merging of arrays: if both user scope and project scope set <code>permissions.allow</code>, Claude uses the project-scope list and ignores the user-scope list.</p>
+<h5 id="013-settingslayering-why-the-split-between-project-and-local">Why the split between project and local?</h5>
+<p><code>settings.json</code> is committed to the repo so every contributor gets the same baseline: the same allowed tools, the same default model, the same permission mode. <code>settings.local.json</code> is in <code>.gitignore</code> by convention (Claude Code creates a <code>.gitignore</code> entry automatically) so personal tweaks — a local API key, a wider allow-list you need for your workflow, a debug flag — never land in the shared repo. The design is deliberate: shared defaults committed, personal overrides private.</p>
+<h5 id="013-settingslayering-inspecting-the-effective-config">Inspecting the effective config</h5>
+<p>From inside the REPL, <code>/permissions</code> prints the merged effective permission list and annotates which scope each entry came from. This is the fastest way to answer &ldquo;which scope is actually controlling this right now?&rdquo;</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#013-settingslayering-__codelineno-0-1"></a>/permissions
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#013-settingslayering-__codelineno-0-2"></a># prints: effective allow/deny list with source scope labels
+</span></code></pre></div>
+<h5 id="013-settingslayering-a-concrete-example">A concrete example</h5>
+<p>Suppose user scope sets:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#013-settingslayering-__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>And project scope sets:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#013-settingslayering-__codelineno-2-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Edit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(npm test)&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>When you start a session from inside that project, the project-scope list wins. Claude will allow <code>Read</code>, <code>Edit</code>, and <code>Bash(npm test)</code> — not just <code>Read</code>. If you want personal overrides on top of the project list, put them in <code>settings.local.json</code> at priority 3.</p>
 <h4 id="013-settingslayering-check">Check</h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#013-settingslayering-__codelineno-0-1"></a>./scripts/doctor.sh<span class="w"> </span><span class="m">013</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#013-settingslayering-__codelineno-3-1"></a>./scripts/doctor.sh<span class="w"> </span><span class="m">013</span>
 </span></code></pre></div>
 <p>Expected output: <code>OK lab 013 pre-flight green</code></p>
 <h4 id="013-settingslayering-do">Do</h4>
 <p>Follow PRIMM (Predict → Run → Investigate → Modify → Make). Each step ends with a verify command.</p>
 <ol>
-<li><strong>Predict</strong> — before reading any docs, write down your prediction: if <code>~/.claude/settings.json</code> and <code>quips/.claude/settings.json</code> both set <code>permissionMode</code>, which file wins?</li>
+<li><strong>Predict</strong> — before reading any docs, write down your prediction: if <code>~/.claude/settings.json</code> and <code>quips/.claude/settings.json</code> both set <code>permissions.allow</code>, which file wins?</li>
 </ol>
-<p>Verify:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#013-settingslayering-__codelineno-1-1"></a><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span>quips<span class="w"> </span><span class="o">]]</span>
+<p>Verify the quips directory exists:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#013-settingslayering-__codelineno-4-1"></a><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span>quips<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;quips present&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;missing — run: git submodule update --init quips&quot;</span>
 </span></code></pre></div>
-   Expected: exits 0 (the Quips project exists from earlier labs).</p>
+<p>Expected: <code>quips present</code></p>
 <ol>
 <li><strong>Run</strong> — read the official settings documentation to learn the full precedence chain.</li>
 </ol>
 <p>Reference: https://docs.claude.com/en/docs/claude-code/settings</p>
 <p>The precedence order from highest to lowest is:
    <strong>enterprise → CLI flag → local (<code>settings.local.json</code>) → project (<code>settings.json</code>) → user (<code>~/.claude/settings.json</code>)</strong></p>
-<p>Verify: you can recite all five levels from memory before moving on.</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#013-settingslayering-__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;precedence order memorised&quot;</span>
+<p>Verify you can recite all five levels from memory before moving on:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#013-settingslayering-__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;five levels memorised: enterprise, cli-flag, local, project, user&quot;</span>
 </span></code></pre></div>
-   Expected: exits 0.</p>
+<p>Expected: exits 0.</p>
 <ol>
-<li><strong>Investigate</strong> — inspect the real settings files on this machine.</li>
+<li><strong>Investigate</strong> — inspect the real settings files present on this machine.</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#013-settingslayering-__codelineno-3-1"></a>cat<span class="w"> </span>~/.claude/settings.json<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#013-settingslayering-__codelineno-6-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>~/.claude/settings.json<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(user settings missing or invalid)&quot;</span>
 </span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#013-settingslayering-__codelineno-4-1"></a>cat<span class="w"> </span>quips/.claude/settings.local.json<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(file does not exist yet)&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#013-settingslayering-__codelineno-7-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.json<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(project settings does not exist yet)&quot;</span>
 </span></code></pre></div>
-<p>Note which files exist and what keys they contain.</p>
-<p>Verify: you can state which files are present (or absent) and name at least one key from each that does exist.</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#013-settingslayering-__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;settings files inspected&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#013-settingslayering-__codelineno-8-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.local.json<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(local settings does not exist yet)&quot;</span>
 </span></code></pre></div>
-   Expected: exits 0.</p>
+<p>Note which files exist and what keys they contain. This is your baseline before you modify anything.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#013-settingslayering-__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;settings files inspected&quot;</span>
+</span></code></pre></div>
+<p>Expected: exits 0.</p>
 <ol>
 <li><strong>Modify</strong> — set the same key at two different scopes and observe which wins.</li>
 </ol>
-<p>Choose the key <code>permissions.allow</code>. In user scope (<code>~/.claude/settings.json</code>) add or update:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#013-settingslayering-__codelineno-6-1"></a><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#013-settingslayering-__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#013-settingslayering-__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">]</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#013-settingslayering-__codelineno-6-4"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#013-settingslayering-__codelineno-6-5"></a><span class="p">}</span>
+<p>In user scope (<code>~/.claude/settings.json</code>) add or update <code>permissions.allow</code> to contain only <code>Read</code>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#013-settingslayering-__codelineno-10-1"></a><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#013-settingslayering-__codelineno-10-2"></a><span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#013-settingslayering-__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">]</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#013-settingslayering-__codelineno-10-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#013-settingslayering-__codelineno-10-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>In project scope (<code>quips/.claude/settings.json</code>, <strong>not</strong> <code>settings.local.json</code>) create:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#013-settingslayering-__codelineno-7-1"></a><span class="p">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#013-settingslayering-__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#013-settingslayering-__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Edit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(npm test)&quot;</span><span class="p">]</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#013-settingslayering-__codelineno-7-4"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#013-settingslayering-__codelineno-7-5"></a><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#013-settingslayering-__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#013-settingslayering-__codelineno-11-2"></a><span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#013-settingslayering-__codelineno-11-3"></a><span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Edit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(npm test)&quot;</span><span class="p">]</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#013-settingslayering-__codelineno-11-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#013-settingslayering-__codelineno-11-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Start a fresh Claude session from inside <code>quips/</code> and run <code>/permissions</code>. Observe which allow-list is active.</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#013-settingslayering-__codelineno-8-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>~/.claude/settings.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#013-settingslayering-__codelineno-8-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#013-settingslayering-__codelineno-8-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;both files are valid JSON&quot;</span>
+<p>Verify both files are valid JSON:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#013-settingslayering-__codelineno-12-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>~/.claude/settings.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#013-settingslayering-__codelineno-12-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#013-settingslayering-__codelineno-12-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;both files are valid JSON&quot;</span>
 </span></code></pre></div>
-   Expected: <code>both files are valid JSON</code>.</p>
+<p>Expected: <code>both files are valid JSON</code></p>
+<p>Start a fresh Claude session from inside <code>quips/</code> and run <code>/permissions</code>. The effective allow-list should show <code>Read</code>, <code>Edit</code>, and <code>Bash(npm test)</code> — project scope wins.</p>
 <ol>
-<li><strong>Make</strong> — write <code>Labs/013-SettingsLayering/observations.md</code> documenting what you found. Include three sections — <strong>User scope</strong>, <strong>Project scope</strong>, <strong>Local scope</strong> — each stating what you set and which layer won.</li>
+<li><strong>Make</strong> — write <code>Labs/013-SettingsLayering/observations.md</code> documenting what you found. Include three sections: <strong>User scope</strong>, <strong>Project scope</strong>, <strong>Local scope</strong> — each stating what you set and which layer won.</li>
 </ol>
-<p>Verify:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#013-settingslayering-__codelineno-9-1"></a>./scripts/verify.sh<span class="w"> </span><span class="m">013</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#013-settingslayering-__codelineno-13-1"></a>./scripts/verify.sh<span class="w"> </span><span class="m">013</span>
 </span></code></pre></div>
-   Expected: exits 0 with no error output.</p>
+<p>Expected: exits 0 with no error output.</p>
 <h4 id="013-settingslayering-observe">Observe</h4>
-<p>A team checks in <code>settings.json</code> (project scope) so every contributor shares the same baseline permissions, but keeps <code>settings.local.json</code> out of version control so individual overrides — personal API keys, local-only allow-list tweaks — never accidentally land in the shared repo.</p>
+<p>A team checks in <code>settings.json</code> (project scope) so every contributor shares the same baseline permissions, but keeps <code>settings.local.json</code> out of version control so individual overrides — personal API keys, local-only allow-list tweaks — never accidentally land in the shared repo. The layering design enforces this separation structurally: shared defaults at no extra cost, private overrides without coordination overhead.</p>
 <h4 id="013-settingslayering-if-stuck">If stuck</h4>
 <table>
 <thead>
@@ -5847,17 +5968,157 @@ Expected: <code>0</code></p>
 <tr>
 <td>Unsure which scope is active</td>
 <td>No visible indicator in normal output</td>
-<td>Run <code>/permissions</code> or <code>/settings</code> inside the REPL — Claude prints the merged effective config and its source scope</td>
+<td>Run <code>/permissions</code> inside the REPL — Claude prints the merged effective config annotated with its source scope</td>
+<td>https://docs.claude.com/en/docs/claude-code/settings</td>
+</tr>
+<tr>
+<td><code>settings.local.json</code> keeps getting committed</td>
+<td><code>.gitignore</code> entry missing</td>
+<td>Claude Code adds it automatically; check with <code>grep settings.local quips/.claude/.gitignore</code> and add manually if absent</td>
 <td>https://docs.claude.com/en/docs/claude-code/settings</td>
 </tr>
 </tbody>
 </table>
+<h4 id="013-settingslayering-tasks">Tasks</h4>
+<p>Click the checkbox next to each task to mark it done — your progress is saved locally.</p>
+<h5 id="013-settingslayering-task-1-recite-the-five-level-precedence-chain">Task 1 — Recite the five-level precedence chain</h5>
+<p><strong>Scenario:</strong> A new teammate asks why their local permission override is being ignored. You need to explain which scope wins and why.</p>
+<p><strong>Hint:</strong> The chain runs from highest to lowest priority. The key insight is that higher-priority scopes win entirely for any key they set — there is no partial merge.</p>
+<details class="success">
+<summary>Solution</summary>
+<p>Highest to lowest:</p>
+<ol>
+<li>Enterprise policy (centrally managed, overrides everything)</li>
+<li>CLI flag (passed at invocation time, e.g. <code>--permission-mode</code>)</li>
+<li>Local (<code>quips/.claude/settings.local.json</code> — not committed)</li>
+<li>Project (<code>quips/.claude/settings.json</code> — committed)</li>
+<li>User (<code>~/.claude/settings.json</code> — global personal defaults)</li>
+</ol>
+<p>If a colleague&rsquo;s local file sets <code>permissions.allow</code>, that takes precedence over the project file. If they want the project defaults, they should delete the key from their local file — not fight the project file.</p>
+</details>
+<h5 id="013-settingslayering-task-2-verify-which-scope-is-active-from-inside-the-repl">Task 2 — Verify which scope is active from inside the REPL</h5>
+<p><strong>Scenario:</strong> You have modified both <code>~/.claude/settings.json</code> and <code>quips/.claude/settings.json</code>. You want to confirm which allow-list Claude is actually using without restarting.</p>
+<p><strong>Hint:</strong> There is a REPL slash command that prints the effective merged configuration and labels each entry with its source scope.</p>
+<details class="success">
+<summary>Solution</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#013-settingslayering-__codelineno-14-1"></a><span class="nb">cd</span><span class="w"> </span>quips<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>claude
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#013-settingslayering-__codelineno-14-2"></a><span class="c1"># Inside the REPL:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#013-settingslayering-__codelineno-14-3"></a>/permissions
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#013-settingslayering-__codelineno-14-4"></a><span class="c1"># Output: effective allow/deny list with scope labels (user, project, local, etc.)</span>
+</span></code></pre></div>
+<p>The output shows which scope contributed each permission entry. If the project scope is contributing <code>Edit</code> and the user scope has no <code>Edit</code>, the project file is the source.</p>
+</details>
+<h5 id="013-settingslayering-task-3-add-a-local-override-that-adds-a-tool-the-project-scope-does-not-allow">Task 3 — Add a local override that adds a tool the project scope does not allow</h5>
+<p><strong>Scenario:</strong> The <code>quips</code> project&rsquo;s <code>settings.json</code> only allows <code>Read</code>, <code>Edit</code>, and <code>Bash(npm test)</code>. You are doing local profiling work and need to also allow <code>Bash(node --prof)</code> — but you must not commit that change to the shared repo.</p>
+<p><strong>Hint:</strong> Local scope (<code>settings.local.json</code>) sits above project scope in the precedence chain. Use it for personal additions that should not affect teammates.</p>
+<details class="success">
+<summary>Solution</summary>
+<p>Create or edit <code>quips/.claude/settings.local.json</code>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#013-settingslayering-__codelineno-15-1"></a><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#013-settingslayering-__codelineno-15-2"></a><span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#013-settingslayering-__codelineno-15-3"></a><span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Edit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(npm test)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(node --prof)&quot;</span><span class="p">]</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#013-settingslayering-__codelineno-15-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#013-settingslayering-__codelineno-15-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Verify it is valid JSON and confirm <code>.gitignore</code> covers it:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#013-settingslayering-__codelineno-16-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.local.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;valid JSON&quot;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#013-settingslayering-__codelineno-16-2"></a>grep<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;settings.local&#39;</span><span class="w"> </span>quips/.claude/<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(no gitignore entry — add one)&quot;</span>
+</span></code></pre></div>
+<p>From the REPL, run <code>/permissions</code> — the local allow-list is now the effective one since local scope outranks project scope.</p>
+</details>
+<h5 id="013-settingslayering-task-4-explain-why-settingslocaljson-is-not-committed">Task 4 — Explain why <code>settings.local.json</code> is not committed</h5>
+<p><strong>Scenario:</strong> A junior developer on the Quips team asks: &ldquo;Why do we have both <code>settings.json</code> and <code>settings.local.json</code>? Can&rsquo;t I just edit <code>settings.json</code> directly for my personal stuff?&rdquo;</p>
+<p><strong>Hint:</strong> Think about what happens when that developer&rsquo;s change lands in the shared repo and every other contributor pulls it.</p>
+<details class="success">
+<summary>Solution</summary>
+<p><code>settings.json</code> is committed so every contributor shares the same baseline: allowed tools, default model, permission mode. If a developer edits it directly for personal needs and commits that change, every teammate now inherits their personal preferences — potentially widening permissions or changing models for the entire team.</p>
+<p><code>settings.local.json</code> is in <code>.gitignore</code> by design. Personal tweaks stay local. The team baseline remains stable.</p>
+<p>Verify the gitignore entry:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#013-settingslayering-__codelineno-17-1"></a>cat<span class="w"> </span>quips/.gitignore<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;local&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(check .claude/.gitignore too)&quot;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#013-settingslayering-__codelineno-17-2"></a>cat<span class="w"> </span>quips/.claude/.gitignore<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;local&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;(no local ignore entry found)&quot;</span>
+</span></code></pre></div>
+</details>
+<h5 id="013-settingslayering-task-5-reset-the-experiment-and-restore-original-settings">Task 5 — Reset the experiment and restore original settings</h5>
+<p><strong>Scenario:</strong> You have finished the experiment. You want to clean up the settings you modified so you do not accidentally affect later labs.</p>
+<p><strong>Hint:</strong> Remove the <code>permissions.allow</code> keys you added from user scope and project scope, or restore the files to their pre-lab state.</p>
+<details class="success">
+<summary>Solution</summary>
+<p>Remove the permissions key from user settings (preserve other keys):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#013-settingslayering-__codelineno-18-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#013-settingslayering-__codelineno-18-2"></a><span class="s2">import json, os</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#013-settingslayering-__codelineno-18-3"></a><span class="s2">path = os.path.expanduser(&#39;~/.claude/settings.json&#39;)</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#013-settingslayering-__codelineno-18-4"></a><span class="s2">with open(path) as f:</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#013-settingslayering-__codelineno-18-5"></a><span class="s2">    d = json.load(f)</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#013-settingslayering-__codelineno-18-6"></a><span class="s2">d.get(&#39;permissions&#39;, {}).pop(&#39;allow&#39;, None)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#013-settingslayering-__codelineno-18-7"></a><span class="s2">if not d.get(&#39;permissions&#39;):</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#013-settingslayering-__codelineno-18-8"></a><span class="s2">    d.pop(&#39;permissions&#39;, None)</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#013-settingslayering-__codelineno-18-9"></a><span class="s2">print(json.dumps(d, indent=2))</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#013-settingslayering-__codelineno-18-10"></a><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/settings_clean.json<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mv<span class="w"> </span>/tmp/settings_clean.json<span class="w"> </span>~/.claude/settings.json
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#013-settingslayering-__codelineno-18-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;user settings cleaned&quot;</span>
+</span></code></pre></div>
+<p>Reset the project settings to an empty object:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#013-settingslayering-__codelineno-19-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;{}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>quips/.claude/settings.json
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#013-settingslayering-__codelineno-19-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>json.tool<span class="w"> </span>quips/.claude/settings.json<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;project settings reset&quot;</span>
+</span></code></pre></div>
+<p>Remove the local override if you created one:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#013-settingslayering-__codelineno-20-1"></a>rm<span class="w"> </span>-f<span class="w"> </span>quips/.claude/settings.local.json<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;local settings removed&quot;</span>
+</span></code></pre></div>
+</details>
+<h5 id="013-settingslayering-task-6-map-the-precedence-chain-to-a-compliance-scenario">Task 6 — Map the precedence chain to a compliance scenario</h5>
+<p><strong>Scenario:</strong> Your organisation deploys Claude for Enterprise with a policy that forbids <code>Bash</code> tool use entirely. A developer sets <code>"allow": ["Bash(rm -rf)"]</code> in their <code>settings.local.json</code>. Does that override the enterprise policy?</p>
+<p><strong>Hint:</strong> Enterprise scope is at priority 1 — the top of the chain.</p>
+<details class="success">
+<summary>Solution</summary>
+<p>No. Enterprise policy sits at priority 1, above local scope at priority 3. The developer&rsquo;s <code>settings.local.json</code> entry is ignored for any key the enterprise policy also sets.</p>
+<p>This is the security guarantee enterprises need: a centrally managed policy cannot be circumvented by editing local files or the project file. Even CLI flags (priority 2) are overridden by enterprise policy.</p>
+<p>You can verify the principle without an enterprise environment by substituting the highest scope you do have — observe that local scope overrides project scope but not CLI flags (try <code>claude --permission-mode default</code> at priority 2 and confirm it takes precedence over your local file).</p>
+</details>
+<h4 id="013-settingslayering-quiz">Quiz</h4>
+<div class="ccg-quiz" data-lab="013">
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q1.</strong> You set <code>permissions.allow: ["Read"]</code> in <code>~/.claude/settings.json</code> and <code>permissions.allow: ["Read", "Edit"]</code> in <code>quips/.claude/settings.json</code>. Which allow-list does Claude use when you start a session from inside <code>quips/</code>?</p>
+    <label><input type="radio" name="013-settingslayering-013-q1" value="a"> A. <code>["Read"]</code> — user scope has higher priority than project scope</label>
+    <label><input type="radio" name="013-settingslayering-013-q1" value="b"> B. <code>["Read", "Edit"]</code> — project scope outranks user scope</label>
+    <label><input type="radio" name="013-settingslayering-013-q1" value="c"> C. <code>["Read", "Edit"]</code> — both lists are deep-merged</label>
+    <label><input type="radio" name="013-settingslayering-013-q1" value="d"> D. Claude asks you which one to use at session start</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Project scope (priority 4) outranks user scope (priority 5). The project allow-list wins entirely — Claude does not merge arrays across scopes. The user-scope list is ignored for that key as soon as the project scope sets it.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q2.</strong> Why is <code>settings.local.json</code> kept out of version control?</p>
+    <label><input type="radio" name="013-settingslayering-013-q2" value="a"> A. It is a temporary file that Claude deletes after each session</label>
+    <label><input type="radio" name="013-settingslayering-013-q2" value="b"> B. It cannot be parsed by git</label>
+    <label><input type="radio" name="013-settingslayering-013-q2" value="c"> C. It holds personal overrides that should not affect teammates who pull the repo</label>
+    <label><input type="radio" name="013-settingslayering-013-q2" value="d"> D. It contains the user's API key and would expose secrets</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain"><code>settings.local.json</code> is for personal, machine-specific tweaks. Committing it would push your local preferences onto every contributor who pulls, potentially widening permissions or changing model defaults team-wide. The split — project file committed, local file ignored — separates shared defaults from personal choices.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q3.</strong> Which scope is the highest priority in the Claude Code settings precedence chain?</p>
+    <label><input type="radio" name="013-settingslayering-013-q3" value="a"> A. User (<code>~/.claude/settings.json</code>)</label>
+    <label><input type="radio" name="013-settingslayering-013-q3" value="b"> B. Local (<code>settings.local.json</code>)</label>
+    <label><input type="radio" name="013-settingslayering-013-q3" value="c"> C. CLI flag (passed at invocation time)</label>
+    <label><input type="radio" name="013-settingslayering-013-q3" value="d"> D. Enterprise policy (centrally managed)</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Enterprise policy sits at the top of the chain — it overrides every other scope, including CLI flags. This is the compliance guarantee: an organisation-wide policy cannot be circumvented by a developer editing their local files or passing a flag on the command line.</p>
+  </div>
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q4.</strong> You are inside the Claude REPL and want to see which scope is currently controlling your permission list. What is the fastest way?</p>
+    <label><input type="radio" name="013-settingslayering-013-q4" value="a"> A. Run <code>/permissions</code> — it prints the merged effective config with scope labels</label>
+    <label><input type="radio" name="013-settingslayering-013-q4" value="b"> B. Run <code>cat ~/.claude/settings.json</code> — that is always the active config</label>
+    <label><input type="radio" name="013-settingslayering-013-q4" value="c"> C. Exit and restart Claude with <code>--verbose</code> to see which files were loaded</label>
+    <label><input type="radio" name="013-settingslayering-013-q4" value="d"> D. There is no way to inspect the merged config at runtime</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain"><code>/permissions</code> is the built-in REPL command for this. It shows the effective merged permission list and annotates each entry with the scope that contributed it. Reading <code>~/.claude/settings.json</code> only tells you what one scope contains — it does not show the merged result or which scope won.</p>
+  </div>
+</div>
+
 <h4 id="013-settingslayering-stretch-optional-10-min">Stretch (optional, ~10 min)</h4>
-<p>If your organisation uses Claude for Enterprise, add an enterprise-level policy and observe that it overrides every other scope — even a CLI flag. If enterprise is unavailable, write a paragraph in <code>observations.md</code> describing what an enterprise policy would override and why that matters for compliance-driven teams.</p>
+<p>If your organisation uses Claude for Enterprise, add an enterprise-level policy that restricts <code>Bash</code> tool use and observe that it overrides every other scope — even a CLI flag passed at invocation time. If enterprise is unavailable, write a paragraph in <code>observations.md</code> describing what an enterprise policy would override and why that guarantee matters for compliance-driven teams: consider a scenario where a developer&rsquo;s <code>settings.local.json</code> tries to allow a sensitive tool that the policy forbids.</p>
 <h4 id="013-settingslayering-recall">Recall</h4>
-<p>What lab created <code>quips/.claude/settings.local.json</code> and why?</p>
+<p>What lab first introduced <code>quips/.claude/settings.local.json</code> and set up an explicit allow/deny list for Bash commands?</p>
 <blockquote>
-<p>Lab 009 created <code>quips/.claude/settings.local.json</code> to gate Bash commands — defining an explicit allow/deny list so Claude could not run destructive shell operations without permission.</p>
+<p>Lab 009 — Permission Modes created <code>quips/.claude/settings.local.json</code> to gate Bash commands, defining an explicit allow/deny list so Claude could not run destructive shell operations without explicit permission. That file is still on your machine at local scope (priority 3), ready to be overridden by a CLI flag or enterprise policy.</p>
 </blockquote>
 <h4 id="013-settingslayering-references">References</h4>
 <!-- Auto-rendered from sources.yml at mkdocs build time. Do not edit by hand. -->
@@ -13482,7 +13743,7 @@ Do not change anything else.</code></p>
       
         <script src="https://buttons.github.io/buttons.js?v=1776569250"></script>
       
-        <script src="../assets/javascripts/ccg-progress.js?v=1"></script>
+        <script src="../assets/javascripts/ccg-progress.js?v=2"></script>
       
     
   </body>

@@ -84,7 +84,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./mkdocs-site
-          cname: ${{ github.event.repository.name }}.github.io
+          # No cname — default URL is https://hemzaz.github.io/CCLabs/.
+          # Setting a cname creates a CNAME file that GitHub interprets as a
+          # custom domain, which would break serving from the default URL.
 
       - name: Deployment Status
         run: echo "✅ Successfully deployed to GitHub Pages"

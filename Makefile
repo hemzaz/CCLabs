@@ -1,4 +1,4 @@
-.PHONY: help serve run build verify lint-labs lab clean deploy-vercel deploy-netlify
+.PHONY: help serve run build verify lint-labs lint-prose lint-all lab clean deploy-vercel deploy-netlify
 
 help:
 	@echo "ClaudeCodeLabs - developer entry points"
@@ -8,6 +8,8 @@ help:
 	@echo "  make build           - build the static site into mkdocs-site/"
 	@echo "  make verify          - run every lab's verify.sh"
 	@echo "  make lint-labs       - run the structural linter across all labs"
+	@echo "  make lint-prose      - run vale on Labs/ (matches CI gate)"
+	@echo "  make lint-all        - run lint-labs + lint-prose + a non-strict build"
 	@echo "  make lab NNN=042 TITLE=MyLabTitle - scaffold a new lab from the template"
 	@echo "  make deploy-vercel   - build and deploy to Vercel (requires vercel CLI)"
 	@echo "  make deploy-netlify  - build and deploy to Netlify (requires netlify CLI)"
@@ -32,6 +34,20 @@ verify:
 
 lint-labs:
 	@./scripts/lint-labs.sh
+
+lint-prose:
+	@command -v vale >/dev/null 2>&1 || { \
+	  echo "ERROR: vale not found" >&2; \
+	  echo "Install: brew install vale   OR   go install github.com/errata-ai/vale/v3@latest" >&2; \
+	  exit 1; \
+	}
+	@vale --minAlertLevel=error Labs/ CONTRIBUTING.md
+
+lint-all: lint-labs lint-prose
+	@echo "== mkdocs build =="
+	@mkdocs build -f mkdocs.yml -d /tmp/mkdocs-lint-check >/dev/null 2>&1 && echo "OK mkdocs build" || { echo "FAIL mkdocs build" >&2; exit 1; }
+	@rm -rf /tmp/mkdocs-lint-check
+	@echo "All lint gates green."
 
 lab:
 	@if [ -z "$(NNN)" ]; then echo "usage: make lab NNN=042 TITLE=MyLabTitle" >&2; exit 2; fi

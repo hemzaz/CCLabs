@@ -58,15 +58,18 @@ cd quips && npm ci && npm test
 
 ## Deploy
 
-Production deploys run on push-to-main via GitHub Actions:
+The live site is served from **GitHub Pages** — no configuration needed in a fresh fork:
 
-- **Vercel** — `.github/workflows/deploy-vercel.yml` (needs `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` secrets)
-- **Netlify** — `.github/workflows/deploy-netlify.yml` (needs `NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID` secrets)
-- **GitHub Pages** — `.github/workflows/deploy-ghpages.yml`
+- **GitHub Pages** (default) — `.github/workflows/deploy-ghpages.yml` runs on every push to `main` and serves at `https://<owner>.github.io/<repo>/`
 
-### One-time secret setup (CI deploys)
+Netlify and Vercel are **optional alternates**, disabled by default. They only run when manually triggered from the Actions tab, and short-circuit cleanly if their secrets are not set — so a fresh fork with no secrets shows no failing CI.
 
-After pushing, the CI workflows will fire automatically. They'll fail until you register the relevant secrets:
+- **Vercel** (optional) — `.github/workflows/deploy-vercel.yml` (`workflow_dispatch` only)
+- **Netlify** (optional) — `.github/workflows/deploy-netlify.yml` (`workflow_dispatch` only)
+
+### Enabling an optional deploy target
+
+If you want Vercel or Netlify deploys in addition to GH Pages:
 
 ```bash
 # Vercel — token at https://vercel.com/account/tokens
@@ -77,11 +80,9 @@ gh secret set VERCEL_PROJECT_ID --body "<project_id>"
 # Netlify — token at https://app.netlify.com/user/applications#personal-access-tokens
 gh secret set NETLIFY_AUTH_TOKEN --body "<token>"
 gh secret set NETLIFY_SITE_ID --body "<site_id>"
-
-# Re-run a previously-failed deploy after registering its secrets
-gh run list --workflow=deploy-vercel.yml --limit 1
-gh run rerun <run-id>
 ```
+
+Then trigger once manually: **Actions → Deploy to Vercel / Netlify → Run workflow**.
 
 To fetch Vercel IDs from a locally linked project: `cat .vercel/project.json`. For Netlify, `netlify status` shows the site ID.
 

@@ -1,14 +1,23 @@
 name: Deploy to Vercel
 
+# Optional. GitHub Pages is the default deploy target (deploy-ghpages.yml).
+# This workflow is opt-in: it runs ONLY when manually dispatched from the
+# Actions tab, and only if the repo has VERCEL_TOKEN, VERCEL_ORG_ID, and
+# VERCEL_PROJECT_ID secrets set. Without those secrets the job short-circuits
+# cleanly.
+#
+# To enable:
+#   gh secret set VERCEL_TOKEN --body "<token>"
+#   gh secret set VERCEL_ORG_ID --body "<org_id>"
+#   gh secret set VERCEL_PROJECT_ID --body "<project_id>"
+# Then trigger: Actions → Deploy to Vercel → Run workflow
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: ${{ vars.ENABLE_VERCEL == 'true' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: read
       deployments: write
@@ -36,10 +45,22 @@ jobs:
       - name: Build MkDocs
         run: mkdocs build -f mkdocs.yml -d mkdocs-site
 
+      - name: Check Vercel credentials
+        id: check
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ] || [ -z "${{ secrets.VERCEL_ORG_ID }}" ] || [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
+            echo "missing=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::VERCEL_TOKEN, VERCEL_ORG_ID, or VERCEL_PROJECT_ID is not set — skipping Vercel deploy. Set secrets to enable; see README.md."
+          else
+            echo "missing=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install Vercel CLI
+        if: steps.check.outputs.missing == 'false'
         run: npm install -g vercel
 
       - name: Deploy to Vercel (Production)
+        if: steps.check.outputs.missing == 'false'
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

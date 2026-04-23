@@ -257,6 +257,7 @@
         state.labsComplete.push(lab);
         state.points += 100;
         toast(`Lab ${lab} complete! +100 points`, 'good');
+        confetti();
       }
     }
     // Badges per part
@@ -354,6 +355,26 @@
         — Tasks <b>${tasksDone}/${totalTasks}</b> · Quiz <b>${quizDone}/${totalQuiz}</b>
         ${complete ? ' · <span class="ccg-complete">Complete</span>' : ''}
       </span>`;
+  }
+
+  // ------- CONFETTI --------
+  // A tiny canvas-less confetti burst: 60 absolutely-positioned colored squares
+  // that fall and fade. No deps, no Canvas, respects prefers-reduced-motion.
+  function confetti() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const colors = ['#8b5cf6', '#22c55e', '#f59e0b', '#ef4444', '#3b82f6', '#ec4899'];
+    const N = 60;
+    for (let i = 0; i < N; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'ccg-confetti-piece';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.background = colors[i % colors.length];
+      piece.style.animationDelay = (Math.random() * 0.4) + 's';
+      piece.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+      piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 4000);
+    }
   }
 
   // ------- TOAST --------

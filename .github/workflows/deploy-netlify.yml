@@ -1,14 +1,21 @@
 name: Deploy to Netlify
 
+# Optional. GitHub Pages is the default deploy target (deploy-ghpages.yml).
+# This workflow is opt-in: it runs ONLY when manually dispatched from the
+# Actions tab, and only if the repo has NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID
+# secrets set. Without those secrets the job short-circuits cleanly.
+#
+# To enable:
+#   gh secret set NETLIFY_AUTH_TOKEN --body "<token>"
+#   gh secret set NETLIFY_SITE_ID --body "<site_id>"
+# Then trigger: Actions → Deploy to Netlify → Run workflow
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: ${{ vars.ENABLE_NETLIFY == 'true' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: read
 
@@ -35,7 +42,18 @@ jobs:
       - name: Build MkDocs
         run: mkdocs build -f mkdocs.yml -d mkdocs-site
 
+      - name: Check Netlify credentials
+        id: check
+        run: |
+          if [ -z "${{ secrets.NETLIFY_AUTH_TOKEN }}" ] || [ -z "${{ secrets.NETLIFY_SITE_ID }}" ]; then
+            echo "missing=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::NETLIFY_AUTH_TOKEN or NETLIFY_SITE_ID is not set — skipping Netlify deploy. Set secrets to enable; see README.md."
+          else
+            echo "missing=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Deploy to Netlify (Production)
+        if: steps.check.outputs.missing == 'false'
         uses: nwtgck/actions-netlify@v3.0
         with:
           publish-dir: mkdocs-site

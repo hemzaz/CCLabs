@@ -48,6 +48,7 @@ misroute
 mkdocs
 monorepo
 multiword
+Netlify
 npm
 npx
 nullability
@@ -92,6 +93,7 @@ TDD
 toolchain
 unicode
 unix
+Vercel
 verifier's
 Vitest
 vitest

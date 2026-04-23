@@ -32,6 +32,7 @@ errored
 eval
 Fastify
 frontmatter
+gamification
 globals
 greppable
 hardcoded
@@ -44,6 +45,7 @@ jq
 lookups
 metacognition
 misroute
+mkdocs
 monorepo
 multiword
 npm

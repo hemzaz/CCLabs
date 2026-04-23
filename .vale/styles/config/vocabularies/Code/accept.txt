@@ -33,6 +33,7 @@ eval
 Fastify
 frontmatter
 gamification
+gitignored
 globals
 greppable
 hardcoded
@@ -48,6 +49,7 @@ misroute
 mkdocs
 monorepo
 multiword
+Netlify
 npm
 npx
 nullability
@@ -60,6 +62,7 @@ params
 parseable
 pre-flight
 Prepending
+pseudocode
 prepends
 pushback
 rc
@@ -92,6 +95,7 @@ TDD
 toolchain
 unicode
 unix
+Vercel
 verifier's
 Vitest
 vitest

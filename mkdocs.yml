@@ -80,10 +80,10 @@ extra:
 
 extra_css:
   - ./assets/stylesheets/codewizard.css?v=1776569250
-  - ./assets/stylesheets/ccg-progress.css?v=1
+  - ./assets/stylesheets/ccg-progress.css?v=2
 extra_javascript:
   - https://buttons.github.io/buttons.js?v=1776569250
-  - ./assets/javascripts/ccg-progress.js?v=2
+  - ./assets/javascripts/ccg-progress.js?v=4
 ###
 ### mkdocs-plugins.yml
 ###

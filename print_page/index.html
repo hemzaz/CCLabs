@@ -62,7 +62,7 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/codewizard.css?v=1776569250">
     
-      <link rel="stylesheet" href="../assets/stylesheets/ccg-progress.css?v=1">
+      <link rel="stylesheet" href="../assets/stylesheets/ccg-progress.css?v=2">
     
     <script>__md_scope=new URL("/CCLabs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -3307,6 +3307,55 @@ Then pick one unfamiliar file:
 <li><strong>(Lab 004)</strong> What database does Quips use under the hood?</li>
 <li><strong>(Lab 005)</strong> What HTTP status code should <code>GET /random</code> return when the quips table is empty?</li>
 </ol>
+<h6 id="_checkpoints-a-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-a">
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q1.</strong> What single command installs Claude Code globally?</p>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q1" value="a"> A. <code>npm install claude-code</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q1" value="b"> B. <code>npx claude-code install</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q1" value="c"> C. <code>npm i -g @anthropic-ai/claude-code</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q1" value="d"> D. <code>brew install claude-code</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">The official install command is <code>npm i -g @anthropic-ai/claude-code</code>, which installs the package globally so the <code>claude</code> binary is available anywhere in your shell.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q2.</strong> When you exit a Claude Code REPL session and start a new one, does the new session remember the previous conversation?</p>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q2" value="a"> A. Yes, Claude Code persists all conversation history to disk by default</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q2" value="b"> B. Yes, but only the last five messages are retained</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q2" value="c"> C. Only if you ran <code>/compact</code> before exiting</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q2" value="d"> D. No, each new invocation starts with a fresh context</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Each <code>claude</code> invocation begins with an empty context. Session history is not persisted between separate REPL launches — memory must be explicitly loaded via CLAUDE.md files or MCP tools.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q3.</strong> Which slash command clears the current session's conversation history?</p>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q3" value="a"> A. <code>/reset</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q3" value="b"> B. <code>/clear</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q3" value="c"> C. <code>/forget</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q3" value="d"> D. <code>/purge</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain"><code>/clear</code> wipes the conversation history so the next message starts a blank context, without exiting the REPL or saving anything to disk.</p>
+  </div>
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q4.</strong> What database does the Quips project use under the hood?</p>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q4" value="a"> A. SQLite via better-sqlite3</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q4" value="b"> B. PostgreSQL via pg</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q4" value="c"> C. MongoDB via Mongoose</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q4" value="d"> D. An in-memory Map with no persistence</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Quips uses SQLite through the better-sqlite3 driver, giving it a file-based relational store that requires no separate server process.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q5.</strong> What HTTP status code should <code>GET /random</code> return when the quips table is empty?</p>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q5" value="a"> A. 200 with an empty body</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q5" value="b"> B. 204 No Content</label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q5" value="c"> C. 404 with <code>{"error": "no quips"}</code></label>
+    <label><input type="radio" name="_checkpoints-a-checkpoint-a-q5" value="d"> D. 500 Internal Server Error</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">When no quips exist the server returns 404 with body <code>{"error": "no quips"}</code>, signalling that the requested resource cannot be found rather than that the server failed.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-a-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Add a <code>GET /version</code> endpoint to Quips that returns <code>{"version": "0.1.0"}</code> with status 200. Use Claude Code to implement it — but before executing, dry-run in your head: which files change? Which tests should you add?</p>
@@ -5064,6 +5113,55 @@ Expected: <code>0</code></p>
 <li><strong>(Lab 009)</strong> What file path holds project-local Claude permissions?</li>
 <li><strong>(Lab 010)</strong> When a schema change breaks tests, what&rsquo;s the cheapest way to keep them green without hiding bugs?</li>
 </ol>
+<h6 id="_checkpoints-b-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-b">
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q1.</strong> Which single prompting move most reliably prevents Claude from asking clarifying questions?</p>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q1" value="a"> A. Adding specificity — schema, function signature, or expected output</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q1" value="b"> B. Providing examples of the desired tone</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q1" value="c"> C. Listing explicit constraints such as line-length limits</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q1" value="d"> D. Asking Claude to think step by step before replying</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Specificity — including a concrete schema, function signature, or expected output — removes the ambiguity that triggers clarifying questions, so Claude can proceed directly to implementation.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q2.</strong> When Claude wants to change a file, which tool must it invoke before calling Edit?</p>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q2" value="a"> A. Write</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q2" value="b"> B. Read</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q2" value="c"> C. Grep</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q2" value="d"> D. Glob</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Edit requires a prior Read of the same file in the same session. Without the Read, the Edit tool cannot verify the existing content and will reject the call to prevent accidental overwrites.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q3.</strong> What does plan mode prevent Claude from doing, even if you explicitly ask?</p>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q3" value="a"> A. Generating code or pseudocode in its response</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q3" value="b"> B. Reading files from the project</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q3" value="c"> C. Executing edits or running non-read-only Bash commands</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q3" value="d"> D. Asking follow-up clarifying questions</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Plan mode locks Claude into a read-only posture: it can explore, analyse, and produce a plan, but it cannot write files or run shell commands until you exit plan mode.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q4.</strong> What file path holds project-local Claude permissions?</p>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q4" value="a"> A. <code>.clauderc</code></label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q4" value="b"> B. <code>claude.config.json</code></label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q4" value="c"> C. <code>.claude/permissions.json</code></label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q4" value="d"> D. <code>.claude/settings.local.json</code> (or <code>.claude/settings.json</code>)</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Project-local permissions live in <code>.claude/settings.local.json</code> (gitignored by convention) or <code>.claude/settings.json</code> (checked in), both relative to the project root.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q5.</strong> When a schema change breaks tests, what is the cheapest way to keep them green without hiding bugs?</p>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q5" value="a"> A. Skip the failing assertions with <code>.skip</code> until the migration is complete</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q5" value="b"> B. Update the tests' seed data or use <code>resetDb()</code></label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q5" value="c"> C. Loosen the assertions so any shape is accepted</label>
+    <label><input type="radio" name="_checkpoints-b-checkpoint-b-q5" value="d"> D. Mock the database layer so no real schema is exercised</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Updating seed data or calling <code>resetDb()</code> brings fixtures in line with the new schema while keeping assertions strict, so tests still catch regressions without masking real bugs.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-b-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Enter plan mode, then ask Claude to design pagination for <code>GET /quips</code>:</p>
@@ -6855,6 +6953,55 @@ Expected: <code>0</code></p>
 <li><strong>(Lab 014)</strong> After running <code>/compact</code>, can Claude still recall the first message you sent this session? Why or why not?</li>
 <li><strong>(Lab 015)</strong> When do nested CLAUDE.md rules take effect?</li>
 </ol>
+<h6 id="_checkpoints-c-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-c">
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q1.</strong> Where does Claude look first for project memory when you open a session in <code>quips/</code>?</p>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q1" value="a"> A. <code>quips/CLAUDE.md</code> at the working-directory root</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q1" value="b"> B. <code>~/.claude/CLAUDE.md</code> in the user's home directory</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q1" value="c"> C. <code>.claude/settings.json</code> inside the project</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q1" value="d"> D. The most recently edited file in the repo</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Claude loads <code>CLAUDE.md</code> from the current working directory first, making <code>quips/CLAUDE.md</code> the primary source of project-specific memory and rules.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q2.</strong> What does prefixing a file path with <code>@</code> change about Claude's behavior?</p>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q2" value="a"> A. It marks the file as read-only so Claude will not edit it</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q2" value="b"> B. It forces Claude to Read that path into context immediately, rather than guess at its contents</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q2" value="c"> C. It adds the file to the gitignore list automatically</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q2" value="d"> D. It pins the file so compaction never drops it</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">The <code>@path</code> syntax tells Claude to read that file into context immediately, ensuring it works from the actual content rather than a guess or a stale mental model.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q3.</strong> Rank these memory sources by precedence, highest first: user, project, local, enterprise, CLI flag.</p>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q3" value="a"> A. user &gt; project &gt; local &gt; enterprise &gt; CLI flag</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q3" value="b"> B. enterprise &gt; user &gt; project &gt; local &gt; CLI flag</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q3" value="c"> C. local &gt; project &gt; user &gt; enterprise &gt; CLI flag</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q3" value="d"> D. CLI flag &gt; enterprise &gt; local &gt; project &gt; user</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">CLI flags override everything at runtime, then enterprise policy, then local settings, then project settings, then user settings — the most-specific and most-immediate source wins.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q4.</strong> After running <code>/compact</code>, can Claude still recall the first message you sent this session?</p>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q4" value="a"> A. Yes, compaction preserves every message verbatim</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q4" value="b"> B. Yes, but only the first and last five messages are retained</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q4" value="c"> C. Partially — compaction summarises and drops raw turns; earlier specifics may be lost but key facts are preserved</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q4" value="d"> D. No, compaction deletes all history and restarts the context</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Compaction replaces the conversation history with a summary. Key facts are carried forward, but verbatim early messages are dropped, so highly specific details from the first turn may no longer be retrievable.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q5.</strong> When do nested <code>CLAUDE.md</code> rules take effect?</p>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q5" value="a"> A. Always, regardless of which directory Claude is working in</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q5" value="b"> B. When Claude is working in the directory containing the nested file or any subdirectory below it</label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q5" value="c"> C. Only when you explicitly reference them with <code>@path</code></label>
+    <label><input type="radio" name="_checkpoints-c-checkpoint-c-q5" value="d"> D. Only if the root <code>CLAUDE.md</code> imports them with an <code>include:</code> directive</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Nested <code>CLAUDE.md</code> files are scoped to their directory and below: Claude picks them up automatically when it is operating inside that subtree, layering them on top of any parent-level rules.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-c-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Strengthen <code>quips/CLAUDE.md</code> so it has <strong>5 or more rule lines</strong> (lines starting with <code>-</code>, <code>*</code>, or a digit followed by <code>.</code>). At least one rule must be <em>testable</em> — for example:</p>
@@ -8757,6 +8904,55 @@ Expected: a number ≥ 10.</p>
 <li><strong>(Lab 019)</strong> What exit-code contract must a valid <code>verify.sh</code> script honour: when does it exit 0, and when does it exit non-zero?</li>
 <li><strong>(Lab 020)</strong> Why must you establish a green baseline BEFORE starting a refactor?</li>
 </ol>
+<h6 id="_checkpoints-d-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-d">
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q1.</strong> In red-green-refactor, what is the correct order of the three phases?</p>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q1" value="a"> A. Green → Red → Refactor</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q1" value="b"> B. Red → Green → Refactor</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q1" value="c"> C. Refactor → Red → Green</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q1" value="d"> D. Red → Refactor → Green</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">TDD requires writing a failing test first (Red), then the minimal code to make it pass (Green), then cleaning up the implementation while keeping the suite green (Refactor).</p>
+  </div>
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q2.</strong> When Claude goes off-track mid-generation, what is the first rescue move?</p>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q2" value="a"> A. Press ESC to interrupt Claude mid-stream, then run <code>git status</code> to inspect what changed</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q2" value="b"> B. Close the terminal and reopen a fresh session</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q2" value="c"> C. Run <code>/clear</code> and repeat the original prompt</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q2" value="d"> D. Let Claude finish, then revert with <code>git checkout .</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">ESC interrupts the stream immediately, limiting unintended changes. Checking <code>git status</code> next gives you a clear picture of what was written before deciding how to proceed or roll back.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q3.</strong> In a self-review workflow, what is the purpose of a challenge prompt after Claude produces a diff?</p>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q3" value="a"> A. To ask Claude to rewrite the diff in a different style</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q3" value="b"> B. To generate a changelog entry for the diff</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q3" value="c"> C. To force Claude to argue against its own output, surfacing edge cases and reviewer-worthy issues it would otherwise skip</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q3" value="d"> D. To confirm that the diff compiles before committing</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">A challenge prompt deliberately puts Claude in an adversarial role toward its own output, which uncovers missing error handling, hidden assumptions, and edge cases that a straightforward generation pass tends to miss.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q4.</strong> What exit-code contract must a valid <code>verify.sh</code> script honour?</p>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q4" value="a"> A. Exit 0 always; use stderr messages to signal failures</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q4" value="b"> B. Exit 1 on success, exit 0 on failure</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q4" value="c"> C. Exit any non-zero code on both pass and fail to trigger CI notifications</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q4" value="d"> D. Exit 0 when every assertion passes; exit non-zero on the first assertion failure</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Shell convention and CI tooling both rely on exit 0 meaning success and any non-zero exit meaning failure. A <code>verify.sh</code> that exits 0 on failure silently hides breakage from automated pipelines.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q5.</strong> Why must you establish a green baseline before starting a refactor?</p>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q5" value="a"> A. So that the refactor can be merged without a code review</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q5" value="b"> B. A green baseline proves existing tests pass before your changes, so any newly broken test is caused by your refactor, not a pre-existing bug</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q5" value="c"> C. It allows you to skip writing new tests during the refactor</label>
+    <label><input type="radio" name="_checkpoints-d-checkpoint-d-q5" value="d"> D. It documents the original code style before changes are made</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Without a green baseline you cannot distinguish regressions introduced by your refactor from bugs that were already present. A passing suite before you start gives you a reliable signal when something breaks.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-d-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Add a <code>DELETE /quips/:id</code> route to the Quips server using strict TDD discipline, then verify it with a shell script and clean up if a refactor opportunity appears.</p>
@@ -10695,6 +10891,55 @@ Expected output: <code>['fs-scoped', 'git-read']</code> (order may vary).</p>
 <li><strong>(Lab 024)</strong> Where on disk is a project-scope skill stored (give the path relative to the project root)?</li>
 <li><strong>(Lab 025)</strong> What is the JSON key under which MCP servers are declared in Claude Code settings?</li>
 </ol>
+<h6 id="_checkpoints-e-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-e">
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q1.</strong> Which four frontmatter keys are required for a valid subagent definition file?</p>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q1" value="a"> A. <code>name</code>, <code>model</code>, <code>prompt</code>, <code>version</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q1" value="b"> B. <code>name</code>, <code>role</code>, <code>tools</code>, <code>temperature</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q1" value="c"> C. <code>name</code>, <code>description</code>, <code>tools</code>, <code>model</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q1" value="d"> D. <code>id</code>, <code>description</code>, <code>permissions</code>, <code>model</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">A valid subagent file requires exactly four frontmatter keys: <code>name</code> (identifier), <code>description</code> (used for auto-routing), <code>tools</code> (allowed tool list), and <code>model</code> (which Claude model to use).</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q2.</strong> What are the two ways to invoke a subagent?</p>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q2" value="a"> A. Via a slash command and via a CLI flag</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q2" value="b"> B. Auto-routing by description match, or explicit invocation via the Task tool</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q2" value="c"> C. By naming it in CLAUDE.md and by calling it from a hook script</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q2" value="d"> D. Via <code>/agent run</code> command and via a PreToolUse hook</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Claude can route a request to a subagent automatically when the task description matches the agent's <code>description</code> field, or you can invoke it explicitly using the Task tool with the agent's name.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q3.</strong> Which exit code from a PreToolUse hook script causes the tool call to be blocked?</p>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q3" value="a"> A. Exit code 0</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q3" value="b"> B. Exit code 1</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q3" value="c"> C. Exit code 2 or higher</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q3" value="d"> D. Any non-zero exit code</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Exit code 2 (or higher) from a PreToolUse hook signals a hard block: Claude will not execute the tool call. Exit codes 0 and 1 both allow the tool to proceed.</p>
+  </div>
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q4.</strong> Where on disk is a project-scope skill stored?</p>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q4" value="a"> A. <code>.claude/skills/&lt;skill-name&gt;/SKILL.md</code> inside the project root</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q4" value="b"> B. <code>~/.claude/skills/&lt;skill-name&gt;/SKILL.md</code> in the user's home directory</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q4" value="c"> C. <code>.claude/agents/&lt;skill-name&gt;.md</code> inside the project root</label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q4" value="d"> D. <code>skills/&lt;skill-name&gt;.md</code> at the repo root</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Project-scope skills live at <code>.claude/skills/&lt;skill-name&gt;/SKILL.md</code> relative to the project root, making them available inside that project but not globally.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q5.</strong> What is the JSON key under which MCP servers are declared in Claude Code settings?</p>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q5" value="a"> A. <code>servers</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q5" value="b"> B. <code>tools</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q5" value="c"> C. <code>plugins</code></label>
+    <label><input type="radio" name="_checkpoints-e-checkpoint-e-q5" value="d"> D. <code>mcpServers</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">MCP servers are declared under the <code>mcpServers</code> key in <code>.claude/settings.json</code>, where each entry maps a server name to its command and arguments.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-e-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Wire all five Part V capabilities together inside the Quips project to produce an end-to-end review flow.</p>
@@ -12648,6 +12893,55 @@ Expected output: <code>['fs-scoped', 'git-read']</code> (order may vary).</p>
 <li><strong>(Lab 029)</strong> Which flag makes Claude Code run non-interactively and print the response to stdout?</li>
 <li><strong>(Lab 030)</strong> Which <code>gh</code> CLI command opens a pull request from the current branch?</li>
 </ol>
+<h6 id="_checkpoints-f-interactive-quiz">Interactive quiz</h6>
+<div class="ccg-quiz" data-lab="checkpoint-f">
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q1.</strong> How do <code>dump-db</code> and <code>seed-db</code> compose — what round-trip do they form together?</p>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q1" value="a"> A. <code>seed-db</code> exports the schema; <code>dump-db</code> imports it into a new database</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q1" value="b"> B. <code>seed-db</code> loads a known state; <code>dump-db</code> exports current state — diffing both proves changes</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q1" value="c"> C. <code>dump-db</code> creates a backup; <code>seed-db</code> restores it after a failed migration</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q1" value="d"> D. They are independent tools with no intended composition</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Together they form a round-trip: <code>seed-db</code> installs a known fixture state and <code>dump-db</code> exports the current state, so diffing the two snapshots proves exactly what changed.</p>
+  </div>
+  <div class="ccg-q" data-answer="c">
+    <p><strong>Q2.</strong> Why does each MCP server need its own <code>scope</code> argument when registered in <code>settings.json</code>?</p>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q2" value="a"> A. So Claude can display the server name in the UI</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q2" value="b"> B. To specify which Claude model the server communicates with</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q2" value="c"> C. Scope args prevent one server from reading outside its intended directory or repo, enforcing least privilege</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q2" value="d"> D. To set the authentication token for each server independently</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">Each MCP server's <code>scope</code> argument limits the filesystem paths or git repositories it can access, implementing least-privilege so a compromised server cannot read the entire machine.</p>
+  </div>
+  <div class="ccg-q" data-answer="a">
+    <p><strong>Q3.</strong> Which secret must be added to the repo's Actions settings before the <code>claude-code-action</code> workflow can run?</p>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q3" value="a"> A. <code>ANTHROPIC_API_KEY</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q3" value="b"> B. <code>CLAUDE_TOKEN</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q3" value="c"> C. <code>GITHUB_TOKEN</code> (must be created manually)</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q3" value="d"> D. <code>CI_SECRET</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">The <code>claude-code-action</code> workflow authenticates with Anthropic's API using <code>ANTHROPIC_API_KEY</code>, which must be stored in the repo's Actions secrets before the workflow can make any API calls.</p>
+  </div>
+  <div class="ccg-q" data-answer="b">
+    <p><strong>Q4.</strong> Which flag makes Claude Code run non-interactively and print the response to stdout?</p>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q4" value="a"> A. <code>--headless</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q4" value="b"> B. <code>-p</code> (or <code>--print</code>)</label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q4" value="c"> C. <code>--batch</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q4" value="d"> D. <code>--quiet</code></label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain">The <code>-p</code> (or <code>--print</code>) flag runs Claude non-interactively with the given prompt and prints the response to stdout, making it composable with shell pipelines and CI scripts.</p>
+  </div>
+  <div class="ccg-q" data-answer="d">
+    <p><strong>Q5.</strong> Which <code>gh</code> CLI command opens a pull request from the current branch?</p>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q5" value="a"> A. <code>gh pr open</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q5" value="b"> B. <code>gh pull-request new</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q5" value="c"> C. <code>gh pr submit</code></label>
+    <label><input type="radio" name="_checkpoints-f-checkpoint-f-q5" value="d"> D. <code>gh pr create</code> (typically with <code>--fill</code> or <code>--title</code>/<code>--body</code>)</label>
+    <button class="ccg-check">Check answer</button>
+    <p class="ccg-explain"><code>gh pr create</code> opens a pull request from the current branch. Adding <code>--fill</code> populates the title and body from the commit log automatically, making it the fastest path in a scripted workflow.</p>
+  </div>
+</div>
+
 <hr />
 <h5 id="_checkpoints-f-part-2-integration-task-20-min">Part 2 — Integration task (20 min)</h5>
 <p>Ship a small follow-up feature to Quips using all five Part VI capabilities.</p>
@@ -13743,7 +14037,7 @@ Do not change anything else.</code></p>
       
         <script src="https://buttons.github.io/buttons.js?v=1776569250"></script>
       
-        <script src="../assets/javascripts/ccg-progress.js?v=2"></script>
+        <script src="../assets/javascripts/ccg-progress.js?v=4"></script>
       
     
   </body>

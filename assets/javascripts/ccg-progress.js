@@ -47,7 +47,8 @@
     'capstone': { name: 'Capstone Hero', desc: 'Capstone complete', emoji: '🏆' },
     'perfect-quiz': { name: 'Perfect Quiz', desc: 'Aced a lab quiz', emoji: '💯' },
     'streak-7': { name: 'On Fire', desc: '7-day learning streak', emoji: '🔥' },
-    'prompting-sensei': { name: 'Prompting Sensei', desc: 'Lab 031 (Prompting Workshop) complete', emoji: '🥋' }
+    'prompting-sensei': { name: 'Prompting Sensei', desc: 'Lab 031 (Prompting Workshop) complete', emoji: '🥋' },
+    'checkpoint-sweep': { name: 'Checkpoint Sweep', desc: 'Aced all six Part checkpoints', emoji: '🎯' }
   };
   const PART_LABS = {
     'part-1': ['001', '002', '003', '004', '005'],
@@ -118,11 +119,16 @@
   }
 
   function currentLabId() {
-    // Derive from URL, e.g. /CCLabs/001-InstallAuth/ → "001"
+    // Derive from URL:
+    //   /CCLabs/001-InstallAuth/           → "001"
+    //   /CCLabs/_CAPSTONE/                 → "capstone"
+    //   /CCLabs/_CHECKPOINTS/A/            → "checkpoint-a"
     const path = window.location.pathname;
     const match = path.match(/\/(\d{3})-[A-Za-z]/);
     if (match) return match[1];
     if (/_CAPSTONE/.test(path)) return 'capstone';
+    const cp = path.match(/_CHECKPOINTS\/([A-Fa-f])/);
+    if (cp) return 'checkpoint-' + cp[1].toLowerCase();
     return null;
   }
 
@@ -251,6 +257,7 @@
         state.labsComplete.push(lab);
         state.points += 100;
         toast(`Lab ${lab} complete! +100 points`, 'good');
+        confetti();
       }
     }
     // Badges per part
@@ -264,6 +271,8 @@
     }
     if (state.labsComplete.includes('capstone')) awardBadge(state, 'capstone');
     if (state.labsComplete.includes('031')) awardBadge(state, 'prompting-sensei');
+    const checkpointIds = ['checkpoint-a', 'checkpoint-b', 'checkpoint-c', 'checkpoint-d', 'checkpoint-e', 'checkpoint-f'];
+    if (checkpointIds.every((id) => state.labsComplete.includes(id))) awardBadge(state, 'checkpoint-sweep');
   }
 
   // ------- HUD --------
@@ -348,6 +357,26 @@
       </span>`;
   }
 
+  // ------- CONFETTI --------
+  // A tiny canvas-less confetti burst: 60 absolutely-positioned colored squares
+  // that fall and fade. No deps, no Canvas, respects prefers-reduced-motion.
+  function confetti() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const colors = ['#8b5cf6', '#22c55e', '#f59e0b', '#ef4444', '#3b82f6', '#ec4899'];
+    const N = 60;
+    for (let i = 0; i < N; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'ccg-confetti-piece';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.background = colors[i % colors.length];
+      piece.style.animationDelay = (Math.random() * 0.4) + 's';
+      piece.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+      piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 4000);
+    }
+  }
+
   // ------- TOAST --------
   function toast(text, kind) {
     kind = kind || 'info';
@@ -370,6 +399,7 @@
       { title: 'Your progress is yours', body: 'Everything is saved locally in this browser. No account, no tracking, no login. Click the 📊 button in the bottom-right to see your stats any time.' },
       { title: 'Tasks and quizzes earn points', body: 'Each task = 10 pts. Each quiz question attempted = 5 pts, correct = +15 pts. Finish a lab = 100 pts. Seven-day streak = a shiny 🔥 badge.' },
       { title: 'You don\'t have to be perfect', body: 'Get answers wrong, peek at solutions, replay labs. This is a learning environment, not a judgment environment. Trying > hesitating.' },
+      { title: 'Checkpoints close each Part', body: 'After every 5 labs you\'ll hit a Checkpoint — a short quiz plus a small integration task. Earn the 🎯 Checkpoint Sweep badge by acing all six.' },
       { title: 'Start anywhere', body: 'Lab 001 is the on-ramp. You can also jump to whichever part looks interesting. Let\'s go.' }
     ];
     let i = 0;

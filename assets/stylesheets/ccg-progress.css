@@ -193,6 +193,25 @@ input.ccg-task-check {
   text-decoration: underline;
 }
 
+/* ---- Confetti ---- */
+.ccg-confetti-piece {
+  position: fixed;
+  top: -12px;
+  width: 9px;
+  height: 9px;
+  z-index: 999;
+  pointer-events: none;
+  animation: ccg-confetti-fall linear forwards;
+  opacity: 0.9;
+}
+@keyframes ccg-confetti-fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ccg-confetti-piece { display: none; }
+}
+
 /* ---- Toasts ---- */
 .ccg-toast {
   position: fixed;

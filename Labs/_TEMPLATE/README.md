@@ -28,7 +28,7 @@
 
 ## Prerequisites
 
-- Completed [Lab NNN−1 — Title](../NNN−1-Title/README.md)
+- Completed `Lab NNN−1 — Title` (previous lab in sequence)
 - `<any extra requirement, e.g. "quips/ submodule initialized">`
 
 ## What You Will Learn

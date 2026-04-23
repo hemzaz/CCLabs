@@ -5,9 +5,11 @@ hide:
 
 # ClaudeCodeLabs
 
-ClaudeCodeLabs is a series of 30 hands-on labs that teach Claude Code from first install to shipping real features — every lab produces a concrete artifact you can point to. The labs are built around **Quips**, a small Fastify API that grows with you across the curriculum.
+**30 hands-on labs + a capstone + an optional prompting workshop**, teaching Claude Code from first install to shipping real features. Every lab produces a concrete artifact you can point to, and includes tasks, a quiz, and recall questions so you actually remember what you learned.
 
-This site is for anyone new to Claude Code who wants a structured, practical path. No prior AI tooling experience is required — just Node 20, Git, and a GitHub account.
+The labs are built around **Quips**, a small Fastify API that grows with you across the curriculum. By the time you finish, you'll have shipped a reviewed PR to a real codebase — and know exactly how you did it.
+
+This site is for anyone new to Claude Code who wants a structured, practical path. No prior AI tooling experience is required — just Node 20, Git, and a GitHub account. If you break something, every lab has an `If stuck` troubleshooting table. You'll be fine.
 
 ## The curriculum
 
@@ -22,6 +24,8 @@ This site is for anyone new to Claude Code who wants a structured, practical pat
 ## How to start
 
 Open [Lab 001 — Install and Auth](001-InstallAuth/README.md) and follow the steps. Once Claude Code is running, use `./scripts/labs.sh next` to advance through the series.
+
+**Tip:** your task checkboxes and quiz answers are saved in your browser's localStorage — close the tab, come back tomorrow, and your progress is still there. No accounts, no tracking.
 
 ## Labs
 
@@ -58,4 +62,14 @@ Open [Lab 001 — Install and Auth](001-InstallAuth/README.md) and follow the st
 | [029](029-PrReviewLoop/README.md) | PR Review Loop | headless review-revise loop evidence |
 | [030](030-ShipFeaturePr/README.md) | Ship Feature PR | shipped PR URL in `quips/SHIPPED.md` |
 
-Six checkpoints close each Part (A after 005, B after 010, C after 015, D after 020, E after 025, F after 030). The [Capstone](_CAPSTONE/README.md) closes the curriculum. See the [design document](../docs/DESIGN.md) for the full curriculum map and outcome coverage.
+Six checkpoints close each Part (A after 005, B after 010, C after 015, D after 020, E after 025, F after 030). The [Capstone](_CAPSTONE/README.md) closes the curriculum with a reviewed PR to Quips, scored against a 4×4 rubric.
+
+## Extras
+
+| # | Lab | Artifact |
+|---|---|---|
+| [031](031-PromptingWorkshop/README.md) | Prompting Workshop | `Labs/031-PromptingWorkshop/prompts.md` — 8 timed prompt drills across 6 patterns |
+
+The Prompting Workshop is optional and sits after the Capstone. Take it when you want deliberate practice on prompt craft without the commit-and-ship loop.
+
+See the [design document](https://github.com/hemzaz/CCLabs/blob/main/docs/DESIGN.md) for the full curriculum map and outcome coverage.

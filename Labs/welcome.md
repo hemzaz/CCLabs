@@ -7,14 +7,27 @@ hide:
 
 ## Why this exists
 
-Most AI coding tutorials stop at "look at this cool autocomplete." ClaudeCodeLabs goes further: every lab is a repeatable exercise that ends with working code checked into a real repository. The curriculum is grounded in Anthropic's official documentation so it stays accurate as Claude Code evolves.
+Most AI coding tutorials stop at "look at this cool autocomplete." ClaudeCodeLabs goes further: every lab ends with working code, a saved artifact, or a PR — checked into a real repo, graded by a real verify script. The curriculum is grounded in Anthropic's official documentation so it stays accurate as Claude Code evolves.
+
+## What each lab gives you
+
+Every lab is the same shape, so you never waste energy parsing structure:
+
+- **Overview** — three bullets of what you'll learn, build, and practice
+- **Walkthrough** — the teaching section (read here, practice below)
+- **PRIMM steps** — Predict, Run, Investigate, Modify, Make; each with a verify command
+- **Tasks** — five to eight scenario drills with hints and collapsible solutions
+- **Quiz** — four multiple-choice questions with instant feedback (answers persist locally in your browser)
+- **Recall** — one question about a lab 5+ steps back, to keep the thread alive
+
+The tasks and quiz progress you make survives browser refreshes — there's a small client-side tracker (localStorage) so you can come back tomorrow and pick up where you left off.
 
 ## Design principles
 
-- **Relentless** — each lab has one clear goal, one deliverable, and one verify command. No busywork.
-- **Cohesive** — all labs build on the same Quips project, so context accumulates rather than resets.
+- **Relentless** — one clear goal, one deliverable, one verify command per lab. No busywork.
+- **Cohesive** — every lab builds on the same Quips project, so context accumulates.
 - **Continuous** — each lab's ending sets up the next. No gaps, no concept jumps.
-- **Uniform** — every lab follows the same template: Why, Check, Do (PRIMM), Observe, If stuck, Stretch, Recall, References, Next.
+- **Uniform** — fourteen sections, same order, every time. Predictable is fast.
 
 ## Prerequisites
 

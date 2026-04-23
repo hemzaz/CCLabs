@@ -1,6 +1,6 @@
 # ClaudeCodeLabs
 
-30 hands-on labs taking a fresher from zero to shipping with Claude Code.
+30 hands-on labs + a Capstone + an optional Prompting Workshop, taking a fresher from zero to shipping with Claude Code. Every lab ends with a concrete artifact; every lab has scenario-driven tasks, a 4-question quiz, and a recall prompt. Your progress is tracked locally (points, streak, badges) via a lightweight in-browser tracker — no account, no server.
 
 ## Why Claude Code
 
@@ -29,7 +29,7 @@ The series is organized into six parts:
 - **Part V — Autonomy & Orchestration**: agents, sub-agents, parallel tasks
 - **Part VI — Shipping**: pull requests, releases, deployment pipelines
 
-All 30 labs plus six checkpoints and the Capstone are live. Start at Lab 001 and advance with `./scripts/labs.sh next`. Full lab index: [Labs/index.md](Labs/index.md).
+All 30 labs plus six checkpoints and the Capstone are live. An optional bonus — [Lab 031 — Prompting Workshop](Labs/031-PromptingWorkshop/README.md) — sits after the Capstone for deliberate practice on prompt patterns. Start at Lab 001 and advance with `./scripts/labs.sh next`. Full lab index: [Labs/index.md](Labs/index.md).
 
 ## Quips — the Spine Project
 

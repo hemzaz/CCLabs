@@ -46,7 +46,8 @@
     'part-6': { name: 'Part VI Finisher', desc: 'Labs 026–030 complete', emoji: '🟡' },
     'capstone': { name: 'Capstone Hero', desc: 'Capstone complete', emoji: '🏆' },
     'perfect-quiz': { name: 'Perfect Quiz', desc: 'Aced a lab quiz', emoji: '💯' },
-    'streak-7': { name: 'On Fire', desc: '7-day learning streak', emoji: '🔥' }
+    'streak-7': { name: 'On Fire', desc: '7-day learning streak', emoji: '🔥' },
+    'prompting-sensei': { name: 'Prompting Sensei', desc: 'Lab 031 (Prompting Workshop) complete', emoji: '🥋' }
   };
   const PART_LABS = {
     'part-1': ['001', '002', '003', '004', '005'],
@@ -262,6 +263,7 @@
       awardBadge(state, 'first-step');
     }
     if (state.labsComplete.includes('capstone')) awardBadge(state, 'capstone');
+    if (state.labsComplete.includes('031')) awardBadge(state, 'prompting-sensei');
   }
 
   // ------- HUD --------
@@ -364,7 +366,7 @@
   function maybeWalkthrough() {
     if (localStorage.getItem(WALKTHROUGH_SEEN_KEY)) return;
     const steps = [
-      { title: 'Welcome, future Claude whisperer 👋', body: 'These 31 labs take you from zero to shipping features with Claude Code. You\'re already doing the hardest part: showing up.' },
+      { title: 'Welcome, future Claude whisperer 👋', body: '30 labs + Capstone + an optional prompting workshop take you from zero to shipping features with Claude Code. You\'re already doing the hardest part: showing up.' },
       { title: 'Your progress is yours', body: 'Everything is saved locally in this browser. No account, no tracking, no login. Click the 📊 button in the bottom-right to see your stats any time.' },
       { title: 'Tasks and quizzes earn points', body: 'Each task = 10 pts. Each quiz question attempted = 5 pts, correct = +15 pts. Finish a lab = 100 pts. Seven-day streak = a shiny 🔥 badge.' },
       { title: 'You don\'t have to be perfect', body: 'Get answers wrong, peek at solutions, replay labs. This is a learning environment, not a judgment environment. Trying > hesitating.' },

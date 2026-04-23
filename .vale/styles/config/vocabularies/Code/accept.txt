@@ -39,6 +39,7 @@ Idempotency
 inlined
 inlining
 JSDoc
+localStorage
 jq
 lookups
 metacognition

@@ -173,6 +173,10 @@ labs:
     primary:
       - https://github.com/anthropics/claude-code-action
       - https://docs.claude.com/en/docs/claude-code/common-workflows
+  "031":
+    primary:
+      - https://github.com/anthropics/courses
+      - https://docs.claude.com/en/docs/claude-code/overview
 
 checkpoints:
   A:

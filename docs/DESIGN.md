@@ -343,7 +343,7 @@ Imperative second person. No exclamation marks. No "we" when describing Claude's
 ## 16. Deployment & operations
 
 - GH Pages + Vercel (both serve `mkdocs-site/`)
-- Final repo: `<org>/claudecodelabs`
+- Final repo: `hemzaz/CCLabs`
 - Quips: lives at `/quips/` subdir in v0; promoted to sibling repo `<org>/quips` in Week 4
 - Shared MkDocs theme submodule: decision pending (keep `nirgeier/mkdocs` with credit, or fork)
 - Domain cutover on rename: redirect page at old GH Pages URL for 6 months
